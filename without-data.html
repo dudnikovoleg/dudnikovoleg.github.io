@@ -1,0 +1,1160 @@
+<!doctype html>
+<html class="no-js" data-ng-app="bzrdashApp">
+<head>
+    <meta charset="utf-8">
+    <title>Buzzer: Dashboard</title>
+    <base >
+    <meta name="description" content="The Buzzer Feedback dashboard for restaurant managers and owners.">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta id="load_styles_before">
+    <link rel="shortcut icon" href="../getbuzzer.com/wp-content/uploads/2016/11/favicon-16x16.html" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="styles/font-awesome.css">
+    <link rel="stylesheet" href="styles/panel.css">
+    <link rel="stylesheet" href="styles/feather.css">
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="styles/is.css">
+    <!-- build:css styles/bzrdash.min.css -->
+    <link rel="stylesheet" href="styles/bzrdash.css">
+    <link rel="stylesheet" href="styles/bzrdash.skins.css">
+
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="styles/custum_style.css">
+
+
+
+
+    <!-- endbuild -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+    </style>
+
+</head>
+<body>
+<div class="quick-launch-panel" data-ng-include="'views/common/quick-launch-panel.html'">
+    <div class="container">
+        <div class="quick-launcher-inner">
+            <a href="#" class="close">×</a>
+            <div class="css-table-xs">
+                <div class="col">
+                    <a href="https://getbuzzer.com">
+                        <i class="fa fa-desktop"></i>
+                        <span>Buzzer website</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a   href="#">
+                        <i class="fa fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a   href="#">
+                        <i class="fa fa-newspaper-o"></i>
+                        <span>News</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a   href="#">
+                        <i class="fa fa-question"></i>
+                        <span>Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- App start -->
+
+
+
+<div class="app">
+    <div class="preloader "></div>
+    <div class="sidebar-panel offscreen-left is-mobile-sidebar-closed">
+        <div class="brand">
+            <!-- logo -->
+            <div class="brand-logo">
+                <img height="15" alt="" src="images/logo.png">
+            </div>
+            <!-- /logo -->
+            <!-- toggle small sidebar menu -->
+            <a href="#" class="toggle-sidebar hamburger-icon v3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <!-- /toggle small sidebar menu -->
+        </div>
+        <!-- main navigation -->
+        <nav role="navigation" >
+
+            <ul class="nav">
+                <!-- dashboard -->
+                <!-- ngIf: hasPermission('dashboard') -->
+                <li class= "active">
+                    <a  href="index.html">
+                        <i class="fa fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <!-- /dashboard -->
+                <li>
+                    <a  href="customer.html">
+                        <i class="fa fa-user"></i>
+                        <span>Customer care</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="staff.html">
+                        <i class="fa fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="promote.html">
+                        <i class="fa fa-bullhorn"></i>
+                        <span>Promote</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-newspaper-o"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="#">
+                        <i class="fa fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a  href="#">
+                        <i class="fa fa-database"></i>
+                        <span>Raw data</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="#">
+                        <i class="fa fa-lock"></i>
+                        <span>Lock</span>
+                    </a>
+                </li>
+                <!--/lock-->
+                <!--logout-->
+                <li >
+                    <a href="#">
+                        <i class="fa fa-sign-out"></i>
+                        <span>Sign out</span>
+                    </a>
+                </li>
+                <!-- /logout -->
+            </ul>
+        </nav>
+        <!-- /main navigation -->
+    </div>
+
+    <div class="main-panel">
+
+
+
+
+        <!-- header end -->
+
+
+        <div class="header navbar">
+            <div>
+                <div class="brand visible-sm visible-xs">
+                    <div class="toggle-offscreen">
+                    </div>
+                    <div class="hamburger-icon v3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="brand-logo">
+                        <img height="15" alt="" src="images/logo-dark.png">
+                    </div>
+                    <a  class="signout-icon">
+                        <i class="fa fa-sign-out"></i>
+                    </a>
+                    <a href="#" class="calendar-icon">
+                        <i class="fa fa-calendar "></i>
+                    </a>
+                    <p class="navbar-text ng-binding">
+                        Dashboard
+                    </p>
+                </div>
+                <ul class="nav navbar-nav hidden-sm hidden-xs">
+                    <li>
+                        <p class="navbar-text ng-binding">
+                            Dashboard
+                        </p>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+                    <li class="datebuttons-wrapper">
+                        <button type="button" class="btn btn-sm btn-info date-button">7 Days</button>
+                        <button type="button" class="btn btn-sm btn-info date-button">14 Days</button>
+                        <button type="button" class="btn btn-sm btn-info date-button">28 Days</button>
+                    </li>
+                    <li class="daterangepicker-wrapper">
+                        <input type="text"  class="form-control date-picker ng-isolate-scope ng-pristine ng-valid" >
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="fa fa-calendar "></i>
+                        </a>
+                    </li>
+                    <li>
+                        <!--<a href="#" class="ng-hide">-->
+                            <!--Currently showing data from <strong class="ng-binding">2016 12 01</strong> to <strong class="ng-binding">2017 07 04</strong>-->
+                        <!--</a>-->
+                        <a href="#" >
+                            Currently showing data for the last <strong class="ng-binding">7</strong> days
+                        </a>
+                    </li>
+                    <li id="layout-quick-launch-btn">
+                        <a href="#">
+                            <i class="fa fa-arrow-up"></i>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#" class="dropdown-toggle " aria-haspopup="true" aria-expanded="false">
+                            <img class="header-avatar img-circle ml10 " alt="user " title="user " src="images/dropdown-toggle-logo.png">
+                            <span class="pull-left  ng-binding">
+                     Demo Restaurant
+                     </span>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <!-- settings link  <li>
+                               <a href="#/settings/ ">Settings</a>
+                               </li> -->
+                            <li>
+                                <a href="#">
+                                    <span>News</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">Sign out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!------------------------>
+        <!-- Main content start -->
+        <!------------------------>
+
+
+
+
+
+        <div class="main-content " analytics-on="scrollby" data-ui-view=""><div class="noshad ng-scope">
+            <div class="loading loading-hidden ng-hide" ng-controller="loadingCaptionCtrl" ng-class="loadingAnimClass" ng-show="isLoadingVisible">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+            <div ng-class="loadingAnimClass" class="loading-hidden">
+                <div class="modal fade in  id="disabled-modal" role="dialog" ng-show="disabledModal" style=";">
+                    <div class="modal-dialog modal-lg" style=" position: absolute; top:0;bottom: 0;left: 0;right: 0; margin: auto; height:20%; min-height: 200px;">
+                        <div class="modal-content" style="height: 100%; min-width: 300px; width: 50%; margin:auto;">
+                            <div class="modal-header" style="text-align: center;">
+                                <button ng-click="logout()" type="button" class="close">×</button>
+                                <h4 class="modal-title text-warning" style="font-weight: 600; text-align: center;">Account Disabled</h4>
+                            </div>
+                            <div class="modal-body ng-binding" style="max-height: 70%; text-align: center;">
+                                Your account has been automatically disabled due to non-payment.
+                                <br> Please contact <a href="mailto:hello@getbuzzer.com">hello@getbuzzer.com</a> to restore account access.
+                            </div>
+                            <div class="modal-footer" style="text-align: center;">
+                                <button ng-click="logout()" type="button" class="btn btn-default">Sign out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notice  <div class="row">
+
+                <div class="col-md-12">
+                  <div class="widget bg-warning-light">
+                    <div class="widget-bg-icon">
+                      <i class="fa fa-bookmark-o"></i>
+                    </div>
+                    <div class="widget-details">
+                      <span class="bold">Notice: you have <u>recommendations</u> that could be acted upon to improve your NPS&reg; score</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              /notice -->
+
+                <div class="row separator">
+                    <span>Snapshot</span>
+                    <hr>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="widget bg-primary" ng-class="weeklySnapshot.atmosphere.className">
+                            <div class="widget-icon bg-white pull-left fa fa-heart">
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="widget-title white fw600">Atmosphere</span>
+                                <span class="widget-subtitle white ng-binding" ng-hide="dateFilter.startDate">The same as the previous 7-day period</span>
+                                <span class="widget-subtitle white ng-binding ng-hide" ng-show="dateFilter.startDate">The same as from  to  period</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="widget bg-warning" ng-class="weeklySnapshot.food.className">
+                            <div class="widget-icon bg-white pull-left fa fa-cutlery">
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="widget-title white fw600">Food</span>
+                                <span class="widget-subtitle white ng-binding" ng-hide="dateFilter.startDate">Worse than the previous 7-day period</span>
+                                <span class="widget-subtitle white ng-binding ng-hide" ng-show="dateFilter.startDate">Worse than from  to  period</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="widget bg-warning" ng-class="weeklySnapshot.service.className">
+                            <div class="widget-icon bg-white pull-left fa fa-eye">
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="widget-title white fw600">Service</span>
+                                <span class="widget-subtitle white ng-binding" ng-hide="dateFilter.startDate">Worse than the previous 7-day period</span>
+                                <span class="widget-subtitle white ng-binding ng-hide" ng-show="dateFilter.startDate">Worse than from  to  period</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="widget bg-warning" ng-class="weeklySnapshot.value.className">
+                            <div class="widget-icon bg-white pull-left fa fa-money">
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="widget-title white fw600">Value</span>
+                                <span class="widget-subtitle white ng-binding" ng-hide="dateFilter.startDate">Worse than the previous 7-day period</span>
+                                <span class="widget-subtitle white ng-binding ng-hide" ng-show="dateFilter.startDate">Worse than from  to  period</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row separator">
+                    <span>Team and Reviews</span>
+                    <hr>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="widget-chart bg-white no-padding">
+                            <div class="text-center">
+                                <h6 class="mt30 ng-binding" ng-hide="dateFilter.startDate">Reviews over 7 days</h6>
+                                <h6 class="mt30 ng-binding ng-hide" ng-show="dateFilter.startDate">Reviews over  to </h6>
+                                <div class="mt15">
+                                    <h1 class="text-info ng-binding">0</h1>
+                                </div>
+                                <rickshaw class="rickshaw_graph rickshaw_graph-first dashboard-rickshaw mt30 ng-isolate-scope"style="height:133px;">
+                                    <div class="ng-scope rickshaw_graph ng-hide"><svg width="450" height="133">
+
+                                        <g><path d="M0,133Q274.85714285714283,133,317.1428571428571,133C380.5714285714285,133,570.8571428571428,133,634.2857142857142,133S887.9999999999999,133,951.4285714285713,133S1205.142857142857,133,1268.5714285714284,133S1522.2857142857144,133,1585.7142857142858,133S1839.4285714285713,133,1902.8571428571427,133Q1945.1428571428569,133,2220,133L2220,133Q1945.1428571428569,133,1902.8571428571427,133C1839.4285714285713,133,1649.142857142857,133,1585.7142857142858,133S1331.9999999999998,133,1268.5714285714284,133S1014.8571428571428,133,951.4285714285713,133S697.7142857142857,133,634.2857142857142,133S380.5714285714285,133,317.1428571428571,133Q274.85714285714283,133,0,133Z" class="area" fill="rgba(0,217,255,0.24)"></path><path d="M0,133Q274.85714285714283,133,317.1428571428571,133C380.5714285714285,133,570.8571428571428,133,634.2857142857142,133S887.9999999999999,133,951.4285714285713,133S1205.142857142857,133,1268.5714285714284,133S1522.2857142857144,133,1585.7142857142858,133S1839.4285714285713,133,1902.8571428571427,133Q1945.1428571428569,133,2220,133" class="line" fill="none" stroke="rgba(0,217,255,1)" stroke-width="1.5"></path></g>   </svg><div class="ng-hide  detail" style="left: 257.143px;"><div class="x_label left">Saturday 1 July 2017</div><div class="item active left" style="top: 133px;">Number of reviews:&nbsp;0</div><div class="dot active" style="top: 133px; border-color: rgba(0, 217, 255, 0.24);"></div></div></div></rickshaw>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+
+                        <div class="widget-chart bg-white no-padding">
+                            <div class="absolute tp lt rt p15">
+                                <h3 class="mb0 mt0 bold">NPS<sup><small>®</small></sup> score</h3>
+                                <div class="text-success">Hover over the graph to see day-by-day</div>
+                            </div>
+                            <!-- <div class="absolute tp rt pt15 pr15">
+                                <div class="text-success">
+                                    <i class="fa fa-caret-up"></i>
+                                    <span>6%</span>
+                                </div>
+                                <div class="small">+5</div>
+                            </div> -->
+                            <rickshaw class="rickshaw_graph rickshaw_graph-second dashboard-rickshaw ng-isolate-scope" style="height:133px;"><div class="ng-scope rickshaw_graph">
+                                <svg width="639" height="133">
+                                    <g><path d="M0,133Q385.2952380952381,133,444.57142857142856,133C533.4857142857143,133,800.2285714285714,133,889.1428571428571,133S1244.8,133,1333.7142857142856,133S1689.3714285714284,133,1778.2857142857142,133S2133.9428571428575,133,2222.857142857143,133S2578.5142857142855,133,2667.428571428571,133Q2726.7047619047617,133,3112,133L3112,133Q2726.7047619047617,133,2667.428571428571,133C2578.5142857142855,133,2311.7714285714287,133,2222.857142857143,133S1867.2,133,1778.2857142857142,133S1422.6285714285711,133,1333.7142857142856,133S978.0571428571428,133,889.1428571428571,133S533.4857142857143,133,444.57142857142856,133Q385.2952380952381,133,0,133Z" class="area" fill="rgba(0,217,255,0.24)"></path><path d="M0,133Q385.2952380952381,133,444.57142857142856,133C533.4857142857143,133,800.2285714285714,133,889.1428571428571,133S1244.8,133,1333.7142857142856,133S1689.3714285714284,133,1778.2857142857142,133S2133.9428571428575,133,2222.857142857143,133S2578.5142857142855,133,2667.428571428571,133Q2726.7047619047617,133,3112,133" class="line" fill="none" stroke="rgba(0,217,255,1)" stroke-width="1.5"></path></g>                                </svg><div class="detail inactive"></div></div></rickshaw>
+                        </div>
+
+                        <div class="widget" style="margin-bottom: 0; padding-left: 0;">
+
+
+                            <!-- ngIf: activeServer -->
+                            <!-- ngIf: bestServer -->
+                            <!-- ngIf: topNpsServer -->
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row separator">
+                <span>Questions</span><span style="font-size: 87%;">Click on a question tile to view more info</span>
+                <span class="text-red ng-hide" data-ng-show="!validDate">Select 7/14/28 days to view periodic change</span>
+                <hr>
+            </div>
+
+            <!-- Questions -->
+
+            <div class="row">
+
+                <!--<div ng-if="!question.response.nResponse.lenght && !question.response.tResponse"-->
+                <!--class="col-md-12 widget bg-white">-->
+                <!--No Data for current interval-->
+                <!--</div>-->
+                <!-- ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in " id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed   table-condensed-popup align-middle " ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style=""></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw dashboard-rickshaw-popup ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph">
+                                    <g><path d="M0,133Q274.85714285714283,133,317.1428571428571,133C380.5714285714285,133,570.8571428571428,133,634.2857142857142,133S887.9999999999999,133,951.4285714285713,133S1205.142857142857,133,1268.5714285714284,133S1522.2857142857144,133,1585.7142857142858,133S1839.4285714285713,133,1902.8571428571427,133Q1945.1428571428569,133,2220,133L2220,133Q1945.1428571428569,133,1902.8571428571427,133C1839.4285714285713,133,1649.142857142857,133,1585.7142857142858,133S1331.9999999999998,133,1268.5714285714284,133S1014.8571428571428,133,951.4285714285713,133S697.7142857142857,133,634.2857142857142,133S380.5714285714285,133,317.1428571428571,133Q274.85714285714283,133,0,133Z" class="area" fill="rgba(0,217,255,0.24)"></path><path d="M0,133Q274.85714285714283,133,317.1428571428571,133C380.5714285714285,133,570.8571428571428,133,634.2857142857142,133S887.9999999999999,133,951.4285714285713,133S1205.142857142857,133,1268.5714285714284,133S1522.2857142857144,133,1585.7142857142858,133S1839.4285714285713,133,1902.8571428571427,133Q1945.1428571428569,133,2220,133" class="line" fill="none" stroke="rgba(0,217,255,1)" stroke-width="1.5"></path></g>   </svg><div class="ng-hide  detail" style="left: 257.143px;"><div class="x_label left">Saturday 1 July 2017</div><div class="item active left" style="top: 133px;">Number of reviews:&nbsp;0</div><div class="dot active" style="top: 133px; border-color: rgba(0, 217, 255, 0.24);"></div></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info btn-info-table ng-hide ">Show Table
+                                </button>
+                                <button class="btn btn-sm btn-info btn-info-graph  ">Show Graph
+                                </button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true"
+                                        type="button" class="btn btn-default"
+                                        data-dismiss="questions.questions_modal">Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s --><div ng-switch-when="s" class="widget bg-white question cursor-pointer ng-scope">
+                <div class="col-md-2 pl0">
+                    <h3 class="mb0 mt0 bold ng-binding">Q1<br>
+                        <!-- <div class="text-success mt15">
+                             <i class="fa fa-caret-up"></i>
+                             <span>1<i class="fa fa-star" aria-hidden="true"></i></span>
+                         </div> -->
+                    </h3>
+                </div>
+                <div class="col-md-10 pl0 pr0 qtit ng-binding" ng-click="toggleQuestionsModal($index)">
+                    <!--    <div style="float: right; text-align: center; margin-left: 5%;">
+                            <span style="float: left; background-color: #efefef; border-radius: 50%; padding: 4px; font-weight: 600; color: #000;">{{question.foreverSummaryResponse.toFixed(1)}}</span>
+                            <span style="float: left; text-align: left; padding-left: 5px; padding-top:5px; line-height: 110%; font-weight: 600; font-size: 60%;">ALL-TIME<br>AVERAGE</span>
+                        </div> -->
+                    Thanks for dining with us! How was the food?
+                    <br>
+                    <h3 style="float:left;" class="text-xs-center inline">
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>0.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>1.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>2.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>3.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>4.75"></i>
+                        <i class="fa fa-star-half ng-hide" aria-hidden="true" ng-show="question.summaryResponse - Math.floor(question.summaryResponse) >= 0.25 &amp;&amp; question.summaryResponse - Math.floor(question.summaryResponse) <= 0.75"></i>
+                        <!-- ngIf: !question.response.nResponse.length --><span ng-if="!question.response.nResponse.length" class="ng-scope">No Data for current interval</span><!-- end ngIf: !question.response.nResponse.length -->
+                    </h3>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === true &amp;&amp; question.summaryResponse !== -1" class="text-success question-change ng-hide">
+                            <i class="fa fa-caret-up"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.33</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+                    </span>
+                    </span>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === false &amp;&amp; question.summaryResponse !== -1" class="text-red question-change ng-hide">
+                            <i class="fa fa-caret-down"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.33</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+
+                    </span>
+                    </span>
+                    <!--  <span style="float:right;" data-ng-show="validDate && question.increase === 'NO' && question.summaryResponse !== -1" class="question-change">
+                              <span class="question-change-size question-no-change">
+                              <span class="question-change-text-no-change">NO CHANGE</span>
+                      <span class="question-change-direction-text-below" ng-hide="dateFilter.startDate">ON PREVIOUS<br>{{dateFilter.lastNDays}}-DAY PERIOD</span>
+                      <span class="question-change-direction-text-below" ng-show="dateFilter.startDate">ON <br>{{dateFilter.startDate}} to {{dateFilter.endDate}} PERIOD</span>
+
+                      </span>
+                      </span> -->
+                </div>
+            </div>
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t -->
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in " id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle ng-hide" ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style="caret"></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph"><svg width="300" height="300"><path class="path" d="M24.793388429752067,300Q55.489964580873675,300,60.2125147579693,300C67.29634002361274,300,88.5478158205431,300,95.63164108618653,300S123.96694214876032,300,131.05076741440377,300S159.38606847697758,300,166.46989374262103,300S194.80519480519482,300,201.88902007083826,300S230.22432113341205,300,237.3081463990555,300Q242.03069657615112,300,272.7272727272727,300" fill="none" stroke="#F47983" stroke-width="2"></path><path class="path" fill="none" stroke="#00d9ff" stroke-width="2"></path><path class="stroke"></path><path class="stroke"></path><g class="x_ticks_d3 plain" transform="translate(0,300)"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,-4V0H300V-4"></path></g><g class="x_grid_d3"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)" data-x-value="27 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)" data-x-value="28 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)" data-x-value="29 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)" data-x-value="30 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)" data-x-value="1 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)" data-x-value="2 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)" data-x-value="3 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)" data-x-value="4 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,300V0H300V300"></path></g><g class="y_ticks plain"><path class="domain" d="M4,0H0V300H4"></path></g><g class="y_grid"><path class="domain" d="M300,0H0V300H300"></path></g></svg><div class="detail inactive"></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info ng-hide" ng-hide="!showGraphInModal || showTableInModal" ng-click="showTableInModal=true">Show Table</button>
+                                <button class="btn btn-sm btn-info ng-hide" ng-show="showGraphInModal &amp;&amp; showTableInModal" ng-click="showTableInModal=false;resize()">Show Graph</button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="btn btn-default" data-dismiss="questions.questions_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s --><div ng-switch-when="s" class="widget bg-white question cursor-pointer ng-scope">
+                <div class="col-md-2 pl0">
+                    <h3 class="mb0 mt0 bold ng-binding">Q2<br>
+                        <!-- <div class="text-success mt15">
+                             <i class="fa fa-caret-up"></i>
+                             <span>1<i class="fa fa-star" aria-hidden="true"></i></span>
+                         </div> -->
+                    </h3>
+                </div>
+                <div class="col-md-10 pl0 pr0 qtit ng-binding" ng-click="toggleQuestionsModal($index)">
+                    <!--    <div style="float: right; text-align: center; margin-left: 5%;">
+                            <span style="float: left; background-color: #efefef; border-radius: 50%; padding: 4px; font-weight: 600; color: #000;">{{question.foreverSummaryResponse.toFixed(1)}}</span>
+                            <span style="float: left; text-align: left; padding-left: 5px; padding-top:5px; line-height: 110%; font-weight: 600; font-size: 60%;">ALL-TIME<br>AVERAGE</span>
+                        </div> -->
+                    How was the service?
+                    - all answers are confidential
+                    <br>
+                    <h3 style="float:left;" class="text-xs-center inline">
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>0.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>1.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>2.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>3.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>4.75"></i>
+                        <i class="fa fa-star-half ng-hide" aria-hidden="true" ng-show="question.summaryResponse - Math.floor(question.summaryResponse) >= 0.25 &amp;&amp; question.summaryResponse - Math.floor(question.summaryResponse) <= 0.75"></i>
+                        <!-- ngIf: !question.response.nResponse.length --><span ng-if="!question.response.nResponse.length" class="ng-scope">No Data for current interval</span><!-- end ngIf: !question.response.nResponse.length -->
+                    </h3>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === true &amp;&amp; question.summaryResponse !== -1" class="text-success question-change ng-hide">
+                            <i class="fa fa-caret-up"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.67</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+                    </span>
+                    </span>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === false &amp;&amp; question.summaryResponse !== -1" class="text-red question-change ng-hide">
+                            <i class="fa fa-caret-down"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.67</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+
+                    </span>
+                    </span>
+                    <!--  <span style="float:right;" data-ng-show="validDate && question.increase === 'NO' && question.summaryResponse !== -1" class="question-change">
+                              <span class="question-change-size question-no-change">
+                              <span class="question-change-text-no-change">NO CHANGE</span>
+                      <span class="question-change-direction-text-below" ng-hide="dateFilter.startDate">ON PREVIOUS<br>{{dateFilter.lastNDays}}-DAY PERIOD</span>
+                      <span class="question-change-direction-text-below" ng-show="dateFilter.startDate">ON <br>{{dateFilter.startDate}} to {{dateFilter.endDate}} PERIOD</span>
+
+                      </span>
+                      </span> -->
+                </div>
+            </div>
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t -->
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in" id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle ng-hide" ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style="caret"></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph"><svg width="300" height="300"><path class="path" d="M24.793388429752067,300Q55.489964580873675,300,60.2125147579693,300C67.29634002361274,300,88.5478158205431,300,95.63164108618653,300S123.96694214876032,300,131.05076741440377,300S159.38606847697758,300,166.46989374262103,300S194.80519480519482,300,201.88902007083826,300S230.22432113341205,300,237.3081463990555,300Q242.03069657615112,300,272.7272727272727,300" fill="none" stroke="#F47983" stroke-width="2"></path><path class="path" fill="none" stroke="#00d9ff" stroke-width="2"></path><path class="stroke"></path><path class="stroke"></path><g class="x_ticks_d3 plain" transform="translate(0,300)"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,-4V0H300V-4"></path></g><g class="x_grid_d3"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)" data-x-value="27 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)" data-x-value="28 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)" data-x-value="29 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)" data-x-value="30 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)" data-x-value="1 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)" data-x-value="2 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)" data-x-value="3 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)" data-x-value="4 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,300V0H300V300"></path></g><g class="y_ticks plain"><path class="domain" d="M4,0H0V300H4"></path></g><g class="y_grid"><path class="domain" d="M300,0H0V300H300"></path></g></svg><div class="detail inactive"></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info ng-hide" ng-hide="!showGraphInModal || showTableInModal" ng-click="showTableInModal=true">Show Table</button>
+                                <button class="btn btn-sm btn-info ng-hide" ng-show="showGraphInModal &amp;&amp; showTableInModal" ng-click="showTableInModal=false;resize()">Show Graph</button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="btn btn-default" data-dismiss="questions.questions_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s --><div ng-switch-when="s" class="widget bg-white question cursor-pointer ng-scope">
+                <div class="col-md-2 pl0">
+                    <h3 class="mb0 mt0 bold ng-binding">Q3<br>
+                        <!-- <div class="text-success mt15">
+                             <i class="fa fa-caret-up"></i>
+                             <span>1<i class="fa fa-star" aria-hidden="true"></i></span>
+                         </div> -->
+                    </h3>
+                </div>
+                <div class="col-md-10 pl0 pr0 qtit ng-binding" ng-click="toggleQuestionsModal($index)">
+                    <!--    <div style="float: right; text-align: center; margin-left: 5%;">
+                            <span style="float: left; background-color: #efefef; border-radius: 50%; padding: 4px; font-weight: 600; color: #000;">{{question.foreverSummaryResponse.toFixed(1)}}</span>
+                            <span style="float: left; text-align: left; padding-left: 5px; padding-top:5px; line-height: 110%; font-weight: 600; font-size: 60%;">ALL-TIME<br>AVERAGE</span>
+                        </div> -->
+                    What about the atmosphere?
+                    <br>
+                    <h3 style="float:left;" class="text-xs-center inline">
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>0.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>1.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>2.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>3.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>4.75"></i>
+                        <i class="fa fa-star-half ng-hide" aria-hidden="true" ng-show="question.summaryResponse - Math.floor(question.summaryResponse) >= 0.25 &amp;&amp; question.summaryResponse - Math.floor(question.summaryResponse) <= 0.75"></i>
+                        <!-- ngIf: !question.response.nResponse.length --><span ng-if="!question.response.nResponse.length" class="ng-scope">No Data for current interval</span><!-- end ngIf: !question.response.nResponse.length -->
+                    </h3>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === true &amp;&amp; question.summaryResponse !== -1" class="text-success question-change ng-hide">
+                            <i class="fa fa-caret-up"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.67</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+                    </span>
+                    </span>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === false &amp;&amp; question.summaryResponse !== -1" class="text-red question-change ng-hide">
+                            <i class="fa fa-caret-down"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.67</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+
+                    </span>
+                    </span>
+                    <!--  <span style="float:right;" data-ng-show="validDate && question.increase === 'NO' && question.summaryResponse !== -1" class="question-change">
+                              <span class="question-change-size question-no-change">
+                              <span class="question-change-text-no-change">NO CHANGE</span>
+                      <span class="question-change-direction-text-below" ng-hide="dateFilter.startDate">ON PREVIOUS<br>{{dateFilter.lastNDays}}-DAY PERIOD</span>
+                      <span class="question-change-direction-text-below" ng-show="dateFilter.startDate">ON <br>{{dateFilter.startDate}} to {{dateFilter.endDate}} PERIOD</span>
+
+                      </span>
+                      </span> -->
+                </div>
+            </div>
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t -->
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in " id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle ng-hide" ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style="caret"></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph"><svg width="300" height="300"><path class="path" d="M24.793388429752067,300Q55.489964580873675,300,60.2125147579693,300C67.29634002361274,300,88.5478158205431,300,95.63164108618653,300S123.96694214876032,300,131.05076741440377,300S159.38606847697758,300,166.46989374262103,300S194.80519480519482,300,201.88902007083826,300S230.22432113341205,300,237.3081463990555,300Q242.03069657615112,300,272.7272727272727,300" fill="none" stroke="#F47983" stroke-width="2"></path><path class="path" fill="none" stroke="#00d9ff" stroke-width="2"></path><path class="stroke"></path><path class="stroke"></path><g class="x_ticks_d3 plain" transform="translate(0,300)"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,-4V0H300V-4"></path></g><g class="x_grid_d3"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)" data-x-value="27 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)" data-x-value="28 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)" data-x-value="29 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)" data-x-value="30 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)" data-x-value="1 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)" data-x-value="2 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)" data-x-value="3 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)" data-x-value="4 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,300V0H300V300"></path></g><g class="y_ticks plain"><path class="domain" d="M4,0H0V300H4"></path></g><g class="y_grid"><path class="domain" d="M300,0H0V300H300"></path></g></svg><div class="detail inactive"></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info ng-hide" ng-hide="!showGraphInModal || showTableInModal" ng-click="showTableInModal=true">Show Table</button>
+                                <button class="btn btn-sm btn-info ng-hide" ng-show="showGraphInModal &amp;&amp; showTableInModal" ng-click="showTableInModal=false;resize()">Show Graph</button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="btn btn-default" data-dismiss="questions.questions_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s --><div ng-switch-when="s" class="widget bg-white question cursor-pointer ng-scope">
+                <div class="col-md-2 pl0">
+                    <h3 class="mb0 mt0 bold ng-binding">Q4<br>
+                        <!-- <div class="text-success mt15">
+                             <i class="fa fa-caret-up"></i>
+                             <span>1<i class="fa fa-star" aria-hidden="true"></i></span>
+                         </div> -->
+                    </h3>
+                </div>
+                <div class="col-md-10 pl0 pr0 qtit ng-binding" ng-click="toggleQuestionsModal($index)">
+                    <!--    <div style="float: right; text-align: center; margin-left: 5%;">
+                            <span style="float: left; background-color: #efefef; border-radius: 50%; padding: 4px; font-weight: 600; color: #000;">{{question.foreverSummaryResponse.toFixed(1)}}</span>
+                            <span style="float: left; text-align: left; padding-left: 5px; padding-top:5px; line-height: 110%; font-weight: 600; font-size: 60%;">ALL-TIME<br>AVERAGE</span>
+                        </div> -->
+                    How was the value for money?
+                    <br>
+                    <h3 style="float:left;" class="text-xs-center inline">
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>0.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>1.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>2.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>3.75"></i>
+                        <i class="fa fa-star ng-hide" aria-hidden="true" ng-show="question.summaryResponse>4.75"></i>
+                        <i class="fa fa-star-half ng-hide" aria-hidden="true" ng-show="question.summaryResponse - Math.floor(question.summaryResponse) >= 0.25 &amp;&amp; question.summaryResponse - Math.floor(question.summaryResponse) <= 0.75"></i>
+                        <!-- ngIf: !question.response.nResponse.length --><span ng-if="!question.response.nResponse.length" class="ng-scope">No Data for current interval</span><!-- end ngIf: !question.response.nResponse.length -->
+                    </h3>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === true &amp;&amp; question.summaryResponse !== -1" class="text-success question-change ng-hide">
+                            <i class="fa fa-caret-up"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.67</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+                    </span>
+                    </span>
+                    <span style="float:right;" data-ng-show="validDate &amp;&amp; question.increase === false &amp;&amp; question.summaryResponse !== -1" class="text-red question-change ng-hide">
+                            <i class="fa fa-caret-down"></i>
+                            <span class="question-change-size">
+                                <span class="question-change-direction-text"></span>
+                    <span class="question-change-number ng-binding">4.67</span>
+                    <span class="question-change-direction-text-below ng-binding" ng-hide="dateFilter.startDate">ON PREVIOUS<br>7-DAY PERIOD</span>
+                    <span class="question-change-direction-text-below ng-binding ng-hide" ng-show="dateFilter.startDate">ON <br> to  PERIOD</span>
+
+                    </span>
+                    </span>
+                    <!--  <span style="float:right;" data-ng-show="validDate && question.increase === 'NO' && question.summaryResponse !== -1" class="question-change">
+                              <span class="question-change-size question-no-change">
+                              <span class="question-change-text-no-change">NO CHANGE</span>
+                      <span class="question-change-direction-text-below" ng-hide="dateFilter.startDate">ON PREVIOUS<br>{{dateFilter.lastNDays}}-DAY PERIOD</span>
+                      <span class="question-change-direction-text-below" ng-show="dateFilter.startDate">ON <br>{{dateFilter.startDate}} to {{dateFilter.endDate}} PERIOD</span>
+
+                      </span>
+                      </span> -->
+                </div>
+            </div>
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t -->
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><div ng-repeat-end="" class="row separator ng-scope" ng-if="($window.innerWidth >= 992 &amp;&amp; $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 &amp;&amp; $index !== 0 : ($index + 1) % 4 === 0 &amp;&amp; $index !== 0"></div><!-- end ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in " id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle ng-hide" ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style="caret"></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph"><svg width="300" height="300"><path class="path" d="M24.793388429752067,300Q55.489964580873675,300,60.2125147579693,300C67.29634002361274,300,88.5478158205431,300,95.63164108618653,300S123.96694214876032,300,131.05076741440377,300S159.38606847697758,300,166.46989374262103,300S194.80519480519482,300,201.88902007083826,300S230.22432113341205,300,237.3081463990555,300Q242.03069657615112,300,272.7272727272727,300" fill="none" stroke="#F47983" stroke-width="2"></path><path class="path" fill="none" stroke="#00d9ff" stroke-width="2"></path><path class="stroke"></path><path class="stroke"></path><g class="x_ticks_d3 plain" transform="translate(0,300)"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,-4V0H300V-4"></path></g><g class="x_grid_d3"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)" data-x-value="27 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)" data-x-value="28 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)" data-x-value="29 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)" data-x-value="30 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)" data-x-value="1 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)" data-x-value="2 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)" data-x-value="3 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)" data-x-value="4 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,300V0H300V300"></path></g><g class="y_ticks plain"><path class="domain" d="M4,0H0V300H4"></path></g><g class="y_grid"><path class="domain" d="M300,0H0V300H300"></path></g></svg><div class="detail inactive"></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info ng-hide" ng-hide="!showGraphInModal || showTableInModal" ng-click="showTableInModal=true">Show Table</button>
+                                <button class="btn btn-sm btn-info ng-hide" ng-show="showGraphInModal &amp;&amp; showTableInModal" ng-click="showTableInModal=false;resize()">Show Graph</button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="btn btn-default" data-dismiss="questions.questions_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s -->
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t --><div ng-switch-when="t" class="widget bg-white t-question cursor-default ng-scope">
+                <div class="col-md-2 pl0">
+                    <h3 class="mb0 mt0 bold ng-binding">Q5
+                    </h3>
+                </div>
+                <div class="col-md-10 pl0 qtit ng-binding">What could we have done to improve your experience (for instance, value) today?<br>
+                    <h3 class="mb2 ng-pristine ng-valid" ng-model="modal">
+                        <!-- ngIf: !question.summaryResponse.length --><span ng-if="!question.summaryResponse.length" style="font-size: 75%;" class="ng-scope"><em>Please check the "<a style="border-bottom: 1px dotted #000;" ui-sref="app.social.promote" href="#/social/promote">Promote</a>" tab</em></span><!-- end ngIf: !question.summaryResponse.length -->
+                        <!-- ngIf: question.summaryResponse.length -->
+                    </h3>
+                </div>
+            </div>
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in" id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle ng-hide" ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style="caret"></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph"><svg width="300" height="300"><path class="path" d="M24.793388429752067,300Q55.489964580873675,300,60.2125147579693,300C67.29634002361274,300,88.5478158205431,300,95.63164108618653,300S123.96694214876032,300,131.05076741440377,300S159.38606847697758,300,166.46989374262103,300S194.80519480519482,300,201.88902007083826,300S230.22432113341205,300,237.3081463990555,300Q242.03069657615112,300,272.7272727272727,300" fill="none" stroke="#F47983" stroke-width="2"></path><path class="path" fill="none" stroke="#00d9ff" stroke-width="2"></path><path class="stroke"></path><path class="stroke"></path><g class="x_ticks_d3 plain" transform="translate(0,300)"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,-4V0H300V-4"></path></g><g class="x_grid_d3"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)" data-x-value="27 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)" data-x-value="28 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)" data-x-value="29 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)" data-x-value="30 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)" data-x-value="1 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)" data-x-value="2 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)" data-x-value="3 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)" data-x-value="4 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,300V0H300V300"></path></g><g class="y_ticks plain"><path class="domain" d="M4,0H0V300H4"></path></g><g class="y_grid"><path class="domain" d="M300,0H0V300H300"></path></g></svg><div class="detail inactive"></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info ng-hide" ng-hide="!showGraphInModal || showTableInModal" ng-click="showTableInModal=true">Show Table</button>
+                                <button class="btn btn-sm btn-info ng-hide" ng-show="showGraphInModal &amp;&amp; showTableInModal" ng-click="showTableInModal=false;resize()">Show Graph</button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="btn btn-default" data-dismiss="questions.questions_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s -->
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t --><div ng-switch-when="t" class="widget bg-white t-question cursor-default ng-scope">
+                <div class="col-md-2 pl0">
+                    <h3 class="mb0 mt0 bold ng-binding">Q6
+                    </h3>
+                </div>
+                <div class="col-md-10 pl0 qtit ng-binding">What could we have done to improve?<br>
+                    <h3 class="mb2 ng-pristine ng-valid" ng-model="modal">
+                        <!-- ngIf: !question.summaryResponse.length --><span ng-if="!question.summaryResponse.length" style="font-size: 75%;" class="ng-scope"><em>Please check the "<a style="border-bottom: 1px dotted #000;" ui-sref="app.social.promote" href="#/social/promote">Promote</a>" tab</em></span><!-- end ngIf: !question.summaryResponse.length -->
+                        <!-- ngIf: question.summaryResponse.length -->
+                    </h3>
+                </div>
+            </div>
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' --><div ng-repeat-start="question in questions | orderBy: 'index'" ng-once="" ng-switch="question.type" class="col-md-4 col-lg-3 ng-scope">
+
+                <div class="modal fade in " id="qs_modal" role="dialog" ng-show="questions.questions_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="close" data-dismiss="questions.questions_modal">×</button>
+                                <h4 class="modal-title ng-binding">Q1: </h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle " ng-show="showTableInModal">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span style="caret"></span></td>
+                                        <td class="noborder" style="width:35%">Response</td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">NPS</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
+                                    </tbody></table>
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope " rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph"><svg width="300" height="300"><path class="path" d="M24.793388429752067,300Q55.489964580873675,300,60.2125147579693,300C67.29634002361274,300,88.5478158205431,300,95.63164108618653,300S123.96694214876032,300,131.05076741440377,300S159.38606847697758,300,166.46989374262103,300S194.80519480519482,300,201.88902007083826,300S230.22432113341205,300,237.3081463990555,300Q242.03069657615112,300,272.7272727272727,300" fill="none" stroke="#F47983" stroke-width="2"></path><path class="path" fill="none" stroke="#00d9ff" stroke-width="2"></path><path class="stroke"></path><path class="stroke"></path><g class="x_ticks_d3 plain" transform="translate(0,300)"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)"><line y2="-4" x2="0"></line><text dy="0em" y="-7" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,-4V0H300V-4"></path></g><g class="x_grid_d3"><g class="tick" style="opacity: 1;" transform="translate(24.793388429752067,0)" data-x-value="27 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">27 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(60.2125147579693,0)" data-x-value="28 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">28 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(95.63164108618653,0)" data-x-value="29 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">29 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(131.05076741440377,0)" data-x-value="30 June 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">30 June 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(166.46989374262103,0)" data-x-value="1 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">1 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(201.88902007083826,0)" data-x-value="2 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">2 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(237.3081463990555,0)" data-x-value="3 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">3 July 2017</text></g><g class="tick" style="opacity: 1;" transform="translate(272.7272727272727,0)" data-x-value="4 July 2017"><line y2="300" x2="0"></line><text dy="0em" y="-3" x="0" style="text-anchor: middle;">4 July 2017</text></g><path class="domain" d="M0,300V0H300V300"></path></g><g class="y_ticks plain"><path class="domain" d="M4,0H0V300H4"></path></g><g class="y_grid"><path class="domain" d="M300,0H0V300H300"></path></g></svg><div class="detail inactive"></div></div></rickshaw>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-sm btn-info " ng-hide="!showGraphInModal || showTableInModal" ng-click="showTableInModal=true">Show Table</button>
+                                <button class="btn btn-sm btn-info " ng-show="showGraphInModal &amp;&amp; showTableInModal" ng-click="showTableInModal=false;resize()">Show Graph</button>
+                                <button ng-click="questions.questions_modal ? questions.questions_modal = false : questions.questions_modal = true" type="button" class="btn btn-default" data-dismiss="questions.questions_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ngSwitchWhen: s -->
+
+                <!-- ngSwitchWhen: m -->
+
+                <!-- ngSwitchWhen: n -->
+
+                <!-- ngSwitchWhen: t -->
+
+            </div>
+                <!-- ngIf: ($window.innerWidth >= 992 && $window.innerWidth < 1200) ? ($index + 1) % 3 === 0 && $index !== 0 : ($index + 1) % 4 === 0 && $index !== 0 --><!-- end ngRepeat: question in questions | orderBy: 'index' -->
+
+            </div>
+
+
+            <div class="row separator">
+                <span>Stats</span>
+                <hr>
+            </div>
+
+            <div class="row">
+
+                <!-- <div class="col-md-4">
+                        <section>
+                            <div class="widget bg-white">
+                                <div class="widget-icon bg-primary pull-left fa fa-star">
+                                </div>
+                                <div class="overflow-hidden">
+                                    <span class="widget-title">6 days in a row!</span>
+                                    <span class="widget-subtitle">Visit every day to improve your streak</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div> -->
+
+                <div class="col-md-4">
+                    <section>
+                        <div class="widget bg-white">
+                            <div class="widget-icon bg-success pull-left fa fa-arrow-down" ng-class="['fa-arrow-', reviews.upDown].join('')">
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="widget-title percent ng-binding">Reviews down <strong class="ng-binding"></strong></span>
+                                <span class="widget-subtitle">Compared with the same period last week</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <div class="col-md-4">
+                    <section>
+                        <div class="widget bg-white">
+                            <div class="widget-icon bg-lightblue pull-left fa fa-smile-o">
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="widget-title percent">Response rate: <strong class="ng-binding">0</strong></span>
+                                <span class="widget-subtitle">Based on your estimated footfall</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+
+            <div class="row separator">
+                <span>Miscellaneous</span>
+                <hr>
+            </div>
+
+            <div class="row">
+                <!-- <div class="col-md-3">
+                        <section class="widget bg-lightblue text-center">
+                            <div class="widget-details">
+                                <h2 class="no-margin bold">17&#176;C</h2>
+                                <small class="text-uppercase">Islington, London</small>
+                            </div>
+                            <div class="widget-details">
+                                <div class="climacon cloud rain sun fa-4x"></div>
+                            </div>
+                        </section>
+                    </div>
+            -->
+                <!--
+                    <div class="col-md-6">
+                      <section class="widget bg-white text-center">
+                        <div class="widget-details col-xs-4">
+                          <h2 class="no-margin">13</h2>
+                          <small class="text-uppercase">Recommendations</small>
+                        </div>
+                        <div class="widget-details col-xs-4">
+                          <h2 class="no-margin">2</h2>
+                          <small class="text-uppercase">In progress</small>
+                        </div>
+                        <div class="widget-details col-xs-4">
+                          <h2 class="no-margin">28</h2>
+                          <small class="text-uppercase">Enacted</small>
+                        </div>
+                      </section>
+                    </div>
+
+                  -->
+
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+
+        <!------------------------>
+        <!-- Main content end -->
+        <!------------------------>
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="content-footer" data-ng-include="'views/common/footer.html'">
+        <nav class="footer-right">
+            <ul class="nav">
+                <li>
+                    <a href="mailto:hello@getbuzzer.com">Feedback</a>
+                </li>
+                <li>
+                    <a href="#" class="scroll-up" >
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="footer-left">
+            <ul class="nav">
+                <li>
+                    <a>© 2017 Buzzer Feedback. All rights reserved.</a>
+                </li>
+                <li>
+                    <a href="javascript:;"><u>Privac</u>y</a>
+                </li>
+                <li>
+                    <a href="https://getbuzzer.com/blog"><u>Read our blo</u>g</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+
+
+
+
+
+
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyChWfztaeQfMRYPGpMdj3O6ifKBGceJKV4"></script>
+<!-- build:js scripts/app.min.js -->
+<script src="scripts/extensions/modernizr.js"></script>
+<script src="vendor/jquery/dist/jquery.js"></script>
+
+<script src="vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+<script src="scripts/extensions/lib.js"></script>
+<script src="vendor/fastclick/lib/fastclick.js"></script>
+
+<script src="vendor/pdfmake/pdfmake.min.js"></script>
+<script src="vendor/pdfmake/vfs_fonts.js"></script>
+<script src="vendor/moment/moment.js"></script>
+<script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+
+<script type="text/javascript" src="//l2.io/ip.js?var=myIp"></script>
+
+
+<!-- Custom script -->
+
+
+<script type="text/javascript" src="scripts/custom_script.js"></script>
+
+
+
+
+</body>
+</html>

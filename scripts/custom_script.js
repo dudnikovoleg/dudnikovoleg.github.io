@@ -7,7 +7,10 @@
 
     $(document).ready(function () {
 
-        $('.date-picker').daterangepicker();
+        $('.date-picker').daterangepicker({
+             "startDate": "12/01/2016",
+             "endDate": "07/04/2017"
+        });
 
 
 

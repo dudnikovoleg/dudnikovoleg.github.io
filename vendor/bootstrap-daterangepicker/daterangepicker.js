@@ -118,7 +118,7 @@
                 '</div>' +
                 '<div class="ranges">' +
                     '<div class="range_inputs">' +
-                        '<a href="./dashboard.html"><button class="applyBtn" disabled="disabled" type="button"></button></a>' +
+                        '<a href="./index.html"><button class="applyBtn" disabled="disabled" type="button"></button></a>' +
                         '<button class="cancelBtn" type="button"></button>' +
                     '</div>' +
                 '</div>' +
