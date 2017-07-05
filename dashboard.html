@@ -452,7 +452,7 @@
                                         <h4 class="modal-title ng-binding">Q1: </h4>
                                     </div>
                                     <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
-                                        <table class="table table-bordered table-hover table-condensed align-middle"
+                                        <table class="table table-bordered table-condensed-popup table-hover table-condensed align-middle"
                                                ng-show="showTableInModal">
                                             <thead class="org-grad">
                                             <tr class="bold">
@@ -754,7 +754,7 @@
                                             <!-- end ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
                                             </tbody>
                                         </table>
-                                        <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide"
+                                        <rickshaw class="rickshaw_graph dashboard-rickshaw dashboard-rickshaw-popup ng-isolate-scope ng-hide"
                                                   rickshaw-options="optionsModalGraph"
                                                   rickshaw-features="featuresModalGraph"
                                                   rickshaw-series="seriesModalGraph" recalculate-height="true">

@@ -462,7 +462,7 @@
                                 <h4 class="modal-title ng-binding">Q1: </h4>
                             </div>
                             <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
-                                <table class="table table-bordered table-hover table-condensed align-middle " ng-show="showTableInModal">
+                                <table class="table table-bordered table-hover table-condensed   table-condensed-popup align-middle " ng-show="showTableInModal">
                                     <thead class="org-grad">
                                     <tr class="bold">
                                         <td class="noborder" style="width:15%">Date <span style=""></span></td>
@@ -473,7 +473,7 @@
                                     </thead>
                                     <tbody><!-- ngRepeat: n in [] | range:questions[questions.modalIndex].response._created_at.length -->
                                     </tbody></table>
-                                <rickshaw class="rickshaw_graph dashboard-rickshaw ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph">
+                                <rickshaw class="rickshaw_graph dashboard-rickshaw dashboard-rickshaw-popup ng-isolate-scope ng-hide" rickshaw-options="optionsModalGraph" rickshaw-features="featuresModalGraph" rickshaw-series="seriesModalGraph" recalculate-height="true" ng-hide="!showGraphInModal || showTableInModal"><div class="ng-scope rickshaw_graph">
                                     <g><path d="M0,133Q274.85714285714283,133,317.1428571428571,133C380.5714285714285,133,570.8571428571428,133,634.2857142857142,133S887.9999999999999,133,951.4285714285713,133S1205.142857142857,133,1268.5714285714284,133S1522.2857142857144,133,1585.7142857142858,133S1839.4285714285713,133,1902.8571428571427,133Q1945.1428571428569,133,2220,133L2220,133Q1945.1428571428569,133,1902.8571428571427,133C1839.4285714285713,133,1649.142857142857,133,1585.7142857142858,133S1331.9999999999998,133,1268.5714285714284,133S1014.8571428571428,133,951.4285714285713,133S697.7142857142857,133,634.2857142857142,133S380.5714285714285,133,317.1428571428571,133Q274.85714285714283,133,0,133Z" class="area" fill="rgba(0,217,255,0.24)"></path><path d="M0,133Q274.85714285714283,133,317.1428571428571,133C380.5714285714285,133,570.8571428571428,133,634.2857142857142,133S887.9999999999999,133,951.4285714285713,133S1205.142857142857,133,1268.5714285714284,133S1522.2857142857144,133,1585.7142857142858,133S1839.4285714285713,133,1902.8571428571427,133Q1945.1428571428569,133,2220,133" class="line" fill="none" stroke="rgba(0,217,255,1)" stroke-width="1.5"></path></g>   </svg><div class="ng-hide  detail" style="left: 257.143px;"><div class="x_label left">Saturday 1 July 2017</div><div class="item active left" style="top: 133px;">Number of reviews:&nbsp;0</div><div class="dot active" style="top: 133px; border-color: rgba(0, 217, 255, 0.24);"></div></div></div></rickshaw>
                             </div>
                             <div class="modal-footer">

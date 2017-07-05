@@ -51,15 +51,15 @@
 
 
             if ($(this).hasClass( 'btn-info-table' )){
-                $('.btn-info-graph, .table-condensed').removeClass('ng-hide');
+                $('.btn-info-graph, .table-condensed-popup').removeClass('ng-hide');
                 $(this).addClass('ng-hide');
-                $('.rickshaw_graph').addClass('ng-hide');
+                $('.dashboard-rickshaw-popup').addClass('ng-hide');
 
             }
              if ($(this).hasClass( 'btn-info-graph' )){
-                 $('.btn-info-table, .rickshaw_graph').removeClass('ng-hide');
+                 $('.btn-info-table, .dashboard-rickshaw-popup').removeClass('ng-hide');
                  $(this).addClass('ng-hide');
-                 $('.table-condensed').addClass('ng-hide');
+                 $('.table-condensed-popup').addClass('ng-hide');
 
              }
 
