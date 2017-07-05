@@ -1,0 +1,159 @@
+/** Datepicker custom style **/
+
+
+.datepicker {
+	padding-top: 15px;
+	width: 89.2%;
+	margin: 0;
+	font-family: $kievit;
+	border-radius: 0;
+	text-align: center;
+	border: none;
+
+	background-repeat: no-repeat;
+	background-size: 3.5%;
+	background-position: 96%;
+	.today.old{
+		pointer-events: none;
+		background: #f2f4fa ;
+	}
+	&.datepicker-dropdown{
+		box-shadow: 0 15px 60px -23px rgba(0, 0, 0, 0.75);
+
+	}
+	.content-header {
+		position: relative;
+		max-width: 314px;
+		margin: 5px auto 10px auto;
+
+		.datepicker-switch {
+			display: inline-block;
+			padding: 2px 25px;
+			background: #f3f3f5;
+			border-radius: 100px;
+			background-repeat: no-repeat;
+			font-size: 1.15em;
+			border: solid 1px #e9edf4;
+			background-size: 20%;
+			pointer-events: none;
+
+		}
+		.next,
+		.prev {
+			height: 100%;
+			position: absolute;
+		}
+		.next {
+			right: 10px;
+		}
+		.prev {
+			left: 10px;
+		}
+
+		.left,
+		.right {
+			display: inline-block;
+			width: 20px;
+			height: 100%;
+			background-image: url("../img/svg/right_b.svg");
+			vertical-align: middle;
+
+			background-repeat: no-repeat;
+			background-position: center;
+			&:hover {
+				background-image: url("../img/svg/right_g.svg");
+			}
+		}
+		.left {
+			transform: rotateY(180deg);
+		}
+	}
+
+
+
+	table{
+		margin: 0 auto;
+		font-family: $kievit;
+		font-size: 1em;
+
+
+
+		.dow{
+			padding: 0 5px;
+			font-weight: normal;
+			font-family: $openS;
+			color: #9da1ad;
+		}
+
+		.table-condensed > thead > tr > th{
+			padding: 0;
+		}
+
+		.dateheader{
+			padding: 10px 0;
+		}
+		tr td{
+			padding: 5px;
+			font-family: $openS;
+			font-weight: 700;
+			border: solid 1px #e9edf4;
+			width: 45px;
+			height: 45px;
+
+			&.today.old .wrapp-custom {
+				background: #f2f4fa;
+				color: #f2f4fa;
+			}
+			&.active .wrapp-custom{
+				background: $accent-col;
+				color: #ffffff;
+				&:hover{
+					color: $accent-col;
+				}
+			}
+
+
+
+			.wrapp-custom{
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				vertical-align: middle;
+				padding: 5px;
+				border-radius: 100px;
+				&:hover{
+					color: $accent-col;
+				}
+
+			}
+
+			&.prev-item .wrapp-custom:hover{
+				color: #1a1b1b;
+			}
+
+			&.old.disabled{
+				background-color: $second-col ;
+				background-image: none ;
+			}
+			&.new{
+				display: none;
+			}
+			//Class for reserve date
+			&.disabled{
+				pointer-events: none;
+				background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgb(232, 234, 240) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%); /* w3c */
+			&:hover{
+				color: #1a1b1b;
+			}
+			}
+		}
+	}
+}
+.datepicker-dropdown.datepicker-orient-bottom:after{
+	display: none;
+}
+.datepicker-dropdown.datepicker-orient-bottom:before{
+	display: none;
+}
+
+

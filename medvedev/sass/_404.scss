@@ -1,0 +1,62 @@
+body{
+	position: static;
+	display: block;
+}
+.sidebar-error{
+	position: absolute;
+	width: 310px;
+	z-index: 2;
+}
+
+
+.error-page{
+	.bg-sidebar{
+		z-index: 2;
+	}
+	.error-page-content{
+		min-height: 100vh;
+		padding: 200px 8%;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center right;
+		.title{
+			margin: 0 0 40px 0;
+			font-family: "KievitExtraBold", "Open Sans", sans-serif;
+			font-size: 2.67em;
+		}
+
+
+		.text-wrapp {
+			margin-bottom: 20px;
+			margin-left: -5px;
+			padding: 2px 0 3px 0;
+			border-left: 10px solid #fff;
+			display: block;
+			line-height: 23px;
+		}
+		.text{
+			margin:0;
+			padding: 3px 0 4px 0;
+			font-size: .9em;
+			background-color: #fff;
+			display: inline;
+			.heading {
+				background-color: #fff;
+			}
+			.indent {
+				position: relative;
+				left: -5px;
+			}
+			.subhead {
+				padding: 0 15px;
+				float: left;
+				margin: 3px 0 0 -29px;
+				outline: 1px solid #fff;
+				line-height: 1.15
+			}
+			.link{
+				color: $accent-col;
+			}
+		}
+	}
+}
