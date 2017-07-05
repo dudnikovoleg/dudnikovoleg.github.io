@@ -1,0 +1,9 @@
+.open{
+    display: block ;
+}
+.loading.loading-hidden,
+.preloader,
+.question-change,
+.ng-hide{
+    display: none;
+}

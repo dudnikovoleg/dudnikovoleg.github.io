@@ -1,0 +1,500 @@
+<!doctype html>
+<html class="no-js" data-ng-app="bzrdashApp">
+<head>
+    <meta charset="utf-8">
+    <title>Buzzer: Dashboard</title>
+    <base >
+    <meta name="description" content="The Buzzer Feedback dashboard for restaurant managers and owners.">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta id="load_styles_before">
+    <link rel="shortcut icon" href="../getbuzzer.com/wp-content/uploads/2016/11/favicon-16x16.html" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="styles/font-awesome.css">
+    <link rel="stylesheet" href="styles/panel.css">
+    <link rel="stylesheet" href="styles/feather.css">
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="styles/is.css">
+    <!-- build:css styles/bzrdash.min.css -->
+    <link rel="stylesheet" href="styles/bzrdash.css">
+    <link rel="stylesheet" href="styles/bzrdash.skins.css">
+
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="styles/custum_style.css">
+
+
+
+
+    <!-- endbuild -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+    </style>
+
+</head>
+<body>
+<div class="quick-launch-panel" data-ng-include="'views/common/quick-launch-panel.html'">
+    <div class="container">
+        <div class="quick-launcher-inner">
+            <a href="#" class="close">×</a>
+            <div class="css-table-xs">
+                <div class="col">
+                    <a href="https://getbuzzer.com">
+                        <i class="fa fa-desktop"></i>
+                        <span>Buzzer website</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a   href="#">
+                        <i class="fa fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a   href="#">
+                        <i class="fa fa-newspaper-o"></i>
+                        <span>News</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a   href="#">
+                        <i class="fa fa-question"></i>
+                        <span>Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- App start -->
+
+
+
+<div class="app">
+    <div class="preloader "></div>
+    <div class="sidebar-panel offscreen-left is-mobile-sidebar-closed">
+        <div class="brand">
+            <!-- logo -->
+            <div class="brand-logo">
+                <img height="15" alt="" src="images/logo.png">
+            </div>
+            <!-- /logo -->
+            <!-- toggle small sidebar menu -->
+            <a href="#" class="toggle-sidebar hamburger-icon v3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <!-- /toggle small sidebar menu -->
+        </div>
+        <!-- main navigation -->
+        <nav role="navigation" >
+
+            <ul class="nav">
+                <!-- dashboard -->
+                <!-- ngIf: hasPermission('dashboard') -->
+                <li >
+                    <a  href="dashboard.html">
+                        <i class="fa fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <!-- /dashboard -->
+                <li class="open">
+                    <a  href="#">
+                        <i class="fa fa-user"></i>
+                        <span>Customer care</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="staff.html">
+                        <i class="fa fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="promote.html">
+                        <i class="fa fa-bullhorn"></i>
+                        <span>Promote</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-newspaper-o"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="#">
+                        <i class="fa fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a  href="#">
+                        <i class="fa fa-database"></i>
+                        <span>Raw data</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="#">
+                        <i class="fa fa-lock"></i>
+                        <span>Lock</span>
+                    </a>
+                </li>
+                <!--/lock-->
+                <!--logout-->
+                <li >
+                    <a href="#">
+                        <i class="fa fa-sign-out"></i>
+                        <span>Sign out</span>
+                    </a>
+                </li>
+                <!-- /logout -->
+            </ul>
+        </nav>
+        <!-- /main navigation -->
+    </div>
+
+    <div class="main-panel">
+
+
+
+
+        <!-- header end -->
+
+
+        <div class="header navbar">
+            <div>
+                <div class="brand visible-sm visible-xs">
+                    <div class="toggle-offscreen">
+                    </div>
+                    <div class="hamburger-icon v3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="brand-logo">
+                        <img height="15" alt="" src="images/logo-dark.png">
+                    </div>
+                    <a  class="signout-icon">
+                        <i class="fa fa-sign-out"></i>
+                    </a>
+                    <a href="#" class="calendar-icon">
+                        <i class="fa fa-calendar "></i>
+                    </a>
+                    <p class="navbar-text ng-binding">
+                        Dashboard
+                    </p>
+                </div>
+                <ul class="nav navbar-nav hidden-sm hidden-xs">
+                    <li>
+                        <p class="navbar-text ng-binding">
+                            Customer Care
+
+                        </p>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+                    <li class="datebuttons-wrapper">
+                        <button type="button" class="btn btn-sm btn-info date-button">7 Days</button>
+                        <button type="button" class="btn btn-sm btn-info date-button">14 Days</button>
+                        <button type="button" class="btn btn-sm btn-info date-button">28 Days</button>
+                    </li>
+                    <li class="daterangepicker-wrapper">
+                        <input type="text"  class="form-control date-picker ng-isolate-scope ng-pristine ng-valid" >
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="fa fa-calendar "></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Currently showing data from <strong class="ng-binding">2016 12 01</strong> to <strong class="ng-binding">2017 07 04</strong>
+                        </a>
+                    </li>
+                    <li id="layout-quick-launch-btn">
+                        <a href="#">
+                            <i class="fa fa-arrow-up"></i>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#" class="dropdown-toggle " aria-haspopup="true" aria-expanded="false">
+                            <img class="header-avatar img-circle ml10 " alt="user " title="user " src="images/dropdown-toggle-logo.png">
+                            <span class="pull-left  ng-binding">
+                     Demo Restaurant
+                     </span>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <!-- settings link  <li>
+                               <a href="#/settings/ ">Settings</a>
+                               </li> -->
+                            <li>
+                                <a href="#">
+                                    <span>News</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">Sign out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!------------------------>
+        <!-- Main content start -->
+        <!------------------------>
+
+
+
+
+
+        <div class="main-content " analytics-on="scrollby" data-ui-view=""><!-- uiView:  --><div ui-view="" class="ng-scope"><div ng-controller="mapCtrl" class="ng-scope">
+            <div class="loading loading-hidden ng-hide" ng-controller="loadingCaptionCtrl" ng-class="loadingAnimClass" ng-show="isLoadingVisible">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+            <div ng-class="loadingAnimClass" class="loading-hidden">
+                <div class="modal fade in ng-hide" id="emails_modal" role="dialog" ng-show="emailData.emails_modal" style="">
+                    <div class="modal-dialog modal-lg" style="height: 75%">
+                        <div class="modal-content" style="height: 100%">
+                            <div class="modal-header">
+                                <button ng-click="emailData.emails_modal = !emailData.emails_modal" type="button" class="close" data-dismiss="emailData.emails_modal">×</button>
+                                <h4 class="modal-title">Email Logs</h4>
+                            </div>
+                            <div class="modal-body" style="max-height: 70%; overflow-y: scroll">
+                                <table class="table table-bordered table-hover table-condensed align-middle">
+                                    <thead class="org-grad">
+                                    <tr class="bold">
+                                        <td class="noborder" style="width:15%">Date <span></span></td>
+                                        <td class="noborder" style="width:30%">Email Address</td>
+                                        <td class="noborder" style="width:10%">Content</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody><!-- ngRepeat: email in emailData.logs | filter:{type: emailData.emails_modal_type} -->
+                                    </tbody></table>
+                            </div>
+                            <div class="modal-footer">
+                                <button ng-click="emailData.emails_modal = !emailData.emails_modal" type="button" class="btn btn-default" data-dismiss="emailData.emails_modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--email table temp hide
+                    <table class="table table-bordered table-hover table-condensed align-middle" style="min-width: 100%; width: auto; max-width: none;">
+                        <tbody>
+                        <tr class="bold" style="overflow: scroll;">
+                            <td style="width:30%">Customer category</td>
+                            <td style="width:10%">Emails active?</td>
+                            <td style="width:15%">Email text</td>
+                            <td style="width:10%">Public review referrals</td>
+                            <td style="width:10%">Views</td>
+                            <td style="width:15%">Auto-emails sent</td>
+                            <td style="width:10%">Read email logs</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-warning" style="font-weight: 800; font-size: 120%;">😡 Detractor</strong></td>
+                            <td><label class="switch switch-sm mb15" for="toggle-0"><input type="checkbox" id="toggle-0" ng-checked="team.active" checked="checked">
+                                <span> <i class="handle"></i> </span>
+                            </label>
+                            </td>
+                            <td><button type="button" class="btn btn-black btn-outline btn-round" disabled="">Edit</button></td>
+                            <td><em>Disabled</em></td>
+                            <td>{{emailData.detractor.viewCount}}</td>
+                            <td>{{emailData.detractor.totalCount}}</td>
+                            <td><button type="button" class="btn btn-black btn-outline btn-round"
+                                        data-ng-click="emailData.emails_modal = true;emailData.emails_modal_type = 'detractor';">Logs
+                            </button></td>
+                        </tr>
+
+
+                        <tr>
+                            <td><strong class="text-success" style="font-weight: 800; font-size: 120%;">😀 Promoter</strong></td>
+
+                            <td><label class="switch switch-sm mb15" for="toggle-1"><input type="checkbox" id="toggle-1" ng-checked="team.active" checked="checked">
+                                <span> <i class="handle"></i> </span>
+                            </label>
+                            </td>
+
+                            <td><button type="button" class="btn btn-black btn-outline btn-round" disabled="">Edit</button></td>
+                            <td>
+                                <a class="fa fa-google-plus"></a>&nbsp;&nbsp;{{emailData.promoter.googleCount}}<br>
+                                <a class="fa fa-tripadvisor"></a>&nbsp;&nbsp;{{emailData.promoter.tripAdvisorCount}}</td>
+                            <td>{{emailData.promoter.viewCount}}</td>
+                            <td>{{emailData.promoter.totalCount}}</td>
+                            <td><button type="button" class="btn btn-black btn-outline btn-round"
+                                        data-ng-click="emailData.emails_modal = true;emailData.emails_modal_type = 'promoter';">Logs
+                            </button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                  -->
+                <div class="col md12">
+                    <div class="widget bg-grey-grad" style="font-size:110%; font-weight: 600;">Our Customer Care algorithm uses the Net Promoter System®, which you can <a style="border-bottom: 1px dotted;" href="http://www.netpromotersystem.com/about/measuring-your-net-promoter-score.aspx" target="_blank">read more about here</a></div>
+                </div>
+                <div>
+                    <button class="btn btn-info ng-isolate-scope" type="button" ng-csv="allCommentsCSV" csv-header="['Category', 'Rating', 'Email', 'Comment']" filename="Customer-Care-Demo Restaurant.csv" style="margin: auto; display: block; font-weight: 600;">Download a CSV spreadsheet of this customer data</button>
+                </div>
+                <br>
+                <div style="text-align:center; border-radius: 9px; padding: 1%; float:left; position: relative;" class="col-sm-12 col-md-4">
+                    <h3 style="background-image: linear-gradient(to right,#ffa600,#fcca65); -webkit-background-clip: text; margin: 0; font-weight: 600;">Detractors 😡</h3><span class="nps-persona">I am probably not a happy customer</span>
+                    <div>
+                        <button class="btn btn-warning btn-xs ng-isolate-scope" type="button" ng-csv="detractorsCSV" csv-header="['Category', 'Rating', 'Email', 'Comment']" filename="Customer-Care-detractors.csv" style="margin: 8px auto; font-weight: 600;">Download CSV</button>
+                    </div>
+                    <table style="table-layout: fixed;word-wrap:break-word !important;" class="table table-bordered table-hover table-condensed align-middle">
+
+                        <tbody><tr class="bold">
+                            <td style="width:20%">Rating <span style="caret"></span></td>
+                            <td style="width:30%;">Email</td>
+                            <td style="width:50%">Comment</td>
+                        </tr>
+
+                        <!-- ngRepeat: detractor in detractors | orderBy: 'metric._created_at':true --><!-- ngIf: detractor.email.tResponse.length >= 4 || detractor.comment.tResponse.length >= 4 --><!-- end ngRepeat: detractor in detractors | orderBy: 'metric._created_at':true -->
+                        </tbody></table>
+                </div>
+
+                <div style="text-align:center; border-radius: 9px; padding: 1%; float:left;" class="col-sm-12 col-md-4">
+                    <h3 style="background-image: linear-gradient(to right,#ffa600,#fcca65); -webkit-background-clip: text; margin: 0; font-weight: 600;">Passives 😐</h3><span class="nps-persona">I am satisfied, but I could go somewhere else</span>
+                    <div>
+                        <button class="btn btn-primary btn-xs ng-isolate-scope" type="button" ng-csv="passivesCSV" csv-header="['Category', 'Rating', 'Email', 'Comment']" filename="Customer-Care-passives.csv" style="margin: 8px auto;; font-weight: 600;">Download CSV</button>
+                    </div>
+                    <table style="table-layout: fixed;word-wrap:break-word !important;" class="table table-bordered table-hover table-condensed align-middle">
+                        <tbody><tr class="bold">
+                            <td style="width:20%">Rating <span style="caret"></span></td>
+                            <td style="width:30%;">Email</td>
+                            <td style="width:50%">Comment</td>
+                        </tr>
+                        <!-- ngRepeat: passive in passives | orderBy: 'metric._created_at':true --><!-- ngIf: passive.email.tResponse.length >= 4 || passive.comment.tResponse.length >= 4 --><!-- end ngRepeat: passive in passives | orderBy: 'metric._created_at':true --><!-- ngIf: passive.email.tResponse.length >= 4 || passive.comment.tResponse.length >= 4 --><!-- end ngRepeat: passive in passives | orderBy: 'metric._created_at':true -->
+                        </tbody></table>
+                </div>
+
+
+                <div style="text-align:center; border-radius: 9px; padding: 1%; display:inline-block;" class="col-sm-12 col-md-4">
+                    <h3 style="margin: 0; font-weight: 600; background-image: linear-gradient(to right,#ffa600,#fcca65); -webkit-background-clip: text;">Promoters 😀</h3><span class="nps-persona">I am an enthusiastic fan and would probably refer people</span>
+                    <div>
+                        <button class="btn btn-success btn-xs ng-isolate-scope" type="button" ng-csv="promotersCSV" csv-header="['Category', 'Rating', 'Email', 'Comment']" filename="Customer-Care-promoters.csv" style="margin: 8px auto;; font-weight:600;">Download CSV</button>
+                    </div>
+                    <table style="table-layout: fixed;word-wrap:break-word !important;" class="table table-bordered table-hover table-condensed align-middle">
+                        <tbody><tr class="bold">
+                            <td style="width:20%">Rating <span style="caret"></span></td>
+                            <td style="width:30%;">Email</td>
+                            <td style="width:50%">Comment</td>
+                        </tr>
+                        <!-- ngRepeat: promoter in promoters | orderBy: 'metric._created_at':true --><!-- ngIf: promoter.email.tResponse.length >= 4 || promoter.comment.tResponse.length >= 4 --><!-- end ngRepeat: promoter in promoters | orderBy: 'metric._created_at':true --><!-- ngIf: promoter.email.tResponse.length >= 4 || promoter.comment.tResponse.length >= 4 --><!-- end ngRepeat: promoter in promoters | orderBy: 'metric._created_at':true --><!-- ngIf: promoter.email.tResponse.length >= 4 || promoter.comment.tResponse.length >= 4 --><!-- end ngRepeat: promoter in promoters | orderBy: 'metric._created_at':true -->
+                        </tbody></table>
+                </div>
+            </div>
+        </div>
+        </div></div>
+
+
+
+
+
+
+        <!------------------------>
+        <!-- Main content end -->
+        <!------------------------>
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="content-footer" data-ng-include="'views/common/footer.html'">
+        <nav class="footer-right">
+            <ul class="nav">
+                <li>
+                    <a href="mailto:hello@getbuzzer.com">Feedback</a>
+                </li>
+                <li>
+                    <a href="#" class="scroll-up" >
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="footer-left">
+            <ul class="nav">
+                <li>
+                    <a>© 2017 Buzzer Feedback. All rights reserved.</a>
+                </li>
+                <li>
+                    <a href="javascript:;"><u>Privac</u>y</a>
+                </li>
+                <li>
+                    <a href="https://getbuzzer.com/blog"><u>Read our blo</u>g</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+
+
+
+
+
+
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyChWfztaeQfMRYPGpMdj3O6ifKBGceJKV4"></script>
+<!-- build:js scripts/app.min.js -->
+<script src="scripts/extensions/modernizr.js"></script>
+<script src="vendor/jquery/dist/jquery.js"></script>
+
+<script src="vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+<script src="scripts/extensions/lib.js"></script>
+<script src="vendor/fastclick/lib/fastclick.js"></script>
+
+<script src="vendor/pdfmake/pdfmake.min.js"></script>
+<script src="vendor/pdfmake/vfs_fonts.js"></script>
+<script src="vendor/moment/moment.js"></script>
+<script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+
+<script type="text/javascript" src="//l2.io/ip.js?var=myIp"></script>
+
+
+<!-- Custom script -->
+
+
+<script type="text/javascript" src="scripts/custom_script.js"></script>
+
+
+
+
+</body>
+</html>
