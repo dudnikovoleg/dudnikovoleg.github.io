@@ -1,0 +1,33 @@
+.fc-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fc-canvas svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.innerNode{
+  display: block;
+}
+.title{
+  margin: 0;
+}
+
+textarea {
+  background-color: #d64e1e;
+  resize: none;
+  border: none;
+  margin: 5px 10px;
+  color: white;
+  font-size: 15px;
+}
+.fc-node.fc-selected {
+  filter: none;
+  cursor: pointer;
+}.fc-node.fc-hover {
+  filter: none;
+  cursor: pointer;
+}
