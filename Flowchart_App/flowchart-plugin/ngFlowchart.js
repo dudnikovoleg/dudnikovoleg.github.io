@@ -164,7 +164,7 @@ if (!Function.prototype.bind) {
               canvasElement.appendChild(nodeDraggingScope.shadowElement[0]);
             }
 
-            event.dataTransfer.setData('Text', 'Just to support firefox');
+            event.dataTransfer.setData('', '');
             if (event.dataTransfer.setDragImage) {
               var invisibleDiv = angular.element('<div></div>')[0]; // This divs stays invisible, because it is not in the dom.
               event.dataTransfer.setDragImage(invisibleDiv, 0, 0);
@@ -507,11 +507,6 @@ if (!Function.prototype.bind) {
 
 
 
-    console.log(destinationNode)
-
-
-
-
       if (destinationNode === undefined) {
         throw new ModelvalidationError('Destination not valid.');
       }
@@ -641,10 +636,17 @@ if (!Function.prototype.bind) {
 
       };
 
+
       modelservice.nodes = {
         getConnectorsByType: function(node, type) {
           return node.connectors.filter(function(connector) {
-            return connector.type === type
+              // console.log( node)
+              // console.log( type)
+              // console.log(connector.type )
+              // console.log(type )
+              // console.log(connector.type === type)
+
+              return connector.type === type
           });
         },
 
@@ -982,7 +984,7 @@ if (!Function.prototype.bind) {
             y: event.clientY + dragOffset.y
           };
 
-          event.dataTransfer.setData('Text', 'Just to support firefox');
+          event.dataTransfer.setData('', '');
           if (event.dataTransfer.setDragImage) {
             var invisibleDiv = angular.element('<div></div>')[0]; // This divs stays invisible, because it is not in the dom.
             event.dataTransfer.setDragImage(invisibleDiv, 0, 0);
@@ -1055,6 +1057,7 @@ if (!Function.prototype.bind) {
         }
       };
 
+
       edgedraggingService.dragoverConnector = function(connector) {
         return function(event) {
 
@@ -1064,6 +1067,7 @@ if (!Function.prototype.bind) {
               Modelvalidation.validateEdges(model.edges.concat([{
                 source: draggedEdgeSource.id,
                 destination: connector.id
+
               }]), model.nodes);
             } catch (error) {
               if (error instanceof Modelvalidation.ModelvalidationError) {
@@ -1089,11 +1093,16 @@ if (!Function.prototype.bind) {
         return function(event) {
           if (edgeDragging.isDragging) {
             edgedraggingService.dragover(event);
+
               try {
               Modelvalidation.validateEdges(model.edges.concat([{
                 source: draggedEdgeSource.id,
                 destination: connector.id
               }]), model.nodes);
+              //
+              // console.log(connector.id)
+              // console.log(draggedEdgeSource.id)
+
             } catch (error) {
               if (error instanceof Modelvalidation.ModelvalidationError) {
                 return true;
@@ -1150,6 +1159,7 @@ if (!Function.prototype.bind) {
                 source: draggedEdgeSource.id,
                 destination: targetConnector.id
               }]), model.nodes);
+
             } catch (error) {
               if (error instanceof Modelvalidation.ModelvalidationError) {
                 return true;

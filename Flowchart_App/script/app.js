@@ -75,7 +75,6 @@ angular.module('app', ['flowchart'])
 
 
         $scope.textQuestion = function () {
-            console.log(nodeName)
 
 
             var newNode = {
@@ -103,14 +102,13 @@ angular.module('app', ['flowchart'])
 
 
         $scope.manyQuestions = function () {
-            console.log(nodeName)
 
 
             var newNode = {
                 name: 'You question',
                 id: nextNodeID++,
                 x: 500,
-                y: 100,
+                y: 200,
                 color: '#F15B26',
                 connectors: [
                     {
@@ -136,26 +134,20 @@ angular.module('app', ['flowchart'])
             var newNode = {
                 name: nodeName,
                 id: nextNodeID++,
-                x: 200,
-                y: 100,
+                x: 500,
+                y: 300,
                 color: '#F15B26',
                 connectors: [
                     {
                         id: nextConnectorID++,
                         type: flowchartConstants.topConnectorType
                     },
-                    {
-                        id: nextConnectorID++,
-                        type: flowchartConstants.topConnectorType
-                    },
+
                     {
                         id: nextConnectorID++,
                         type: flowchartConstants.bottomConnectorType
                     },
-                    {
-                        id: nextConnectorID++,
-                        type: flowchartConstants.bottomConnectorType
-                    }
+
                 ]
             };
 
@@ -169,8 +161,8 @@ angular.module('app', ['flowchart'])
             var newNode = {
                 name: nodeName,
                 id: nextNodeID++,
-                x: 200,
-                y: 100,
+                x: 500,
+                y: 400,
                 color: '#F15B26',
                 connectors: [
                     {
