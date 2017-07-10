@@ -132,6 +132,7 @@
             autoplay: true,
             infinite: true,
             swipeToSlide: true,
+            adaptiveHeight: true,
             autoplaySpeed: 5000
         });
 
@@ -173,9 +174,19 @@
         licenseSlider.slick({
             slidesToShow: 3,
             slidesToScroll: 1,
+            adaptiveHeight: true,
             variableWidth: true,
             prevArrow: $('.license-slider .prev-arrow'),
-            nextArrow: $('.license-slider .next-arrow')
+            nextArrow: $('.license-slider .next-arrow'),
+            responsive: [
+                {
+                    breakpoint: 620,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: false
+                    }
+                }
+            ]
         })
     }
 
@@ -355,6 +366,9 @@
 
 
             /**** Date picker ****/
+            
+            
+
 
             $("#datepicker").datepicker({
                 todayHighlight: true,
@@ -406,6 +420,9 @@
             });
 
 
+            $('.datepicker-icon').on('click', function () {
+                $("#datepicker").focus();
+            });
 
             /**** Validation form ****/
 
@@ -684,9 +701,9 @@
 
         function positionSoc () {
 
-            var  sidebarH = $('.sidebar').height(),
-                windowH = $(window).height();
-
+            if (windowsWidth > 1279){
+                var  sidebarH   = $('.sidebar').height(),
+                     windowH    = $(window).height();
 
                 if ( sidebarH + 100 <= windowH) {
                     $('.social').addClass('fixed')
@@ -696,6 +713,9 @@
                     $('.social').removeClass('fixed')
 
                 }
+            }
+
+
             }
             $(window).ready(positionSoc);
             $(window).resize(positionSoc);
@@ -788,7 +808,7 @@
 
 
             $(document).on('click', function(event) {
-                if (!$(event.target).closest(directionsWrapp).length && !$(event.target).closest(selected).length)
+                if (!$(event.target).closest(selected).length)
 
                 {
                     $(".select-list-wrapp").removeClass('opened')
