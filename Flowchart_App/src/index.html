@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 <head>
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+    <meta name="viewport" content="width=1600, user-scalable=no">
+
     <title>AngularJS-FlowChart</title>
 
     <link rel="stylesheet" href="flowchart-plugin/onedatastyle.css" type="text/css">
@@ -10,6 +14,42 @@
     <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
 </head>
 <body ng-app="app" ng-controller="AppCtrl" ng-keydown="keyDown($event)" ng-keyup="keyUp($event)">
+
+<div class="finish-wrap">
+    <div class="finish">
+        <ul class="finish-list">
+            <li class="finish-item">
+                <p class="finish-text">Word of mouth</p>
+                <span class="line-svg">
+                <svg width="500" height="20">
+                    <g><line x1="0" y1="10" x2="100%" y2="10"/></g>
+                </svg>
+            </span>
+            </li>
+            <li class="finish-item">
+                <p class="finish-text">Advert</p>
+                <span class="line-svg">
+                <svg width="500" height="20">
+                    <g><!-- Vertical line  --><line x1="0" y1="10" x2="100%" y2="10"/></g>
+                </svg>
+            </span>
+            </li>
+            <li class="finish-item">
+                <p class="finish-text">Google</p>
+                <span class="line-svg">
+                <svg width="500" height="20">
+                    <g><!-- Vertical line  --><line x1="0" y1="10" x2="100%" y2="10"/></g>
+                </svg>
+            </span>
+            </li>
+        </ul>
+
+        <div class="finish-link">
+            <span><a class="link" href="#">Finish</a></span>
+        </div>
+    </div>
+</div>
+
 
 <div class="content">
     <div class="button-overlay">

@@ -17,10 +17,10 @@
 
 
 
-            $('.content').css({
-                'width': contentWidth - 100 + 'px',
-                // 'min-height': windowGeight + 'px'
-            });
+            // $('.content').css({
+            //     'width': contentWidth - 150 + 'px',
+            //     // 'min-height': windowGeight + 'px'
+            // });
         }
 
 

@@ -16,6 +16,34 @@ angular.module('app', ['flowchart'])
         var nextConnectorID = 20;
         var ctrlDown = false;
 
+        $scope.phones = [{
+            name: 'Nokia Lumia 630',
+            year: 2014,
+            price: 200,
+            company: {
+                name: 'Nokia',
+                country: 'Финляндия'
+            }
+        },{
+            name: 'Samsung Galaxy S 4',
+            year: 2014,
+            price: 400,
+            company: {
+                name: 'Samsung',
+                country: 'Республика Корея'
+            }
+        },{
+            name: 'Mi 5',
+            year: 2015,
+            price: 300,
+            company: {
+                name: 'Xiaomi',
+                country: 'Китай'
+            }
+        }]
+
+
+
         var model = {
             nodes: [
                 {
@@ -25,12 +53,27 @@ angular.module('app', ['flowchart'])
                     y: 20,
                     startText: 'Start',
                     class: 'star-question',
+
+                    finishText1: 'Google',
+                    finishText2: 'Google',
+                    finishText3: 'Google',
+
                     figureClass: 'star',
                     textVal: 'How was the food?',
+
+
+
+
+
+
+
+
+
                     connectors: [
                         {
                             type: flowchartConstants.topConnectorType,
-                            id: 'template1'
+                            id: 'template1',
+                            ww: 'sdsdwwdwd'
                         },
                         {
                             type: flowchartConstants.topConnectorType,
