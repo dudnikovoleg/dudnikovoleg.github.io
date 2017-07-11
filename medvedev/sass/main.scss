@@ -361,6 +361,9 @@ header{
 				z-index: 6;
 
 				&:hover{
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 50%;
 					background-image: url("../img/svg/close_g.svg");
 				}
 			}
@@ -401,7 +404,7 @@ header{
 
 			.work-time{
 				display: none;
-				padding: 10px 10px 10px 55px;
+				padding: 10px 10px 10px 63px;
 				font-weight: 700;
 			}
 		 }
@@ -830,7 +833,7 @@ header{
 	.title{
 		margin: 0;
 		padding-bottom: 15px;
-		font-size: .9em;
+		font-size: 1em;
 		font-weight: 700;
 		border-bottom: solid 1px #e9edf4;
 	}
@@ -981,6 +984,9 @@ footer{
 
 			&:hover{
 				cursor: pointer;
+				background-size: 32%;
+				background-repeat: no-repeat;
+				background-position: center;
 				background-image: url('../img/svg/close_g.svg');
 			}
 		}
@@ -1097,9 +1103,9 @@ footer{
 			.time-icon{
 				position: absolute;
 				width: 50px;
-				height: 50px;
-				right: 2%;
-				top: 20px;
+				height: 54px;
+				right: 8px;
+				top: 14px;
 				background-image: url(../img/down_ico.png);
 				background-repeat: no-repeat;
 				background-position: center;
