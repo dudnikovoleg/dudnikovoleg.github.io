@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/script/app.js" line="10" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="2e9e28ca-bc83-4a7e-abbc-c0561d7972f8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,75 +14,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43869048">
+    <splitter split-orientation="horizontal" split-proportion="0.39880952">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="flowchart.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flowchart-plugin/flowchart.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="onedatastyle.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/onedatastyle.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/script/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-                  <folding>
-                    <marker date="1499420656863" expanded="true" signature="146:222" ph="{...}" />
-                    <marker date="1499420656863" expanded="true" signature="311:6983" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ngFlowchart.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="24776">
-                  <caret line="1480" column="71" lean-forward="false" selection-start-line="1480" selection-start-column="71" selection-end-line="1480" selection-end-column="71" />
-                  <folding>
-                    <marker date="1499419387003" expanded="true" signature="5296:5449" ph="..." />
-                    <marker date="1499419387003" expanded="true" signature="5484:5500" ph="..." />
-                    <marker date="1499419387003" expanded="true" signature="49170:49182" ph="..." />
-                    <marker date="1499419387003" expanded="true" signature="50405:50420" ph="..." />
-                    <marker date="1499419387003" expanded="true" signature="51199:51206" ph="×" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="angular.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/angular.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575110">
-                  <caret line="33830" column="361" lean-forward="false" selection-start-line="33830" selection-start-column="361" selection-end-line="33830" selection-end-column="361" />
+                <state relative-caret-position="636">
+                  <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -94,12 +30,59 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/script/app.js">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="flowchart.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sass/flowchart.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3331">
-                  <caret line="254" column="24" lean-forward="false" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="24" />
+                <state relative-caret-position="287">
+                  <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="165" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="onedatastyle.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/flowchart-plugin/onedatastyle.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ngFlowchart.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/flowchart-plugin/ngFlowchart.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="355">
+                  <caret line="1486" column="31" lean-forward="false" selection-start-line="1486" selection-start-column="19" selection-end-line="1486" selection-end-column="31" />
+                  <folding>
+                    <marker date="1499787776808" expanded="true" signature="5359:5512" ph="..." />
+                    <marker date="1499787776808" expanded="true" signature="5547:5563" ph="..." />
+                    <marker date="1499787776808" expanded="true" signature="49481:49493" ph="..." />
+                    <marker date="1499787776808" expanded="true" signature="51877:51884" ph="×" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/script/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+                  <folding>
+                    <marker date="1499787989700" expanded="true" signature="151:649" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/script/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
@@ -119,34 +102,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addNewNode</find>
-      <find>nextNodeID</find>
-      <find>Customizable templates</find>
-      <find>fc-topConnectors</find>
-      <find>innerNode</find>
-      <find>bottomConnectorType</find>
-      <find>get</find>
-      <find>model</find>
-      <find>modelva</find>
-      <find>ngFlowchart</find>
-      <find>prototype</find>
-      <find>leng</find>
+      <find>circ</find>
+      <find>id</find>
+      <find>height</find>
+      <find>.many-questions</find>
+      <find>multiQuestion</find>
+      <find>btn</find>
+      <find>automati</find>
+      <find>texter</find>
+      <find>200</find>
+      <find>100</find>
+      <find>.fc-canvas</find>
+      <find>conte</find>
+      <find>automaticResize</find>
+      <find>.fc-bottomConnectors</find>
+      <find>activateWo</find>
+      <find>fc</find>
       <find>edge</find>
-      <find>source n</find>
-      <find>Destination</find>
-      <find>node</find>
-      <find>id not</find>
-      <find>nodes</find>
-      <find>filter</find>
-      <find>destination not</find>
-      <find>edges</find>
-      <find>destination</find>
-      <find>sour</find>
-      <find>slide</find>
-      <find>nodeName</find>
-      <find>slider</find>
-      <find>title</find>
-      <find>da</find>
+      <find>path</find>
+      <find>activateWorkflow</find>
+      <find>.button-overlay</find>
+      <find>innerNode</find>
+      <find>cons</find>
+      <find>button-control</find>
+      <find>edge.ac</find>
+      <find>000000</find>
+      <find>star</find>
+      <find>edge.active</find>
+      <find>textarea</find>
+      <find>texta</find>
+      <find>start</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -158,10 +143,25 @@
         <option value="$PROJECT_DIR$/script/flowchart_app" />
         <option value="$PROJECT_DIR$/script/flowchart_app.js" />
         <option value="$PROJECT_DIR$/script/flowchart-app.js" />
-        <option value="$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js" />
-        <option value="$PROJECT_DIR$/flowchart-plugin/flowchart.css" />
+        <option value="$PROJECT_DIR$/onedatastyle.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/script/app.js" />
+        <option value="$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js" />
+        <option value="$PROJECT_DIR$/Black_Star.svg" />
+        <option value="$PROJECT_DIR$/script/main.js" />
+        <option value="$PROJECT_DIR$/flowchart-plugin/flowchart.css" />
+        <option value="$PROJECT_DIR$/src/flowchart-plugin/flowchart.css" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/flowchart-plugin/flowchart.scss" />
+        <option value="$PROJECT_DIR$/../../My_project/Medvedev/Project/medvedev/src/js/main.js" />
+        <option value="$PROJECT_DIR$/../../app.js" />
+        <option value="$PROJECT_DIR$/src/css/flowchart.css" />
+        <option value="$PROJECT_DIR$/src/flowchart-plugin/onedatastyle.css" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/flowchart-plugin/ngFlowchart.js" />
+        <option value="$PROJECT_DIR$/src/script/main.js" />
+        <option value="$PROJECT_DIR$/src/sass/flowchart.scss" />
+        <option value="$PROJECT_DIR$/src/script/app.js" />
       </list>
     </option>
   </component>
@@ -170,6 +170,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -192,6 +195,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -214,56 +219,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flowchart_App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flowchart_App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flowchart-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flowchart_App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flowchart_App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flowchart_App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flowchart_App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,6 +233,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Oleg/Desktop/dudnikovoleg.github.io/Flowchart_App/src/css/flowchart.css" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -365,19 +327,22 @@
       <updated>1499371112869</updated>
       <workItem from="1499371114450" duration="5603000" />
       <workItem from="1499405802275" duration="14759000" />
+      <workItem from="1499623085769" duration="5060000" />
+      <workItem from="1499750755777" duration="35340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20362000" />
+    <option name="totallyTimeSpent" value="81986000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -389,7 +354,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -401,123 +365,162 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4760">
-          <caret line="280" column="8" lean-forward="false" selection-start-line="280" selection-start-column="8" selection-end-line="280" selection-end-column="8" />
-          <folding>
-            <marker date="1499420656863" expanded="true" signature="146:222" ph="{...}" />
-            <marker date="1499420656863" expanded="true" signature="311:6983" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575110">
-          <caret line="33830" column="361" lean-forward="false" selection-start-line="33830" selection-start-column="361" selection-end-line="33830" selection-end-column="361" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/script/app.js" />
+    <entry file="file://$PROJECT_DIR$/angular/angular.js" />
     <entry file="file://$PROJECT_DIR$/flowchart-plugin/index.html" />
     <entry file="file://$PROJECT_DIR$/script/flowchart_app" />
     <entry file="file://$PROJECT_DIR$/script/flowchart-app.js" />
-    <entry file="file://$PROJECT_DIR$/example/places.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="67" column="11" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="67" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575110">
-          <caret line="33830" column="361" lean-forward="false" selection-start-line="33830" selection-start-column="361" selection-end-line="33830" selection-end-column="361" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/onedatastyle.css">
+    <entry file="file://$PROJECT_DIR$/example/places.html" />
+    <entry file="file://$PROJECT_DIR$/../Razumnuj_vubor/razumnyj_vybor/src/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/../Medvedev/Project/medvedev/src/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/angular/angular.js" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/flowchart.css" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/script/app.js" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js" />
+    <entry file="file://$PROJECT_DIR$/onedatastyle.css" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/flowchart.css" />
+    <entry file="file://$PROJECT_DIR$/onedatastyle.css" />
+    <entry file="file://$PROJECT_DIR$/angular/angular.js" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js" />
+    <entry file="file://$PROJECT_DIR$/script/app.js" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/script/app.js" />
+    <entry file="file://$PROJECT_DIR$/angular/angular.js" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/index.html" />
+    <entry file="file://$PROJECT_DIR$/script/flowchart_app" />
+    <entry file="file://$PROJECT_DIR$/script/flowchart-app.js" />
+    <entry file="file://$PROJECT_DIR$/../Razumnuj_vubor/razumnyj_vybor/src/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/../Medvedev/Project/medvedev/src/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/Black_Star.svg" />
+    <entry file="file://$PROJECT_DIR$/onedatastyle.css" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js" />
+    <entry file="file://$PROJECT_DIR$/script/app.js" />
+    <entry file="file://$PROJECT_DIR$/flowchart-plugin/flowchart.css" />
+    <entry file="file://$PROJECT_DIR$/angular/angular.js" />
+    <entry file="file://$PROJECT_DIR$/script/main.js" />
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Razumnuj_vubor/razumnyj_vybor/src/js/main.js">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="90" column="34" lean-forward="true" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Medvedev/Project/medvedev/src/js/main.js">
+    <entry file="file://$PROJECT_DIR$/src/flowchart-plugin/flowchart.scss" />
+    <entry file="file://$PROJECT_DIR$/../../My_project/Razumnuj_vubor/razumnyj_vybor/src/sass/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="129" selection-start-column="9" selection-end-line="130" selection-end-column="40" />
+        <state relative-caret-position="-11708">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flowchart-plugin/flowchart.css">
+    <entry file="file://$PROJECT_DIR$/../../My_project/Medvedev/Project/medvedev/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="-903">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/app.js">
+    <entry file="file://$PROJECT_DIR$/../../app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="128" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/flowchart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="125" column="1" lean-forward="false" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../flowchart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/places.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-547">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flowchart-plugin/onedatastyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/flowchart.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="165" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flowchart-plugin/ngFlowchart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="1486" column="31" lean-forward="false" selection-start-line="1486" selection-start-column="19" selection-end-line="1486" selection-end-column="31" />
           <folding>
-            <marker date="1499420656863" expanded="true" signature="146:222" ph="{...}" />
-            <marker date="1499420656863" expanded="true" signature="311:6983" ph="{...}" />
+            <marker date="1499787776808" expanded="true" signature="5359:5512" ph="..." />
+            <marker date="1499787776808" expanded="true" signature="5547:5563" ph="..." />
+            <marker date="1499787776808" expanded="true" signature="49481:49493" ph="..." />
+            <marker date="1499787776808" expanded="true" signature="51877:51884" ph="×" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/src/script/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1499787989700" expanded="true" signature="151:649" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flowchart-plugin/ngFlowchart.js">
+    <entry file="file://$PROJECT_DIR$/src/script/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24776">
-          <caret line="1480" column="71" lean-forward="false" selection-start-line="1480" selection-start-column="71" selection-end-line="1480" selection-end-column="71" />
-          <folding>
-            <marker date="1499419387003" expanded="true" signature="5296:5449" ph="..." />
-            <marker date="1499419387003" expanded="true" signature="5484:5500" ph="..." />
-            <marker date="1499419387003" expanded="true" signature="49170:49182" ph="..." />
-            <marker date="1499419387003" expanded="true" signature="50405:50420" ph="..." />
-            <marker date="1499419387003" expanded="true" signature="51199:51206" ph="×" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

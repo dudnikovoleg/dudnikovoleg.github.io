@@ -135,9 +135,10 @@ if (!Function.prototype.bind) {
       function resizeCanvas(draggedNode, nodeElement) {
         if (automaticResize) {
           var canvasElement = modelservice.getCanvasHtmlElement();
-          if (canvasElement.offsetWidth < draggedNode.x + nodeElement.offsetWidth + flowchartConstants.canvasResizeThreshold) {
-            canvasElement.style.width = canvasElement.offsetWidth + flowchartConstants.canvasResizeStep + 'px';
-          }
+          // if (canvasElement.offsetWidth < draggedNode.x + nodeElement.offsetWidth + flowchartConstants.canvasResizeThreshold) {
+          //   canvasElement.style.width = canvasElement.offsetWidth + flowchartConstants.canvasResizeStep + 'px';
+          //   console.log(canvasElement.offsetWidth)
+          // }
           if (canvasElement.offsetHeight < draggedNode.y + nodeElement.offsetHeight + flowchartConstants.canvasResizeThreshold) {
             canvasElement.style.height = canvasElement.offsetHeight + flowchartConstants.canvasResizeStep + 'px';
           }
@@ -1297,8 +1298,8 @@ if (!Function.prototype.bind) {
               maxX = Math.max(node.x + scope.nodeWidth, maxX);
               maxY = Math.max(node.y + scope.nodeHeight, maxY);
             });
-            element.css('width', Math.max(maxX, element.prop('offsetWidth')) + 'px');
-            element.css('height', Math.max(maxY, element.prop('offsetHeight')) + 'px');
+            // element.css('width', Math.max(maxX, element.prop('offsetWidth')) + 'px');
+            element.css('height', Math.max(maxY, element.prop('offsetHeight')) + 100 + 'px');
           }
         }
         if (scope.edgeStyle !== flowchartConstants.curvedStyle && scope.edgeStyle !== flowchartConstants.lineStyle) {
@@ -1432,13 +1433,13 @@ module.run(['$templateCache', function($templateCache) {
     '<div ng-click="canvasClick($event)">\n' +
     '  <svg>\n' +
     '    <g ng-repeat="edge in model.edges">\n' +
-    '      <path\n' +
+    '      <path \n' +
     '        ng-click="edgeClick($event, edge)"\n' +
     '        ng-dblclick="edgeDoubleClick($event, edge)"\n' +
     '        ng-mouseover="edgeMouseOver($event, edge)"\n' +
     '        ng-mouseenter="edgeMouseEnter($event, edge)"\n' +
     '        ng-mouseleave="edgeMouseLeave($event, edge)"\n' +
-    '        ng-attr-class="{{(modelservice.edges.isSelected(edge) && flowchartConstants.selectedClass + \' \' + flowchartConstants.edgeClass) || edge == mouseOver.edge && flowchartConstants.hoverClass + \' \' + flowchartConstants.edgeClass || edge.active && flowchartConstants.activeClass + \' \' + flowchartConstants.edgeClass || flowchartConstants.edgeClass}}"\n' +
+    '        ng-attr-class="{{(modelservice.edges.isSelected(edge) && flowchartConstants.selectedClass + \' \' + flowchartConstants.edgeClass) || edge == mouseOver.edge && flowchartConstants.hoverClass + \' \' + flowchartConstants.edgeClass || !edge.active && flowchartConstants.activeClass + \' \' + flowchartConstants.edgeClass || flowchartConstants.edgeClass}}"\n' +
     '        ng-attr-d="{{getEdgeDAttribute(modelservice.edges.sourceCoord(edge), modelservice.edges.destCoord(edge), edgeStyle)}}"></path>\n' +
     '    </g>\n' +
     '    <g ng-if="dragAnimation == flowchartConstants.dragAnimationRepaint && edgeDragging.isDragging">\n' +
@@ -1478,20 +1479,28 @@ module.run(['$templateCache', function($templateCache) {
     '  id="{{node.id}}"\n' +
     '  ng-attr-style="position: absolute; top: {{ node.y }}px; left: {{ node.x }}px;"\n' +
     '  ng-dblclick="callbacks.doubleClick($event)">\n' +
-    '  <div class="innerNode">\n' +
+
+    '  <div class="innerNode {{ node.class }} {{ node.figureClass }} ">\n' +
+    '  <div class="start">{{ node.startText }}</div>\n' +
+    '  <div class="figure"></div>\n' +
     '    <p class="title">{{ node.name }}</p>\n' +
-    '   <textarea onkeyup="textAreaAdjust(this)" style="overflow:hidden"></textarea>\n' +
+    '  <div class="textareaWrap">' +
+    '   <textarea rows="3">{{ node.textVal}}</textarea>\n' +
+    '</div>\n' +
+
     '\n' +
     '    <div class="{{flowchartConstants.topConnectorClass}}">\n' +
     '      <div fc-magnet\n' +
     '           ng-repeat="connector in modelservice.nodes.getConnectorsByType(node, flowchartConstants.topConnectorType)">\n' +
-    '        <div fc-connector></div>\n' +
+    '        <div class="conditionItem" id="conditionItem{{node.id}}"></div>\n' +
+    '        <div fc-connector id="{{ node.id }}"></div>\n' +
     '      </div>\n' +
     '    </div>\n' +
     '    <div class="{{flowchartConstants.bottomConnectorClass}}">\n' +
     '      <div fc-magnet\n' +
     '           ng-repeat="connector in modelservice.nodes.getConnectorsByType(node, flowchartConstants.bottomConnectorType)">\n' +
-    '        <div fc-connector></div>\n' +
+    '        <div class="conditionItem" id="conditionItem{{node.id}}"></div>\n' +
+    '        <div fc-connector id="{{ node.id }}"></div>\n' +
     '      </div>\n' +
     '    </div>\n' +
     '  </div>\n' +
