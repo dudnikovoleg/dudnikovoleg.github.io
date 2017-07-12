@@ -380,11 +380,21 @@
 
         $('.button-control button').on('click',function () {
             textareaTextCentr();
+            finishShow()
 
         });
 
 
         textareaTextCentr();
+        
+        
+        function finishShow() {
+            if ($('.innerNode').hasClass('finish-show')){
+                console.log('ss')
+                $('.finish-wrap').addClass('open')
+            }
+        }
+        finishShow()
 
         window.scrollTo(0, 0);
     })

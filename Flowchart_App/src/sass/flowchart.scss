@@ -298,10 +298,13 @@ textarea {
 
 //Finish
 .finish-wrap{
+  display: none;
   bottom: 100px;
   right: 400px;
   position: absolute;
-  //background-color: #FCCA65;
+  &.open{
+    display: block;
+  }
 }
 .finish{
   position: relative;

@@ -1,10 +1,18 @@
+
+
+//Tutorial
+    //nodes  - start page template
+    //source:  - index start line,
+    //destination: index finish line,
+    //connectors.id - id lines
+    //finish-show  - class for showed block 'finish'
+    //startText  - if you want text start
+    //textVal  - start text in you block
+
 angular.module('app', ['flowchart'])
-// .factory('prompt', function () {
-//   return prompt;
-// })
-// .config(function (NodeTemplatePathProvider) {
-//   NodeTemplatePathProvider.setTemplatePath("flowchart/node.html");
-// })
+
+
+
 
     .controller('AppCtrl', function AppCtrl($scope, Modelfactory, flowchartConstants) {
 
@@ -16,32 +24,6 @@ angular.module('app', ['flowchart'])
         var nextConnectorID = 20;
         var ctrlDown = false;
 
-        $scope.phones = [{
-            name: 'Nokia Lumia 630',
-            year: 2014,
-            price: 200,
-            company: {
-                name: 'Nokia',
-                country: 'Финляндия'
-            }
-        },{
-            name: 'Samsung Galaxy S 4',
-            year: 2014,
-            price: 400,
-            company: {
-                name: 'Samsung',
-                country: 'Республика Корея'
-            }
-        },{
-            name: 'Mi 5',
-            year: 2015,
-            price: 300,
-            company: {
-                name: 'Xiaomi',
-                country: 'Китай'
-            }
-        }]
-
 
 
         var model = {
@@ -52,22 +34,10 @@ angular.module('app', ['flowchart'])
                     x: 200,
                     y: 20,
                     startText: 'Start',
-                    class: 'star-question',
-
-                    finishText1: 'Google',
-                    finishText2: 'Google',
-                    finishText3: 'Google',
-
+                    class: 'star-question' +
+                    '',
                     figureClass: 'star',
                     textVal: 'How was the food?',
-
-
-
-
-
-
-
-
 
                     connectors: [
                         {
@@ -179,7 +149,7 @@ angular.module('app', ['flowchart'])
                     id: nextNodeID++,
                     x: 600,
                     y: 1200,
-                    class: 'multi-question',
+                    class: 'multi-question finish-show',
                     figureClass: 'square',
                     textVal: 'How did you find out about us?',
                     connectors: [
