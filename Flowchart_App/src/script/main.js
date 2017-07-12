@@ -17,17 +17,14 @@
 
 
 
-<<<<<<< HEAD
             $('.content').css({
                 'width': contentWidth - 150 + 'px',
                 // 'min-height': windowGeight + 'px'
             });
-=======
-            // $('.content').css({
-            //     'width': contentWidth - 150 + 'px',
-            //     // 'min-height': windowGeight + 'px'
-            // });
->>>>>>> ef06e70355413af47115004e40bc1223e0ab1a43
+            $('.content').css({
+                'width': contentWidth - 150 + 'px',
+                // 'min-height': windowGeight + 'px'
+            });
         }
 
 
