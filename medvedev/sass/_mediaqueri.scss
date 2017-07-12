@@ -110,7 +110,11 @@
 
 	/** Mobile menu **/
 
-
+  .sidebar .navbar .sidebar-nav {
+    .active .sub-menu{
+      font-size: .6em;
+    }
+  }
 
 
 
@@ -832,12 +836,17 @@
 				&:nth-child(odd) {
 					.normal{
 						border-left: transparent;
-						border-right: transparent;
 					}
 				}
 				&:nth-child(even) {
 					.normal{
 						border-right: transparent;
+						border-left: transparent;
+					}
+				}
+                &:nth-last-child(1):nth-child(odd) {
+					.normal{
+                      border: solid 1px #eaedf4;
 					}
 				}
 				.normal{
@@ -975,9 +984,7 @@
 	/**** Sidebar ****/
 	.sidebar .navbar .sidebar-nav {
 		padding: 45px 30px 0 55px;
-		.active .sub-menu{
-			font-size: 1em;
-		}
+
 	}
 	.sidebar {
 		&.open {
