@@ -6,7 +6,7 @@
     $(document).ready(function () {
 
 
-        $('.textareaWrap').perfectScrollbar();
+        $('textarea').perfectScrollbar();
 
         function widthHeight() {
             var windowsWidth = (window.innerWidth),
@@ -18,7 +18,7 @@
 
 
             $('.content').css({
-                'width': contentWidth - 100 + 'px',
+                'width': contentWidth - 150 + 'px',
                 // 'min-height': windowGeight + 'px'
             });
         }
@@ -356,8 +356,7 @@
             }
         multiQuestionCycle();
 
-
-        $('.button-control button').on('click',function () {
+        function textareaTextCentr() {
             $('textarea')
                 .on('input', function() {
                     var h = this.offsetHeight;
@@ -373,10 +372,15 @@
                 })
                 .trigger('input')
                 .focus();
+        }
+
+        $('.button-control button').on('click',function () {
+            textareaTextCentr();
+
         });
 
 
-
+        textareaTextCentr();
 
         window.scrollTo(0, 0);
     })
