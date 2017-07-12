@@ -15,18 +15,12 @@
                 contentWidth = windowsWidth - buttonWidth;
 
 
-
-
             $('.content').css({
                 'width': contentWidth - 150 + 'px',
                 // 'min-height': windowGeight + 'px'
             });
-            $('.content').css({
-                'width': contentWidth - 150 + 'px',
-                // 'min-height': windowGeight + 'px'
-            });
+
         }
-
 
 
         $(window).ready(widthHeight);
@@ -183,51 +177,51 @@
         $('.many-questions-btn').on('click', function () {
             manyQuestionCycle('many')
         });
-            function manyQuestionCycle () {
-                var iterationDifference = false;
+        function manyQuestionCycle() {
+            var iterationDifference = false;
 
-                $('.many-questions .conditionItem').each(function (index) {
-
-
-                    var thisConector = $(this).attr('id');
-
-                    switch (thisConector) {
-                        case 'conditionItem10':
-                            if ($(this).hasClass('disabled')) break;
-                            $(this).text(conditionValueArr.manyQuestions.conditionItem10[index]);
-                            $(this).addClass('disabled');
-
-                            break;
-
-                        case 'conditionItem11':
-                            if ($(this).hasClass('disabled')) break;
-
-                            //ned for correct iteration
-                            if (iterationDifference === false) {
-                                iterationDifference = index
-                            }
-
-                            $(this).text(conditionValueArr.manyQuestions.conditionItem11[index - iterationDifference]);
-                            $(this).addClass('disabled');
-
-                            break;
+            $('.many-questions .conditionItem').each(function (index) {
 
 
-                        case 'conditionItem12':
-                            if ($(this).hasClass('disabled')) break;
+                var thisConector = $(this).attr('id');
 
-                            //ned for correct iteration
-                            if (iterationDifference === false) {
-                                iterationDifference = index
-                            }
+                switch (thisConector) {
+                    case 'conditionItem10':
+                        if ($(this).hasClass('disabled')) break;
+                        $(this).text(conditionValueArr.manyQuestions.conditionItem10[index]);
+                        $(this).addClass('disabled');
 
-                            $(this).text(conditionValueArr.manyQuestions.conditionItem12[index - iterationDifference]);
-                            $(this).addClass('disabled');
+                        break;
 
-                            break;
-                    }
-                });
-            }
+                    case 'conditionItem11':
+                        if ($(this).hasClass('disabled')) break;
+
+                        //ned for correct iteration
+                        if (iterationDifference === false) {
+                            iterationDifference = index
+                        }
+
+                        $(this).text(conditionValueArr.manyQuestions.conditionItem11[index - iterationDifference]);
+                        $(this).addClass('disabled');
+
+                        break;
+
+
+                    case 'conditionItem12':
+                        if ($(this).hasClass('disabled')) break;
+
+                        //ned for correct iteration
+                        if (iterationDifference === false) {
+                            iterationDifference = index
+                        }
+
+                        $(this).text(conditionValueArr.manyQuestions.conditionItem12[index - iterationDifference]);
+                        $(this).addClass('disabled');
+
+                        break;
+                }
+            });
+        }
 
         manyQuestionCycle();
 
@@ -239,61 +233,62 @@
             starQuestionCycle()
         });
 
-            function starQuestionCycle () {
+        function starQuestionCycle() {
 
-                var iterationDifference = false;
+            var iterationDifference = false;
 
-                $('.star-question .conditionItem').each(function (index) {
+            $('.star-question .conditionItem').each(function (index) {
 
-                    var thisConector = $(this).attr('id');
+                var thisConector = $(this).attr('id');
 
-                    switch (thisConector) {
-                        case 'conditionItem10':
-                            if ($(this).hasClass('disabled')) break;
-                            $(this).text(conditionValueArr.starQuestion.conditionItem10[index]);
-                            $(this).addClass('disabled');
+                switch (thisConector) {
+                    case 'conditionItem10':
+                        if ($(this).hasClass('disabled')) break;
+                        $(this).text(conditionValueArr.starQuestion.conditionItem10[index]);
+                        $(this).addClass('disabled');
 
-                            break;
+                        break;
 
-                        case 'conditionItem11':
-                            if ($(this).hasClass('disabled')) break;
+                    case 'conditionItem11':
+                        if ($(this).hasClass('disabled')) break;
 
-                            //ned for correct iteration
-                            if (iterationDifference === false) {
-                                iterationDifference = index
-                            }
+                        //ned for correct iteration
+                        if (iterationDifference === false) {
+                            iterationDifference = index
+                        }
 
-                            $(this).text(conditionValueArr.starQuestion.conditionItem10[index - iterationDifference]);
-                            $(this).addClass('disabled');
+                        $(this).text(conditionValueArr.starQuestion.conditionItem10[index - iterationDifference]);
+                        $(this).addClass('disabled');
 
-                            break;
-                        case 'conditionItem12':
-                            if ($(this).hasClass('disabled')) break;
+                        break;
+                    case 'conditionItem12':
+                        if ($(this).hasClass('disabled')) break;
 
-                            //ned for correct iteration
-                            if (iterationDifference === false) {
-                                iterationDifference = index
-                            }
+                        //ned for correct iteration
+                        if (iterationDifference === false) {
+                            iterationDifference = index
+                        }
 
-                            $(this).text(conditionValueArr.starQuestion.conditionItem11[index - iterationDifference]);
-                            $(this).addClass('disabled');
+                        $(this).text(conditionValueArr.starQuestion.conditionItem11[index - iterationDifference]);
+                        $(this).addClass('disabled');
 
-                            break;
-                        case 'conditionItem13':
-                            if ($(this).hasClass('disabled')) break;
+                        break;
+                    case 'conditionItem13':
+                        if ($(this).hasClass('disabled')) break;
 
-                            //ned for correct iteration
-                            if (iterationDifference === false) {
-                                iterationDifference = index
-                            }
+                        //ned for correct iteration
+                        if (iterationDifference === false) {
+                            iterationDifference = index
+                        }
 
-                            $(this).text(conditionValueArr.starQuestion.conditionItem11[index - iterationDifference]);
-                            $(this).addClass('disabled');
+                        $(this).text(conditionValueArr.starQuestion.conditionItem11[index - iterationDifference]);
+                        $(this).addClass('disabled');
 
-                            break;
-                    }
-                });
-            }
+                        break;
+                }
+            });
+        }
+
         starQuestionCycle();
 
 
@@ -302,100 +297,129 @@
         $('.multi-question-btn').on('click', function () {
             multiQuestionCycle()
         })
-            function multiQuestionCycle () {
-                var iterationDifference = false;
+        function multiQuestionCycle() {
+            var iterationDifference = false;
 
-                // $('.multi-question .conditionItem').each(function (index) {
-                //
-                //     var thisConector = $(this).attr('id');
-                //
-                //     switch (thisConector) {
-                //         case 'conditionItem10':
-                //             if ($(this).hasClass('disabled')) break;
-                //             $(this).text(conditionValueArr.multiQuestion.conditionItem10[index]);
-                //             $(this).addClass('disabled');
-                //
-                //             break;
-                //
-                //         case 'conditionItem11':
-                //             if ($(this).hasClass('disabled')) break;
-                //
-                //             //ned for correct iteration
-                //             if (iterationDifference === false) {
-                //                 iterationDifference = index
-                //             }
-                //
-                //             $(this).text(conditionValueArr.multiQuestion.conditionItem11[index - iterationDifference]);
-                //             $(this).addClass('disabled');
-                //
-                //             break;
-                //
-                //
-                //         case 'conditionItem12':
-                //             if ($(this).hasClass('disabled')) break;
-                //
-                //             //ned for correct iteration
-                //             if (iterationDifference === false) {
-                //                 iterationDifference = index
-                //             }
-                //
-                //             $(this).text(conditionValueArr.multiQuestion.conditionItem11[index - iterationDifference]);
-                //             $(this).addClass('disabled');
-                //
-                //             break;
-                //
-                //         case 'conditionItem13':
-                //             if ($(this).hasClass('disabled')) break;
-                //
-                //             //ned for correct iteration
-                //             if (iterationDifference === false) {
-                //                 iterationDifference = index
-                //             }
-                //             $(this).text(conditionValueArr.multiQuestion.conditionItem11[index - iterationDifference]);
-                //             $(this).addClass('disabled');
-                //
-                //             break;
-                //     }
-                // });
-            }
+            // $('.multi-question .conditionItem').each(function (index) {
+            //
+            //     var thisConector = $(this).attr('id');
+            //
+            //     switch (thisConector) {
+            //         case 'conditionItem10':
+            //             if ($(this).hasClass('disabled')) break;
+            //             $(this).text(conditionValueArr.multiQuestion.conditionItem10[index]);
+            //             $(this).addClass('disabled');
+            //
+            //             break;
+            //
+            //         case 'conditionItem11':
+            //             if ($(this).hasClass('disabled')) break;
+            //
+            //             //ned for correct iteration
+            //             if (iterationDifference === false) {
+            //                 iterationDifference = index
+            //             }
+            //
+            //             $(this).text(conditionValueArr.multiQuestion.conditionItem11[index - iterationDifference]);
+            //             $(this).addClass('disabled');
+            //
+            //             break;
+            //
+            //
+            //         case 'conditionItem12':
+            //             if ($(this).hasClass('disabled')) break;
+            //
+            //             //ned for correct iteration
+            //             if (iterationDifference === false) {
+            //                 iterationDifference = index
+            //             }
+            //
+            //             $(this).text(conditionValueArr.multiQuestion.conditionItem11[index - iterationDifference]);
+            //             $(this).addClass('disabled');
+            //
+            //             break;
+            //
+            //         case 'conditionItem13':
+            //             if ($(this).hasClass('disabled')) break;
+            //
+            //             //ned for correct iteration
+            //             if (iterationDifference === false) {
+            //                 iterationDifference = index
+            //             }
+            //             $(this).text(conditionValueArr.multiQuestion.conditionItem11[index - iterationDifference]);
+            //             $(this).addClass('disabled');
+            //
+            //             break;
+            //     }
+            // });
+        }
+
         multiQuestionCycle();
 
         function textareaTextCentr() {
-            $('textarea')
-                .on('input', function() {
-                    var h = this.offsetHeight;
-                    $(this).css({
-                        paddingTop: 0,
-                        height: 0
-                    });
+            $('textarea').on('input', function () {
+                var h = this.offsetHeight;
+                $(this).css({
+                    paddingTop: 0,
+                    height: 0
+                });
 
-                    $(this).css({
-                        paddingTop: Math.max(0, h / 2 - this.scrollHeight / 2),
-                        height: h
-                    });
-                })
+                $(this).css({
+                    paddingTop: Math.max(0, h / 2 - this.scrollHeight / 2),
+                    height: h
+                });
+            })
                 .trigger('input')
                 .focus();
         }
 
-        $('.button-control button').on('click',function () {
+        $('.button-control button').on('click', function () {
             textareaTextCentr();
             finishShow()
-
+            $(".finish-wrap").appendTo($(".finish-show "));
+            $('textarea').perfectScrollbar();
         });
+        $(".finish-wrap").appendTo($(".finish-show "));
 
 
         textareaTextCentr();
-        
-        
+
+
         function finishShow() {
-            if ($('.innerNode').hasClass('finish-show')){
-                console.log('ss')
+            if ($('.innerNode').hasClass('finish-show')) {
                 $('.finish-wrap').addClass('open')
             }
         }
-        finishShow()
+
+        finishShow();
+
+
+
+        function textReadonly() {
+            $('.textareaWrap textarea').addClass('readonly')
+        }
+
+
+        $('.edit-question').on('click', function () {
+
+            $('.fc-selected textarea').removeClass('readonly')
+            $('.fc-selected textarea').focus()
+            // $('.fc-selected textarea').blur().addClass('readonly')
+        });
+
+
+        textReadonly();
+
+
+
+
+
+
+
 
         window.scrollTo(0, 0);
+
+
+
     })
 })(jQuery);

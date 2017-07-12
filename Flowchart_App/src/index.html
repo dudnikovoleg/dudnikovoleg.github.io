@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="flowchart-plugin/onedatastyle.css" type="text/css">
     <link rel="stylesheet" href="css/flowchart.css" type="text/css">
     <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+
 </head>
 <body ng-app="app" ng-controller="AppCtrl" ng-keydown="keyDown($event)" ng-keyup="keyUp($event)">
 
-<div class="finish-wrap">
+<div class="finish-wrap"  >
     <div class="finish">
         <ul class="finish-list">
             <li class="finish-item">
@@ -47,7 +48,7 @@
         </ul>
 
         <div class="finish-link">
-            <span><a class="link" href="#">Finish</a></span>
+            <span><span class="link" href="#">Finish</span></span>
         </div>
     </div>
 </div>
@@ -94,13 +95,19 @@
                 </button>
             </li>
 
+            <li class="button-control edit-btn">
+                <span class="edit-question" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0" title="Edit question text">
+                    Edit question
+                </span>
+            </li>
 
             <li class="button-control del-btn">
-                <button ng-click="deleteSelected()"
-                        ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0"
-                        title="Delete selected nodes and connections">Delete Selected
-                </button>
+                <span class="del" ng-click="deleteSelected()"
+                        ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0" title="Delete selected nodes and connections">
+                    Delete Selected
+                </span>
             </li>
+
 
             <!--<li class="button-control">-->
                 <!--<button ng-click="activateWorkflow()">Activate Workflow</button>-->
@@ -112,6 +119,7 @@
     <fc-canvas model="model" selected-objects="flowchartselected" edge-style="line" callbacks="callbacks"
                automatic-resize="true"></fc-canvas>
 </div>
+
 
 <script src="angular/angular.js"></script>
 <script src="flowchart-plugin/ngFlowchart.js"></script>

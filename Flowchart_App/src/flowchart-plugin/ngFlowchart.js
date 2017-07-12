@@ -194,6 +194,7 @@ if (!Function.prototype.bind) {
         },
 
         dragover: function(event) {
+
           if (dragAnimation == flowchartConstants.dragAnimationRepaint) {
             if (nodeDraggingScope.draggedNode) {
               return applyFunction(function() {
@@ -1479,33 +1480,13 @@ module.run(['$templateCache', function($templateCache) {
     '  id="{{node.id}}"\n' +
     '  ng-attr-style="position: absolute; top: {{ node.y }}px; left: {{ node.x }}px;"\n' +
     '  ng-dblclick="callbacks.doubleClick($event)">\n' +
-
-
-    // '<div class="finish-wrap">\n' +
-    // '<div class="finish">\n' +
-    // '<ul class="finish-list">\n' +
-    // '<li class="finish-item">\n' +
-    // '<p class="finish-text">Word of mouth</p>\n' +
-    // '<span class="line-svg"> \n' +
-    // '<svg width="500" height="20"> <g><line x1="0" y1="10" x2="100%" y2="10"/></g> </svg>\n' +
-    // '</span>\n' +
-    // '</li>\n' +
-    // '</ul>\n' +
-    //
-    // '<div class="finish-link">\n' +
-    // '<span><a class="link" href="#">Finish</a></span>\n' +
-    // '</div>\n' +
-    // '</div>\n' +
-    // '</div>\n' +
-
-
-
     '  <div class="innerNode {{ node.class }} {{ node.figureClass }} ">\n' +
+    '  <div class="content-wrap">\n' +
     '  <div class="start">{{ node.startText }}</div>\n' +
     '  <div class="figure"></div>\n' +
     '    <p class="title">{{ node.name }}</p>\n' +
     '  <div class="textareaWrap">' +
-    '   <textarea rows="3">{{ node.textVal}}</textarea>\n' +
+    '   <textarea  rows="3" >{{ node.textVal}}</textarea>\n' +
     '</div>\n' +
 
     '\n' +
@@ -1527,6 +1508,7 @@ module.run(['$templateCache', function($templateCache) {
     '  <div class="fc-nodedelete" ng-click="modelservice.nodes.delete(node)">\n' +
     '    &times;\n' +
     '  </div>\n' +
+    '</div>\n' +
     '</div>\n' +
     '');
 }]);

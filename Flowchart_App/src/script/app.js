@@ -8,6 +8,7 @@
     //finish-show  - class for showed block 'finish'
     //startText  - if you want text start
     //textVal  - start text in you block
+    //finish-show - add nodes class for finish
 
 angular.module('app', ['flowchart'])
 
@@ -34,8 +35,7 @@ angular.module('app', ['flowchart'])
                     x: 200,
                     y: 20,
                     startText: 'Start',
-                    class: 'star-question' +
-                    '',
+                    class: 'star-question',
                     figureClass: 'star',
                     textVal: 'How was the food?',
 
@@ -120,7 +120,7 @@ angular.module('app', ['flowchart'])
                     id: nextNodeID++,
                     x: 700,
                     y: 800,
-                    class: 'text-question',
+                    class: 'text-question ' ,
                     figureClass: 'rectangle',
                     textVal: 'What didn`t you like about the service?',
                     connectors: [
