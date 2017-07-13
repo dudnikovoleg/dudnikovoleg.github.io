@@ -962,9 +962,13 @@ footer{
 	padding: 45px 5% 0 5%;
 	background: $accent-col;
 	z-index: 101;
+	-webkit-overflow-scrolling: touch;
+
 
 	&.open{
 		display: block;
+		-webkit-overflow-scrolling: touch;
+
 	}
 	&::-webkit-scrollbar { width: 0; }
 	& { -ms-overflow-style: none; }
