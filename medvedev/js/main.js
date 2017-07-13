@@ -643,10 +643,7 @@
                 var windowH = $(window).height() + 'px';
 
 
-                $(window).resize(function () {
                     $('body').css('min-height', windowH);
-                });
-
                 $(".navTrigger").on('click', function () {
 
                     var menuHeight = $('#sidebar').height() + $('.main-content .logo').outerHeight() + 'px';
@@ -666,6 +663,7 @@
                 });
             }
 
+            menuHeight()
 
             $(window).ready(menuHeight);
             $(window).resize(menuHeight);
