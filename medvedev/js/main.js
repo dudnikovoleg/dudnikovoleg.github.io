@@ -18,36 +18,36 @@
         var windowsWidth = (window.innerWidth);
 
 
-        function menuHeight() {
-
-
-            var windowH = $(window).height() + 'px';
-
-
-            $('body').css('min-height', windowH);
-            $(".navTrigger").on('click', function () {
-
-                var menuHeight = $('#sidebar').height() + $('.main-content .logo').outerHeight() + 'px';
-
-
-                if (!$('.sidebar').hasClass('open')) {
-                    $('body').css(
-                        {
-                            'height': 'auto',
-                            'min-height': 'auto'
-                        }
-                    );
-                }
-                else {
-                    $('body').css('height', menuHeight);
-                }
-            });
-        }
-
-        menuHeight()
-
-        $(window).ready(menuHeight);
-        $(window).resize(menuHeight);
+        // function menuHeight() {
+        //
+        //
+        //     var windowH = $(window).height() + 'px';
+        //
+        //
+        //     $('body').css('min-height', windowH);
+        //     $(".navTrigger").on('click', function () {
+        //
+        //         var menuHeight = $('#sidebar').height() + $('.main-content .logo').outerHeight() + 'px';
+        //
+        //
+        //         if (!$('.sidebar').hasClass('open')) {
+        //             $('body').css(
+        //                 {
+        //                     'height': 'auto',
+        //                     'min-height': 'auto'
+        //                 }
+        //             );
+        //         }
+        //         else {
+        //             $('body').css('height', menuHeight);
+        //         }
+        //     });
+        // }
+        //
+        // menuHeight()
+        //
+        // $(window).ready(menuHeight);
+        // $(window).resize(menuHeight);
 
 
 
@@ -423,7 +423,6 @@
 
                     e.preventDefault();
 
-                menuHeight()
                 $('.day').each(function(  ) {
 
                     var tidayDate       = $(this).data('date'),
