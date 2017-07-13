@@ -958,7 +958,7 @@ footer{
 	z-index: 101;
 
 	&.open{
-		overflow-y: scroll;
+		overflow: scroll;
 		display: block;
 	}
 	&::-webkit-scrollbar { width: 0; }
