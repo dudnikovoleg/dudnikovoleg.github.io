@@ -382,6 +382,7 @@
                 oldDates: true,
                 newDates: false,
                 keyboardNavigation: false,
+                disableTouchKeyboard: true,
 
                 autoclose: true,
                 templates: {
