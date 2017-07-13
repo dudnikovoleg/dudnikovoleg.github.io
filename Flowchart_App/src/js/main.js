@@ -10,15 +10,23 @@
 
         function widthHeight() {
             var windowsWidth = (window.innerWidth),
-                // windowGeight = $(window).height(),
                 buttonWidth = $('.button-overlay').width(),
                 contentWidth = windowsWidth - buttonWidth;
 
+            if (windowsWidth > 1280) {
+                $('.content').css({
+                    'width': contentWidth - 150 + 'px'
+                });
 
-            $('.content').css({
-                'width': contentWidth - 150 + 'px',
-                // 'min-height': windowGeight + 'px'
-            });
+            }
+
+            if (windowsWidth <= 1280) {
+                $('.content').css({
+                    'width': windowsWidth - 50 + 'px'
+                });
+
+            }
+
 
         }
 
@@ -72,16 +80,16 @@
                     '',
                     '',
                     '>8',
-                    '<7'
+                    '<8'
                 ]
             },
 
 //star Question array
             starQuestion: {
                 conditionItem10: [
-                    '',
-                    '',
+                    '<7',
                     '>7',
+                    '',
                     '<7'
                 ],
                 conditionItem11: [
@@ -370,22 +378,19 @@
                 });
             })
                 .trigger('input')
-                .focus();
         }
 
         $('.button-control button').on('click', function () {
-            textareaTextCentr();
             finishShow()
-            $(".finish-wrap").appendTo($(".finish-show "));
-            $('textarea').perfectScrollbar();
         });
-        $(".finish-wrap").appendTo($(".finish-show "));
 
 
         textareaTextCentr();
 
 
         function finishShow() {
+            $(".finish-wrap").appendTo($(".finish-show "));
+
             if ($('.innerNode').hasClass('finish-show')) {
                 $('.finish-wrap').addClass('open')
             }
@@ -394,31 +399,66 @@
         finishShow();
 
 
-
         function textReadonly() {
-            $('.textareaWrap textarea').addClass('readonly')
+            $('.textareaWrap textarea').attr('readonly', 'readonly')
         }
+
+
+        $(document).on('click', function () {
+
+            $('textarea').on('mousedown', function () {
+
+                $('textarea').attr('readonly', 'readonly')
+            });
+            $('.textareaWrap textarea:not([readonly="readonly"])').focus();
+
+            textareaTextCentr();
+
+
+            $('.textareaWrap textarea').on('blur', function () {
+
+                $('.textareaWrap textarea').attr('readonly', 'readonly')
+            })
+            $('textarea').perfectScrollbar();
+
+        });
 
 
         $('.edit-question').on('click', function () {
 
-            $('.fc-selected textarea').removeClass('readonly')
-            $('.fc-selected textarea').focus()
-            // $('.fc-selected textarea').blur().addClass('readonly')
+            var selectedNode = $('.fc-selected textarea');
+
+            selectedNode.removeAttr('readonly', 'readonly');
+            selectedNode.focus();
+
+
         });
 
 
         textReadonly();
 
 
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            $('.button-overlay').toggleClass('open')
+        });
 
 
+        // function connectorPoint() {
+        //     $('.conditionItem').each(function () {
+        //         if (!$(this).text()) {
+        //             $(this).siblings('.fc-connector').addClass('connector-point');
+        //         }
+        //         if ($(this).text()) {
+        //             $(this).addClass('connector-point');
+        //         }
+        //     })
+        // }
 
-
+        // connectorPoint();
 
 
         window.scrollTo(0, 0);
-
 
 
     })

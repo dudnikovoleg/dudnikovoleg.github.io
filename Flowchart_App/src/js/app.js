@@ -40,15 +40,14 @@ angular.module('app', ['flowchart'])
                     textVal: 'How was the food?',
 
                     connectors: [
-                        {
-                            type: flowchartConstants.topConnectorType,
-                            id: 'template1',
-                            ww: 'sdsdwwdwd'
-                        },
-                        {
-                            type: flowchartConstants.topConnectorType,
-                            id: 'template2'
-                        },
+                        // {
+                        //     type: flowchartConstants.topConnectorType,
+                        //     id: 'template1',
+                        // },
+                        // {
+                        //     type: flowchartConstants.topConnectorType,
+                        //     id: 'template2'
+                        // },
                         {
                             type: flowchartConstants.bottomConnectorType,
                             id: 'template3'
@@ -147,7 +146,7 @@ angular.module('app', ['flowchart'])
                 {
                     name: '',
                     id: nextNodeID++,
-                    x: 600,
+                    x: 400,
                     y: 1200,
                     class: 'multi-question finish-show',
                     figureClass: 'square',
