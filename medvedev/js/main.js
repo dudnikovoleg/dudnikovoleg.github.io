@@ -381,7 +381,7 @@
                 container: '.wrapp-date',
                 oldDates: true,
                 newDates: false,
-                disableTouchKeyboard:true,
+                // disableTouchKeyboard:true,
                 keyboardNavigation: false,
                 autoclose: true,
                 templates: {
