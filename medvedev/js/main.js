@@ -382,6 +382,8 @@
                 oldDates: true,
                 newDates: false,
                 keyboardNavigation: false,
+                disableTouchKeyboard: false,
+
                 autoclose: true,
                 templates: {
                     leftArrow: '<span class="left" title="назад"></span>',
