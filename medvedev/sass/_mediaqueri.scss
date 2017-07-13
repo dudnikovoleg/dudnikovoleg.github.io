@@ -1238,6 +1238,7 @@
 /**** Pop up ****/
 	.pop-up {
 		padding: 45px 0 0 0;
+        overflow-y: scroll;
 
 		.closed {
 			margin: -21px 14%;
