@@ -7,9 +7,8 @@
 .slider-wrapp{
 	overflow: hidden;
 }
-*{
+*, *:before, *:after {
 	-webkit-appearance: none;
-
 }
 body {
 	position: relative;
