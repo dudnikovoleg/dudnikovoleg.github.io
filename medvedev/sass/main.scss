@@ -3,9 +3,12 @@
 
 
 //Main style
+.container-fluid,
+.slider-wrapp{
+	overflow: hidden;
+}
 
-
-html, body {
+body {
 	position: relative;
 	width: 100%;
 	min-width: 320px;
@@ -18,15 +21,13 @@ html, body {
 	overflow-x: hidden;
 	background: $second-col;
 	color: #1a1b1b;
-	.open{
-		overflow-y: scroll !important;
+	&.open{
+		overflow: hidden;
 	}
 }
 
 
-.heigt{
-	overflow: hidden;
-}
+
 
 .btn,
 .btn:visited,
@@ -954,7 +955,7 @@ footer{
 	top: 0;
 	bottom: 0;
 	right: 0;
-	overflow: scroll;
+	overflow-y: scroll;
 
 	padding: 45px 5% 0 5%;
 	background: $accent-col;
