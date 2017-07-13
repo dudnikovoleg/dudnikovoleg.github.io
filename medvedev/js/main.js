@@ -643,7 +643,7 @@
                 var windowH = $(window).height() + 'px';
 
 
-                    $('body').css('min-height', windowH);
+                $('body').css('min-height', windowH);
                 $(".navTrigger").on('click', function () {
 
                     var menuHeight = $('#sidebar').height() + $('.main-content .logo').outerHeight() + 'px';
@@ -655,7 +655,7 @@
                                 'height': 'auto',
                                 'min-height': 'auto'
                             }
-                            );
+                        );
                     }
                     else {
                         $('body').css('height', menuHeight);
