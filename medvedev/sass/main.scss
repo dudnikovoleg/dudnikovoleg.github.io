@@ -18,6 +18,9 @@ html, body {
 	overflow-x: hidden;
 	background: $second-col;
 	color: #1a1b1b;
+	.open{
+		overflow-y: scroll !important;
+	}
 }
 
 
