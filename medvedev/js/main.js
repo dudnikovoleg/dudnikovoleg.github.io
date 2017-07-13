@@ -293,12 +293,12 @@
 
             $('.btn-feedback .btn').on('click', function () {
                 $('.pop-up').addClass('open');
-                $('body').addClass('open');
+                // $('body').addClass('open');
             });
 
             $('.pop-up .closed-ic').on('click', function () {
                 $('.pop-up').removeClass('open');
-                $('body').removeClass('open');
+                // $('body').removeClass('open');
             });
 
 
