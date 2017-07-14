@@ -3,14 +3,9 @@
 
 
 //Main style
-.container-fluid,
-.slider-wrapp{
-	overflow: hidden;
-}
-*, *:before, *:after {
-	-webkit-appearance: none;
-}
-body {
+
+
+html, body {
 	position: relative;
 	width: 100%;
 	min-width: 320px;
@@ -23,14 +18,14 @@ body {
 	overflow-x: hidden;
 	background: $second-col;
 	color: #1a1b1b;
-	&.open{
-		overflow: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
+}
+.height-popup{
+	overflow: hidden;
 }
 
-
-
+.heigt{
+	overflow: hidden;
+}
 
 .btn,
 .btn:visited,
@@ -172,11 +167,11 @@ body {
 			}
 		}
 	}
-/** Search form **/
+	/** Search form **/
 
-.search-form{
-	position: relative;
-	margin: 0 45px 50px 55px;
+	.search-form{
+		position: relative;
+		margin: 0 45px 50px 55px;
 
 		.search-icon{
 			position: absolute;
@@ -336,7 +331,7 @@ header{
 	}
 
 
-//Header top
+	//Header top
 	.header-top{
 		width: 100%;
 		height: 135px;
@@ -411,10 +406,10 @@ header{
 
 			.work-time{
 				display: none;
-				padding: 10px 10px 10px 63px;
+				padding: 10px 10px 10px 55px;
 				font-weight: 700;
 			}
-		 }
+		}
 
 
 		.phone-mail{
@@ -449,7 +444,7 @@ header{
 	}
 
 
-/*** Header main ***/
+	/*** Header main ***/
 	video{
 		position: absolute;
 		top: 0;
@@ -478,7 +473,7 @@ header{
 		}
 
 
-/** Header middle **/
+		/** Header middle **/
 		.header-middle{
 			position: relative;
 			padding: 55px 8% 25px 8%;
@@ -506,7 +501,7 @@ header{
 
 
 
-/** Header bottom **/
+	/** Header bottom **/
 	.header-bottom{
 
 		.link-box{
@@ -618,7 +613,7 @@ header{
 	}
 
 
-/** News **/
+	/** News **/
 	.news-item{
 		display: block;
 		padding: 25px 0 25px 5%;
@@ -682,13 +677,13 @@ header{
 			transition: all 0.3s ease-in-out 0s;
 		}
 
-		 a:hover:after {
+		a:hover:after {
 			visibility: visible;
 			transform: scaleX(1);
 		}
 	}
 
-/** shares **/
+	/** shares **/
 	.shares-short{
 		padding-left: 6%;
 
@@ -818,18 +813,18 @@ header{
 		min-height: 405px;
 		padding: 96px 18% 0 4%;
 
-			h3{
-				margin: 0;
-				font-family: $kievit;
-				font-size: 2em;
-				line-height: 1.2;
-			}
+		h3{
+			margin: 0;
+			font-family: $kievit;
+			font-size: 2em;
+			line-height: 1.2;
+		}
 
-			p{
-				padding-top: 23px;
-				font-size: .791em;
-				line-height: 1.84;
-			}
+		p{
+			padding-top: 23px;
+			font-size: .791em;
+			line-height: 1.84;
+		}
 	}
 }
 
@@ -840,7 +835,7 @@ header{
 	.title{
 		margin: 0;
 		padding-bottom: 15px;
-		font-size: 1em;
+		font-size: .9em;
 		font-weight: 700;
 		border-bottom: solid 1px #e9edf4;
 	}
@@ -953,23 +948,17 @@ footer{
 
 .pop-up{
 	display: none;
-	position: fixed;
+	position: absolute;
 	left: 310px;
 	top: 0;
-	bottom: 0;
 	right: 0;
 	overflow-y: scroll;
-
 	padding: 45px 5% 0 5%;
 	background: $accent-col;
 	z-index: 101;
-	-webkit-overflow-scrolling: touch;
-
 
 	&.open{
 		display: block;
-		-webkit-overflow-scrolling: touch;
-
 	}
 	&::-webkit-scrollbar { width: 0; }
 	& { -ms-overflow-style: none; }
@@ -990,15 +979,15 @@ footer{
 			background-size: 32%;
 			background-repeat: no-repeat;
 			background-position: center;
-			
+
 			transition: all .3s ease;
 
 			&:hover{
 				cursor: pointer;
+				background-image: url('../img/svg/close_g.svg');
 				background-size: 32%;
 				background-repeat: no-repeat;
 				background-position: center;
-				background-image: url('../img/svg/close_g.svg');
 			}
 		}
 	}
@@ -1100,7 +1089,7 @@ footer{
 		}
 
 
-//Time picker
+		//Time picker
 
 
 		.timepicker + .contact-item{
@@ -1114,9 +1103,9 @@ footer{
 			.time-icon{
 				position: absolute;
 				width: 50px;
-				height: 54px;
-				right: 8px;
-				top: 14px;
+				height: 50px;
+				right: 2%;
+				top: 20px;
 				background-image: url(../img/down_ico.png);
 				background-repeat: no-repeat;
 				background-position: center;

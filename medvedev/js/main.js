@@ -293,12 +293,38 @@
 
             $('.btn-feedback .btn').on('click', function () {
                 $('.pop-up').addClass('open');
-                $('body').addClass('open');
+
+                $('body').addClass('height-popup');
+
+
+
+                $(window).resize(function() {
+                    resizeContent();
+                });
+
+                function resizeContent () {
+                    var heightPopup = $('.pop-up.open').height(),
+                        windowH = $(window).height();
+
+                    if (heightPopup < windowH)  {
+                        $('body, .pop-up').css('height', windowH + 'px');
+                    }
+                    else{
+                        $('body').css('height', heightPopup + 'px');
+                    }
+                }
+
+                resizeContent ()
+
+
+
             });
 
             $('.pop-up .closed-ic').on('click', function () {
                 $('.pop-up').removeClass('open');
-                $('body').removeClass('open');
+                $('body').removeClass('heightPopup');
+                $('body, .pop-up').css('height','');
+
             });
 
 
@@ -558,9 +584,7 @@
 
 
 
-
-
-        })
+        });
 
 
 
@@ -654,8 +678,7 @@
                     if (!$('.sidebar').hasClass('open')) {
                         $('body').css(
                             {
-                                'height': 'auto',
-                                'min-height': 'auto'
+                                'height': ''
                             }
                             );
                     }
@@ -853,6 +876,30 @@
         $(window).resize(errorPageResize);
 
 
+        // $(document).ready(function() {
+        //     $("input, select, textarea").on('focus', function() {
+        //         var focusing
+        //
+        //         $(".pop-up").css({
+        //             'position': 'absolute',
+        //             'top': $(document).scrollTop()
+        //         });
+        //         focusing = true;
+        //     })
+        //     $("input, select, textarea").on('blur', function() {
+        //         var focusing
+        //
+        //         $(".pop-up").css({
+        //             'position': 'fixed',
+        //             'top': 0
+        //         });
+        //         focusing = false;
+        //     })
+        // });
+        //
+        // $(window).scroll(function() {
+        //     if ( focusing ) $("#header").css({ 'top': $(document).scrollTop() });
+        // });
 
 
     })

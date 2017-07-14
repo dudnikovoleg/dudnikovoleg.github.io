@@ -1237,8 +1237,7 @@
 
 /**** Pop up ****/
 	.pop-up {
-
-      padding: 45px 0 0 0;
+      padding: 0;
 
 		.closed {
 			margin: -21px 14%;
@@ -1262,7 +1261,7 @@
 				display: none;
 				position: absolute;
 				left: 0;
-				right: 2%;
+				right: 0;
 			}
 			.timepicker label{
 				left: 0;
