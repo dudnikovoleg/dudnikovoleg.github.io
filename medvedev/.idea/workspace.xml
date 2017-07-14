@@ -18,8 +18,8 @@
       <file leaf-file-name="_mediaqueri.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sass/_mediaqueri.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="1238" column="13" lean-forward="false" selection-start-line="1238" selection-start-column="13" selection-end-line="1238" selection-end-column="13" />
+            <state relative-caret-position="313">
+              <caret line="1240" column="16" lean-forward="false" selection-start-line="1240" selection-start-column="16" selection-end-line="1240" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -201,15 +201,15 @@
       <workItem from="1500015311861" duration="1415000" />
       <workItem from="1500018242346" duration="515000" />
       <workItem from="1500019834277" duration="598000" />
-      <workItem from="1500030516422" duration="10604000" />
+      <workItem from="1500030516422" duration="10803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26858000" />
+    <option name="totallyTimeSpent" value="27057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -626,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_mediaqueri.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="1238" column="13" lean-forward="false" selection-start-line="1238" selection-start-column="13" selection-end-line="1238" selection-end-column="13" />
+        <state relative-caret-position="313">
+          <caret line="1240" column="16" lean-forward="false" selection-start-line="1240" selection-start-column="16" selection-end-line="1240" selection-end-column="23" />
           <folding />
         </state>
       </provider>
