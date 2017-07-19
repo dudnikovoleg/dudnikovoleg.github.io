@@ -280,8 +280,7 @@
 			resize: none;
 
 			&.error{
-				background-color: rgba(250,0,0, .5);
-				color: #ffffff;
+				background: rgba(255,201,202, 1);
 			}
 			&:focus + label,
 			&:focus + label {

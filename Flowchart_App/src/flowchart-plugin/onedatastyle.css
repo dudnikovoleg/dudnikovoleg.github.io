@@ -13,6 +13,7 @@ body {
 }
 
 .button-overlay .edit-question,
+.button-overlay .edit-answer,
 .button-overlay .del,
 .button-overlay button {
   display: inline-block;
@@ -27,12 +28,15 @@ body {
 }
 
 .edit-btn .edit-question:hover:not([disabled]),
+.edit-answer-btn .edit-answer:hover:not([disabled]),
 .del-btn .del:hover:not([disabled]) {
   cursor: pointer;
 }
 
 .edit-btn .edit-question[disabled],
+.edit-answer-btn .edit-answer[disabled],
 .del-btn .del[disabled] {
+  position: relative;
   -webkit-filter: brightness(70%);
   filter: brightness(70%);
   box-shadow: none !important;

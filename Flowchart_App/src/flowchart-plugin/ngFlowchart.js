@@ -343,6 +343,7 @@ if (!Function.prototype.bind) {
             mouseoverscope.edge = null;
             mouseoverscope.node = null;
 
+
             mouseoverservice.nodeMouseOver = function(node) {
                 return function(event) {
                     return applyFunction(function() {
@@ -360,6 +361,7 @@ if (!Function.prototype.bind) {
             };
 
             mouseoverservice.connectorMouseEnter = function(connector) {
+
                 return function(event) {
                     return applyFunction(function() {
                         mouseoverscope.connector = connector;
@@ -368,6 +370,7 @@ if (!Function.prototype.bind) {
             };
 
             mouseoverservice.connectorMouseLeave = function(connector) {
+
                 return function(event) {
                     return applyFunction(function() {
                         mouseoverscope.connector = null
@@ -376,6 +379,7 @@ if (!Function.prototype.bind) {
             };
 
             mouseoverservice.edgeMouseEnter = function(event, edge) {
+
                 mouseoverscope.edge = edge;
             };
 
@@ -678,6 +682,7 @@ if (!Function.prototype.bind) {
                 },
 
                 getSelectedNodes: function() {
+
                     return model.nodes.filter(function(node) {
                         return modelservice.nodes.isSelected(node)
                     });
@@ -1436,6 +1441,7 @@ if (!Function.prototype.bind) {
             '      <circle class="edge-endpoint" r="4"></circle>\n' +
             '    </g>\n' +
             '  </svg>\n' +
+
             '  <fc-node selected="modelservice.nodes.isSelected(node)" under-mouse="node === mouseOver.node" node="node"\n' +
             '           mouse-over-connector="mouseOver.connector"\n' +
             '           modelservice="modelservice"\n' +
@@ -1457,10 +1463,10 @@ if (!Function.prototype.bind) {
     module.run(['$templateCache', function($templateCache) {
         $templateCache.put('flowchart/node.html',
             '<div\n' +
-            '  id="{{node.id}}"\n' +
+            '  id="{{node.id}"\n' +
             '  ng-attr-style="position: absolute; top: {{ node.y }}px; left: {{ node.x }}px;"\n' +
             '  ng-dblclick="callbacks.doubleClick($event)">\n' +
-            '  <div class="innerNode {{ node.class }} {{ node.figureClass }} ">\n' +
+            '  <div class=" innerNode {{ node.class }} {{ node.figureClass }} ">\n' +
             '  <div class="content-wrap">\n' +
             '  <div class="start">{{ node.startText }}</div>\n' +
             '  <div class="figure"></div>\n' +
@@ -1489,6 +1495,7 @@ if (!Function.prototype.bind) {
             '      </div>\n' +
             '    </div>\n' +
             '  </div>\n' +
+
             '  <div class="fc-nodedelete" ng-click="modelservice.nodes.delete(node)">\n' +
             '    &times;\n' +
             '  </div>\n' +

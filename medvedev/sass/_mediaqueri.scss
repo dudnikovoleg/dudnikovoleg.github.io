@@ -1396,7 +1396,24 @@
 		}
 	}
 
+  .close-popup-custom{
+    right: 20px;
+  }
+  img.mfp-img {
+    padding: 35px 50px 35px 25px;
+  }
+  .mfp-wrap{
+    &:before{
+      position: absolute;
+      content: '';
+      left: 25px;
+      right: 50px;
+      bottom: 35px;
+      top: 35px;
+      background-color: #ffcdcf;
 
+    }
+  }
 
 	/***** Doctors page start *****/
 

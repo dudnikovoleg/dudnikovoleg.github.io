@@ -4,6 +4,9 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	color: #212121;
+	margin: 0;
+	padding-top: 50px;
+	box-sizing: border-box;
 	//zoom: .8;
 }
 
@@ -29,6 +32,8 @@ li {
 		position: relative;
 		width: 100%;
 		height: 100%;
+		min-height:  100vh;
+
 		//filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
 	}
 }
@@ -66,7 +71,8 @@ ul {
 	ul {
 		padding: 0;
 	}
-	.edit-btn {
+	.edit-btn,
+	.edit-answer-btn{
 		text-align: center;
 	}
 	.del-btn {
@@ -77,6 +83,10 @@ ul {
 		}
 	}
 }
+
+
+
+
 
 .start {
 	position: absolute;
@@ -96,6 +106,7 @@ ul {
 		.star-question-btn,
 		.multi-question-btn,
 		.edit-question,
+		.edit-answer,
 		.del {
 			box-shadow: 250px 0 0 0 rgba(0, 0, 0, .3) inset;
 		}
@@ -144,6 +155,7 @@ ul {
 .star-question-btn,
 .multi-question-btn,
 .del,
+.edit-answer,
 .edit-question {
 	background-image: linear-gradient(21deg, #2ecc71, #79e196);
 	display: inline-block;
@@ -508,6 +520,53 @@ textarea {
 	100% {
 		-moz-box-shadow: 0 0 0 0 rgba(240,240,240, 0);
 		box-shadow: 0 0 0 0 rgba(240,240,240, 0);
+	}
+}
+
+.settingsPopUp-wrap{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.2);
+	display: none;
+	z-index: 96;
+	&.open{
+		display: block;
+	}
+	&.disabled{
+		display: none !important;
+	}
+}
+.settingsPopUp {
+	position: absolute;
+	min-height: 200px;
+	min-width: 300px;
+	background-color: rgba(0, 217, 255, 1);
+	box-shadow: 0 0px 27px 0 rgba(0, 0, 0, 0.08);
+	z-index: 2;
+	padding: 0px 20px 30px 20px;
+	box-sizing: border-box;
+	left: 50%;
+	top: 10%;
+	margin-bottom: 30px;
+	transform: translateX(-50%);
+
+	input{
+		width: 100%;
+		padding: 10px;
+		box-sizing: border-box;
+
+	}
+	.add{
+		&.disabled{
+			pointer-events:  none;
+			color: #9c9a9a;
+		}
+	}
+	label{
+		display: block;
 	}
 }
 

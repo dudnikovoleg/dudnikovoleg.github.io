@@ -15,6 +15,28 @@
     $(document).ready(function () {
 
 
+
+        (function ($) {
+            if (!$('.license-slider .slide-item').length) return;
+            $('.license-slider .slide-item').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                closeBtnInside: false,
+                fixedContentPos: true,
+                mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+
+                zoom: {
+
+                },
+                closeMarkup: ' <button class="close-popup-custom"></button>'
+            });
+    })($);
+
+
+
+
+
+
         var windowsWidth = (window.innerWidth);
 
 
@@ -456,7 +478,7 @@
 
             /**** Validation form ****/
 
-            $(document).on( 'blur' , '[name="name"] ,  [name="email"] , [name="tel"], [name="questionerName"], [name="questionerEmail"]' , function() {
+            $(document).on( 'blur' , '[name="name"] ,  [name="email"] , [name="tel"], [name="questionerName"], [name="questionerEmail"], [name="subscribeEmail"]' , function() {
 
 
                 var field           = $(this).attr("name"),
@@ -473,6 +495,7 @@
 
                     case 'email':
                     case 'questionerEmail':
+                    case 'subscribeEmail':
 
                         if (!mailRegExp.test(fieldValue)) {
                             $(this).addClass(errorClass)
@@ -719,9 +742,10 @@
                 $(" .title").removeClass('show')
 
                 $(this).addClass('show')
-
             }
         });
+
+
 
 
         function positionSoc () {
@@ -844,6 +868,13 @@
 
 
 
+        $('#subscribe, .subscribe-icon ').on('click', function () {
+            $('#subscribe').addClass('label-show');
+        });
+
+        $('.subscribe-icon').on('click',function () {
+            $('#subscribe').focus()
+        });
 
 
 
@@ -900,7 +931,6 @@
         // $(window).scroll(function() {
         //     if ( focusing ) $("#header").css({ 'top': $(document).scrollTop() });
         // });
-
 
     })
 })(jQuery);

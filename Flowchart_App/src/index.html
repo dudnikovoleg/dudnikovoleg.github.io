@@ -16,7 +16,26 @@
     <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
 
 </head>
-<body ng-app="app" ng-controller="AppCtrl" ng-keydown="keyDown($event)" ng-keyup="keyUp($event)">
+<body ng-app="app" ng-controller="AppCtrl" >
+<!--ng-keydown="keyDown($event)" ng-keyup="keyUp($event)"-->
+
+<div class="settingsPopUp-wrap">
+    <div class="settingsPopUp ">
+        <h3>Enter your answer options</h3>
+        <form class="startForm">
+            <button ng-click="addNewOutputConnector()" class="add disabled"
+                    ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0">
+                Add
+            </button>
+            <button class="done">Done</button>
+            <button class="delete disabled">Delete</button>
+            <label for="1">1 Answer</label>
+            <input class="answer" id="1" type="text">
+        </form>
+
+    </div>
+</div>
+
 
 <div class="finish-wrap"  >
 
@@ -110,12 +129,27 @@
                 </span>
             </li>
 
+            <li class="button-control edit-answer-btn">
+                <span class="edit-answer" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0" title="Edit answers text">
+                    Edit answers
+                </span>
+            </li>
+
             <li class="button-control del-btn">
                 <span class="del" ng-click="deleteSelected()"
                         ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0" title="Delete selected nodes and connections">
                     Delete Selected
                 </span>
             </li>
+
+
+            <!--<li class="button-control edit-btn" ng-click="addNewInputConnector()" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0"-->
+                    <!--title="Add a new input connector to the selected node">-->
+                <!--Add Input-->
+            <!--</li>-->
+            <!--<li class="button-control edit-btn" ng-click="addNewOutputConnector()" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0"-->
+                    <!--title="Add a new output connector to the selected node">Add Output-->
+            <!--</li>-->
 
 
             <!--<li class="button-control">-->

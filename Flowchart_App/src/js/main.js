@@ -381,6 +381,8 @@
         }
 
         $('.button-control button').on('click', function () {
+
+
             finishShow()
         });
 
@@ -405,23 +407,56 @@
 
 
         $(document).on('click', function () {
-
+            $('.textareaWrap textarea').focusin(function() {
+            });
             $('textarea').on('mousedown', function () {
 
                 $('textarea').attr('readonly', 'readonly')
             });
             $('.textareaWrap textarea:not([readonly="readonly"])').focus();
 
+
+
             textareaTextCentr();
 
 
-            $('.textareaWrap textarea').on('blur', function () {
+            $('.new .textareaWrap textarea').on('blur', function () {
 
+                $(this).closest('.fc-node').click();
                 $('.textareaWrap textarea').attr('readonly', 'readonly')
-            })
-            $('textarea').perfectScrollbar();
+
+            });
+
+                $('textarea').perfectScrollbar();
 
         });
+
+
+
+        /**************************/
+        /***** settingsPopUp *****/
+        /*************************/
+
+        $(document).on('click  mouseup', function (e) {
+
+            if ($('.new').length && !$(e.target).closest('.button-overlay ,.innerNode').length) {
+                $('.settingsPopUp-wrap').addClass('open')
+                $('.innerNode ').removeClass('new')
+                $('fc-dragging')
+            }
+            if (!$(e.target).closest('.fc-dragging')) {
+            }
+
+        });
+
+
+
+
+        $('.edit-question').on('click', function (e) {
+            $(".fc-node.fc-selected .innerNode ").addClass('new')
+
+        });
+
 
 
         $('.edit-question').on('click', function () {
@@ -456,6 +491,69 @@
         // }
 
         // connectorPoint();
+
+        //
+        //
+        // var allGood=true;
+        // var lastInputField=0;
+        // var indexInputField=1;
+        //
+        // $(function(){
+        //     $('.add').on("click", function(){
+        //
+        //         lastInputField++;
+        //         indexInputField++;
+        //
+        //         var ww =  $(this).siblings("input").last();
+        //
+        //
+        //
+        //         console.log( ww)
+        //
+        //         $('.settingsPopUp input').each(function() {
+        //             if ($(this).val() == "") {
+        //
+        //                 allGood=false;
+        //                 return false;
+        //             }
+        //
+        //         });
+        //
+        //         if (!allGood && lastInputField < 4 ) {
+        //
+        //              $("<label for=" + indexInputField  + ">" + indexInputField + " Answer</label>" +
+        //                  "<input type='text' id =" + indexInputField + ">").insertAfter(ww);
+        //         }
+        //     });
+        // });
+
+        //
+        //
+        // $('.settingsPopUp input').each(function () {
+        //
+        //             $(this).on( 'click', function () {
+        //
+        //                 $(this).after('<input type="text"></form>');
+        //             console.log($(this))
+        //                 });
+        //
+        //
+        //
+        //     });
+
+//
+// $('.fc-node').on('click', function () {
+//     console.log($(this).position())
+// });
+
+        $('form').keydown(function(event){
+            if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+
 
 
         window.scrollTo(0, 0);
