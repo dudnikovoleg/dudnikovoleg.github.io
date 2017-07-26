@@ -2,15 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-.button-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 30px 30px 10px 30px ;
-  z-index: 95;
-  background-color: #f0f0f0;
-  box-shadow: 0 0px 27px 0 rgba(0, 0, 0, 0.08);
-}
 
 .button-overlay .edit-question,
 .button-overlay .edit-answer,

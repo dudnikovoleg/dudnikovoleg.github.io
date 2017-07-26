@@ -16,22 +16,20 @@
     <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
 
 </head>
-<body ng-app="app" ng-controller="AppCtrl" >
+<body ng-app="bzrdashApp" ng-controller="FlowchartCtrl"  class="flowchart">
 <!--ng-keydown="keyDown($event)" ng-keyup="keyUp($event)"-->
 
 <div class="settingsPopUp-wrap">
     <div class="settingsPopUp ">
         <h3>Enter your answer options</h3>
-        <form class="startForm">
-            <button ng-click="addNewOutputConnector()" class="add disabled"
-                    ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0">
-                Add
+        <div class="startForm">
+            <button ng-click="addNewOutputConnector()" class="add disabled" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0">Add
             </button>
             <button class="done">Done</button>
-            <button class="delete disabled">Delete</button>
+            <button  class="delete disabled" ng-click="deleteInput()">Delete</button>
             <label for="1">1 Answer</label>
-            <input class="answer" id="1" type="text">
-        </form>
+            <input placeholder="Enter the text of the question" class="answer" id="1" type="text">
+        </div>
 
     </div>
 </div>
@@ -135,6 +133,11 @@
                 </span>
             </li>
 
+            <!--<li class="button-control del-btn">-->
+                <!--<span  class=" " ng-click="deleteInput()">Delete point </span>-->
+
+            <!--</li>   -->
+
             <li class="button-control del-btn">
                 <span class="del" ng-click="deleteSelected()"
                         ng-disabled="modelservice.nodes.getSelectedNodes().length == 0 && modelservice.edges.getSelectedEdges().length == 0" title="Delete selected nodes and connections">
@@ -143,18 +146,6 @@
             </li>
 
 
-            <!--<li class="button-control edit-btn" ng-click="addNewInputConnector()" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0"-->
-                    <!--title="Add a new input connector to the selected node">-->
-                <!--Add Input-->
-            <!--</li>-->
-            <!--<li class="button-control edit-btn" ng-click="addNewOutputConnector()" ng-disabled="modelservice.nodes.getSelectedNodes().length == 0"-->
-                    <!--title="Add a new output connector to the selected node">Add Output-->
-            <!--</li>-->
-
-
-            <!--<li class="button-control">-->
-                <!--<button ng-click="activateWorkflow()">Activate Workflow</button>-->
-            <!--</li>-->
         </ul>
 
 
@@ -163,11 +154,11 @@
                automatic-resize="true"></fc-canvas>
 </div>
 
+<script src="js/jquery-3.2.1.min.js"></script>
 
 <script src="angular/angular.js"></script>
 <script src="flowchart-plugin/ngFlowchart.js"></script>
 <!-- App code. -->
-<script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/perfect-scrollbar.jquery.js"></script>
 
 

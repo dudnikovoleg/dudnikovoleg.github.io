@@ -143,49 +143,65 @@ if (!Function.prototype.bind) {
                     }
                 }
             }
+
             return {
                 dragstart: function(node) {
                     return function(event) {
+
+
+
+
                         modelservice.deselectAll();
                         modelservice.nodes.select(node);
                         nodeDraggingScope.draggedNode = node;
-                        draggedElement = event.target;
+                        draggedElement = event.originalEvent.target;
 
-                        var element = angular.element(event.target);
-                        dragOffset.x = parseInt(element.css('left')) - event.clientX;
-                        dragOffset.y = parseInt(element.css('top')) - event.clientY;
+
+                        var element = angular.element(event.originalEvent.target);
+                        dragOffset.x = parseInt(element.css('left')) - event.originalEvent.clientX;
+                        dragOffset.y = parseInt(element.css('top')) - event.originalEvent.clientY;
+
+                        // console.log(element)
+                        // console.log(event)
 
                         if (dragAnimation == flowchartConstants.dragAnimationShadow) {
-                            var shadowElement = angular.element('<div style="position: absolute; opacity: 0.7; top: '+ getYCoordinate(dragOffset.y + event.clientY) +'px; left: '+ getXCoordinate(dragOffset.x + event.clientX) +'px; "><div class="innerNode"><p style="padding: 0 15px;">'+ nodeDraggingScope.draggedNode.name +'</p> </div></div>');
-                            var targetInnerNode = angular.element(event.target).children()[0];
+                            var shadowElement = angular.element('<div style="position: absolute; opacity: 0.7; top: '+ getYCoordinate(dragOffset.y + event.originalEvent.clientY) +'px; left: '+ getXCoordinate(dragOffset.x + event.originalEvent.clientX) +'px; "><div class="innerNode"><p style="padding: 0 15px;">'+ nodeDraggingScope.draggedNode.name +'</p> </div></div>');
+                            var targetInnerNode = angular.element(event.originalEvent.target).children()[0];
+
+
                             shadowElement.children()[0].style.backgroundColor = targetInnerNode.style.backgroundColor;
                             nodeDraggingScope.shadowElement = shadowElement;
                             var canvasElement = modelservice.getCanvasHtmlElement();
                             canvasElement.appendChild(nodeDraggingScope.shadowElement[0]);
                         }
 
-                        event.dataTransfer.setData('Text', 'Just to support firefox');
-                        if (event.dataTransfer.setDragImage) {
+                        event.originalEvent.dataTransfer.setData('Text', 'Just to support firefox');
+                        if (event.originalEvent.dataTransfer.setDragImage) {
                             var invisibleDiv = angular.element('<div></div>')[0]; // This divs stays invisible, because it is not in the dom.
-                            event.dataTransfer.setDragImage(invisibleDiv, 0, 0);
+                            event.originalEvent.dataTransfer.setDragImage(invisibleDiv, 0, 0);
                         } else {
-                            destinationHtmlElement = event.target;
+                            destinationHtmlElement = event.originalEvent.target;
                             oldDisplayStyle = destinationHtmlElement.style.display;
-                            event.target.style.display = 'none'; // Internetexplorer does not support setDragImage, but it takes an screenshot, from the draggedelement and uses it as dragimage.
+                            event.originalEvent.target.style.display = 'none'; // Internetexplorer does not support setDragImage, but it takes an screenshot, from the draggedelement and uses it as dragimage.
                             // Since angular redraws the element in the next dragover call, display: none never gets visible to the user.
                             if (dragAnimation == flowchartConstants.dragAnimationShadow) {
                                 // IE Drag Fix
                                 nodeDraggingScope.shadowDragStarted = true;
                             }
                         }
+
                     };
+                    // event.stopPropagation()
+
                 },
 
                 drop: function(event) {
+
+
                     if (nodeDraggingScope.draggedNode) {
                         return applyFunction(function() {
-                            nodeDraggingScope.draggedNode.x = getXCoordinate(dragOffset.x + event.clientX);
-                            nodeDraggingScope.draggedNode.y = getYCoordinate(dragOffset.y + event.clientY);
+                            nodeDraggingScope.draggedNode.x = getXCoordinate(dragOffset.x + event.originalEvent.clientX);
+                            nodeDraggingScope.draggedNode.y = getYCoordinate(dragOffset.y + event.originalEvent.clientY);
                             event.preventDefault();
                             return false;
                         })
@@ -193,13 +209,19 @@ if (!Function.prototype.bind) {
                 },
 
                 dragover: function(event) {
+                    // console.log(event)
+
+                    // console.log(dragOffset.x)
+                    // console.log(event.clientX)
+                    // console.log(nodeDraggingScope.draggedNode.y + '  -  X')
+
                     if (dragAnimation == flowchartConstants.dragAnimationRepaint) {
                         if (nodeDraggingScope.draggedNode) {
                             return applyFunction(function() {
-                                nodeDraggingScope.draggedNode.x = getXCoordinate(dragOffset.x + event.clientX);
-                                nodeDraggingScope.draggedNode.y = getYCoordinate(dragOffset.y + event.clientY);
+                                nodeDraggingScope.draggedNode.x = getXCoordinate(dragOffset.x + event.originalEvent.clientX);
+                                nodeDraggingScope.draggedNode.y = getYCoordinate(dragOffset.y + event.originalEvent.clientY);
                                 resizeCanvas(nodeDraggingScope.draggedNode, draggedElement);
-                                event.preventDefault();
+                                event.originalEvent.preventDefault();
                                 return false;
                             });
                         }
@@ -211,20 +233,20 @@ if (!Function.prototype.bind) {
                                     nodeDraggingScope.shadowDragStarted = false;
                                 });
                             }
-                            nodeDraggingScope.shadowElement.css('left', getXCoordinate(dragOffset.x + event.clientX) + 'px');
-                            nodeDraggingScope.shadowElement.css('top', getYCoordinate(dragOffset.y + event.clientY) + 'px');
+                            nodeDraggingScope.shadowElement.css('left', getXCoordinate(dragOffset.x + event.originalEvent.clientX) + 'px');
+                            nodeDraggingScope.shadowElement.css('top', getYCoordinate(dragOffset.y + event.originalEvent.clientY) + 'px');
                             resizeCanvas(nodeDraggingScope.draggedNode, draggedElement);
-                            event.preventDefault();
+                            event.originalEvent.preventDefault();
                         }
                     }
                 },
 
                 dragend: function(event) {
+
                     applyFunction(function() {
                         if (nodeDraggingScope.shadowElement) {
                             nodeDraggingScope.draggedNode.x = parseInt(nodeDraggingScope.shadowElement.css('left').replace('px',''));
                             nodeDraggingScope.draggedNode.y = parseInt(nodeDraggingScope.shadowElement.css('top').replace('px',''));
-
                             modelservice.getCanvasHtmlElement().removeChild(nodeDraggingScope.shadowElement[0]);
                             nodeDraggingScope.shadowElement = null;
                         }
@@ -234,6 +256,7 @@ if (!Function.prototype.bind) {
                             draggedElement = null;
                             dragOffset.x = 0;
                             dragOffset.y = 0;
+
                         }
                     });
                 }
@@ -659,6 +682,8 @@ if (!Function.prototype.bind) {
                 },
 
                 delete: function(node) {
+                    // console.log(modelservice.edges)
+
                     if (this.isSelected(node)) {
                         this.deselect(node);
                     }
@@ -739,6 +764,7 @@ if (!Function.prototype.bind) {
                         this.deselect(edge)
                     }
                     model.edges.splice(index, 1);
+
                 },
 
                 getSelectedEdges: function() {
@@ -780,15 +806,58 @@ if (!Function.prototype.bind) {
             };
 
             modelservice.deleteSelected = function() {
+
                 var edgesToDelete = modelservice.edges.getSelectedEdges();
+
                 angular.forEach(edgesToDelete, function(edge) {
                     modelservice.edges.delete(edge);
                 });
                 var nodesToDelete = modelservice.nodes.getSelectedNodes();
+
                 angular.forEach(nodesToDelete, function(node) {
                     modelservice.nodes.delete(node);
                 });
             };
+
+
+
+
+            /**************************/
+            /******* $Node info   ******/
+            /**************************/
+
+
+
+            modelservice.deleteInput = function () {
+
+                var pointToDelete = modelservice.nodes.getSelectedNodes();
+
+                var edgesToDelete = modelservice.edges.getSelectedEdges();
+
+
+                angular.forEach(pointToDelete, function(node) {
+                    // console.log(node.connectors)
+                    // console.log(node)
+                    console.log(model.nodes)
+                    console.log(model.edges)
+
+                        // console.log($('.answer ').length);
+                        // console.log(model.edges.length);
+                        model.edges = [];
+
+                    // console.log(node.connectors)
+
+                    node.connectors.splice(-1,1);
+                });
+
+            };
+
+
+
+            /**************************/
+            /******* Node info   ******/
+            /**************************/
+
 
             modelservice.setCanvasHtmlElement = function(element) {
                 canvasHtmlElement = element;
@@ -944,6 +1013,7 @@ if (!Function.prototype.bind) {
             edgedraggingService.dragstart = function(connector) {
                 return function(event) {
 
+
                     if (connector.type == flowchartConstants.topConnectorType) {
                         for (var i = 0; i < model.edges.length; i++) {
                             if (model.edges[i].destination == connector.id) {
@@ -974,18 +1044,18 @@ if (!Function.prototype.bind) {
                     dragOffset.y = -canvas.getBoundingClientRect().top;
 
                     edgeDragging.dragPoint2 = {
-                        x: event.clientX + dragOffset.x,
-                        y: event.clientY + dragOffset.y
+                        x: event.originalEvent.clientX + dragOffset.x,
+                        y: event.originalEvent.clientY + dragOffset.y
                     };
 
-                    event.dataTransfer.setData('Text', 'Just to support firefox');
-                    if (event.dataTransfer.setDragImage) {
+                    event.originalEvent.dataTransfer.setData('Text', 'Just to support firefox');
+                    if (event.originalEvent.dataTransfer.setDragImage) {
                         var invisibleDiv = angular.element('<div></div>')[0]; // This divs stays invisible, because it is not in the dom.
-                        event.dataTransfer.setDragImage(invisibleDiv, 0, 0);
+                        event.originalEvent.dataTransfer.setDragImage(invisibleDiv, 0, 0);
                     } else {
-                        destinationHtmlElement = event.target;
+                        destinationHtmlElement = event.originalEvent.target;
                         oldDisplayStyle = destinationHtmlElement.style.display;
-                        event.target.style.display = 'none'; // Internetexplorer does not support setDragImage, but it takes an screenshot, from the draggedelement and uses it as dragimage.
+                        event.originalEvent.target.style.display = 'none'; // Internetexplorer does not support setDragImage, but it takes an screenshot, from the draggedelement and uses it as dragimage.
                         // Since angular redraws the element in the next dragover call, display: none never gets visible to the user.
 
                         if (dragAnimation == flowchartConstants.dragAnimationShadow) {
@@ -1008,7 +1078,7 @@ if (!Function.prototype.bind) {
                         edgeDragging.circleElement.attr('cx', edgeDragging.dragPoint2.x);
                         edgeDragging.circleElement.attr('cy', edgeDragging.dragPoint2.y);
                     }
-                    event.stopPropagation();
+                    event.originalEvent.stopPropagation();
                 };
             };
 
@@ -1027,8 +1097,8 @@ if (!Function.prototype.bind) {
                         }
 
                         edgeDragging.dragPoint2 = {
-                            x: event.clientX + dragOffset.x,
-                            y: event.clientY + dragOffset.y
+                            x: event.originalEvent.clientX + dragOffset.x,
+                            y: event.originalEvent.clientY + dragOffset.y
                         };
 
                         edgeDragging.pathElement.attr('d', Edgedrawingservice.getEdgeDAttribute(edgeDragging.dragPoint1, edgeDragging.dragPoint2, edgeStyle));
@@ -1043,8 +1113,8 @@ if (!Function.prototype.bind) {
                             }
 
                             edgeDragging.dragPoint2 = {
-                                x: event.clientX + dragOffset.x,
-                                y: event.clientY + dragOffset.y
+                                x: event.originalEvent.clientX + dragOffset.x,
+                                y: event.originalEvent.clientY + dragOffset.y
                             };
                         });
                     }
@@ -1069,8 +1139,8 @@ if (!Function.prototype.bind) {
                             }
                         }
                         if (isValidEdgeCallback(draggedEdgeSource, connector)) {
-                            event.preventDefault();
-                            event.stopPropagation();
+                            event.originalEvent.preventDefault();
+                            event.originalEvent.stopPropagation();
                             return false;
                         }
                     }
@@ -1107,15 +1177,15 @@ if (!Function.prototype.bind) {
                                 edgeDragging.circleElement.attr('cx', edgeDragging.dragPoint2.x);
                                 edgeDragging.circleElement.attr('cy', edgeDragging.dragPoint2.y);
 
-                                event.preventDefault();
-                                event.stopPropagation();
+                                event.originalEvent.preventDefault();
+                                event.originalEvent.stopPropagation();
                                 return false;
 
                             } else if (dragAnimation == flowchartConstants.dragAnimationRepaint) {
                                 return applyFunction(function() {
                                     edgeDragging.dragPoint2 = modelservice.connectors.getCenteredCoord(connector.id);
-                                    event.preventDefault();
-                                    event.stopPropagation();
+                                    event.originalEvent.preventDefault();
+                                    event.originalEvent.stopPropagation();
                                     return false;
                                 });
                             }
@@ -1130,7 +1200,7 @@ if (!Function.prototype.bind) {
                     edgeDragging.isDragging = false;
                     edgeDragging.dragPoint1 = null;
                     edgeDragging.dragPoint2 = null;
-                    event.stopPropagation();
+                    event.originalEvent.stopPropagation();
 
                     if (dragAnimation == flowchartConstants.dragAnimationShadow) {
                         edgeDragging.gElement.css('display', 'none');
@@ -1156,8 +1226,8 @@ if (!Function.prototype.bind) {
 
                         if (isValidEdgeCallback(draggedEdgeSource, targetConnector)) {
                             modelservice.edges._addEdge(draggedEdgeSource, targetConnector);
-                            event.stopPropagation();
-                            event.preventDefault();
+                            event.originalEvent.stopPropagation();
+                            event.originalEvent.preventDefault();
                             return false;
                         }
                     }
@@ -1362,8 +1432,8 @@ if (!Function.prototype.bind) {
         $scope.edgeClick = function(event, edge) {
             $scope.modelservice.edges.handleEdgeMouseClick(edge, event.ctrlKey);
             // Don't let the chart handle the mouse down.
-            event.stopPropagation();
-            event.preventDefault();
+            event.originalEvent.stopPropagation();
+            event.originalEvent.preventDefault();
         };
 
         $scope.edgeDoubleClick = $scope.userCallbacks.edgeDoubleClick || angular.noop;
@@ -1489,9 +1559,8 @@ if (!Function.prototype.bind) {
             '      <div fc-magnet\n' +
             '           ng-repeat="connector in modelservice.nodes.getConnectorsByType(node, flowchartConstants.bottomConnectorType)">\n' +
             '        <span class="connector-point"></span>\n' +
-
-            '        <div class="conditionItem" id="conditionItem{{node.id}}"></div>\n' +
             '        <div fc-connector id="{{ node.id }}"></div>\n' +
+            '        <div class="conditionItem" id="conditionItem{{node.id}}"></div>\n' +
             '      </div>\n' +
             '    </div>\n' +
             '  </div>\n' +

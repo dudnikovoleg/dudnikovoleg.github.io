@@ -10,12 +10,12 @@
     //textVal  - start text in you block
     //finish-show - add nodes class for finish
 
-angular.module('app', ['flowchart'])
+angular.module('bzrdashApp', ['flowchart'])
 
 
 
 
-    .controller('AppCtrl', function AppCtrl($scope, Modelfactory, flowchartConstants) {
+    .controller('FlowchartCtrl', function AppCtrl($scope, Modelfactory, flowchartConstants) {
 
         var deleteKeyCode = 46;
         var ctrlKeyCode = 17;
@@ -261,7 +261,7 @@ angular.module('app', ['flowchart'])
             var newNode = {
                 name: '',
                 id: nextNodeID++,
-                x: 500,
+                x: 300,
                 y: 0,
                 startText: '',
                 class: 'text-question new',
@@ -285,7 +285,7 @@ angular.module('app', ['flowchart'])
             var newNode = {
                 name: '',
                 id: nextNodeID++,
-                x: 500,
+                x: 300,
                 y: 120,
                 startText: '',
                 class: 'many-questions new',
@@ -312,7 +312,7 @@ angular.module('app', ['flowchart'])
 
                 name: '',
                 id: nextNodeID++,
-                x: 500,
+                x: 300,
                 y: 240,
                 startText: '',
                 class: 'star-question new',
@@ -337,7 +337,7 @@ angular.module('app', ['flowchart'])
             var newNode = {
                 name: '',
                 id: nextNodeID++,
-                x: 500,
+                x: 300,
                 y: 360,
                 startText: '',
                 class: 'multi-question new',
@@ -398,6 +398,9 @@ angular.module('app', ['flowchart'])
         $scope.deleteSelected = function () {
             modelservice.deleteSelected();
         };
+        $scope.deleteInput = function () {
+            modelservice.deleteInput();
+        };
 
         $scope.callbacks = {
             edgeDoubleClick: function () {
@@ -431,29 +434,48 @@ angular.module('app', ['flowchart'])
             $(document).ready(function () {
 
 
+                $('.flowchart .navTrigger').click(function () {
+                    $(this).toggleClass('active');
+                    $('.flowchart .button-overlay').toggleClass('closed')
+                });
 
-                $('.button-control').not( ".edit-btn" ).on("click", function () {
-                     $('.settingsPopUp-wrap').removeClass('disabled')
-                })
-                $('.button-control').on("click", function () {
 
-
+                $('.flowchart .button-control').on("click", function () {
                     settingsPopUp()
+
+                });
+
+
+                $(document).on("click", function (e) {
+
+                    $('.fc-node').each(function () {
+                        if ($('.new').length && !$(e.target).closest('.flowchart .button-control').length){
+                            $('.flowchart .settingsPopUp-wrap').addClass('open')
+                        }
+                        $('.new').click();
+
+
+                    });
+
+
+
                 });
 
                 var allGood             = true,
-                    lastQuestionInput   = $('.settingsPopUp input').last(),
-                    allQuestionInput    = $('.settingsPopUp input'),
+                    lastQuestionInput   = $('.flowchart .settingsPopUp input').last(),
+                    allQuestionInput    = $('.flowchart .settingsPopUp input'),
                     lastInputField      = $(this).siblings("input").length + 1;
 
                 function settingsPopUp () {
 
-                    $('.add').on("click", function () {
+                    $('.flowchart .add').on("click", function () {
 
-                         lastQuestionInput = $('.settingsPopUp input').last();
-                         allQuestionInput = $('.settingsPopUp input');
 
-                        $('.add').addClass('disabled');
+                         lastQuestionInput = $('.flowchart .settingsPopUp input').last();
+                         allQuestionInput = $('.flowchart .settingsPopUp input');
+                        allQuestionInput.removeClass('newInput');
+
+                        $('.flowchart .add').addClass('disabled');
 
                         allQuestionInput.each(function () {
                             if (!$(this).val()) {
@@ -465,25 +487,37 @@ angular.module('app', ['flowchart'])
 
                         if (allGood && lastInputField <= 10) {
                             $("<label for=" + lastInputField + ">" + lastInputField + " Answer</label>" +
-                                "<input  class='answer' type='text' id =" + lastInputField + ">").insertAfter(lastQuestionInput);
+                                "<input placeholder='Enter the text of the question'  class='answer' type='text' id =" + lastInputField + ">").insertAfter(lastQuestionInput);
                         }
+
+                        if($('.fc-node.fc-selected .star').length) {
+                            $('.flowchart .settingsPopUp input').attr("placeholder", "Enter from 1 to 5");
+                            $('.flowchart .settingsPopUp input').attr("maxlength", "1");
+                        };
+
+                        if($('.fc-node.fc-selected .circle').length) {
+                            $('.flowchart .settingsPopUp input').attr("placeholder", "Example '<7 >7' ");
+                            $('.flowchart .settingsPopUp input').attr("maxlength", "3");
+
+                        };
                         allGood=true;
+                        allQuestionInput.last().addClass('newInput');
                     });
 
 
 
-                    $( ".settingsPopUp, .settingsPopUp input" ).on('change keyup', function () {
+                    $( ".flowchart .settingsPopUp, .flowchart .settingsPopUp input" ).on('change keyup', function () {
 
                          lastInputField = $(this).siblings("input").length + 1;
 
-                        allQuestionInput = $('.settingsPopUp input');
+                        allQuestionInput = $('.flowchart .settingsPopUp input');
 
                         allQuestionInput.each(function () {
                             if (!$(this).val()) {
-                                $('.add').addClass('disabled')
+                                $('.flowchart .add').addClass('disabled')
                             }
                             else {
-                                $('.add').removeClass('disabled')
+                                $('.flowchart .add').removeClass('disabled')
                             }
                         });
 
@@ -499,10 +533,12 @@ angular.module('app', ['flowchart'])
                 /****done btn****/
                 /******************/
 
-                $('.done').on("click", function () {
+                $('.flowchart .done').on("click", function () {
+
+
                     var settingsInputVal = [];
 
-                    $('.settingsPopUp input').each(function (index) {
+                    $('.flowchart .settingsPopUp input').each(function (index) {
 
                         if ($(this).val()){
                             settingsInputVal.push($(this).val());
@@ -512,17 +548,16 @@ angular.module('app', ['flowchart'])
 
                     });
 
-                    $('.fc-selected .fc-bottomConnectors .fc-connector').each(function (index) {
-
+                    $('.flowchart .fc-selected .fc-bottomConnectors .fc-connector').each(function (index) {
                         $(this).text(index + 1);
-                        $(this).prev('.conditionItem').text(settingsInputVal[index]);
+                        $(this).next('.conditionItem').text(settingsInputVal[index]);
                     });
                     settingsInputVal = [];
 
-                    $('.startForm input,.startForm label ').detach()
-                    $('.startForm ').append(' <label for="1">1 Answer</label> <input class="answer" id="1" type="text">');
-                    $('.settingsPopUp-wrap').removeClass('open')
-
+                    $('.flowchart .startForm input, .flowchart .startForm label ').detach();
+                    $('.flowchart .startForm ').append(' <label for="1">1 Answer</label> <input placeholder="Enter the text of the question" class="answer" id="1" type="text">');
+                    $('.flowchart .settingsPopUp-wrap').removeClass('open');
+                    $(' .innerNode').removeClass('new');
                 });
 
 
@@ -530,68 +565,131 @@ angular.module('app', ['flowchart'])
 
 
 
+                /**************************/
+                /******* edit-answer *******/
+                /**************************/
 
 
 
-                $('.edit-answer , .edit-answer').on("click", function () {
+                $('.flowchart .edit-answer').on("click", function () {
                     if (!$(this).attr('disabled')) {
 
-                        $('.startForm input,.startForm label ').detach();
+
+
+                        $('.flowchart .startForm input, .flowchart .startForm label ').detach();
                         $('.add').removeClass('disabled');
+                        $('.delete').addClass('disabled');
 
                         var connectorVal = [];
+                        var connectorValLeng = 0;
 
-                        $('.fc-selected .fc-bottomConnectors .conditionItem ').each(function (index) {
 
+                        $('.flowchart .fc-selected .fc-bottomConnectors .conditionItem ').each(function (index) {
                                 connectorVal.push($(this).text());
                                 connectorValLeng = connectorVal.length;
 
-                                $('.startForm ').append(' <label for="1">' + connectorValLeng  + ' Answer</label> <input value="' + connectorVal[index] + '" class="answer" id="1" type="text">');
+                                $('.flowchart .startForm ').append(' <label for="' + connectorValLeng + '">' + connectorValLeng  + ' Answer</label> <input placeholder="Enter the text of the question" value="' + connectorVal[index] + '" class="answer" id="' + connectorValLeng  +'" type="text">');
                                 return connectorVal;
                         });
+                        connectorValLeng++;
+                        $('.flowchart .startForm ').append(' <label for="' + connectorValLeng  +'">' + connectorValLeng   + ' Answer</label> <input placeholder="Enter the text of the question" value="" class="answer" id="' + connectorValLeng +'" type="text">');
+                        $('.flowchart .add').addClass('disabled');
+                        $('.flowchart .settingsPopUp-wrap').addClass('open');
 
-                        $('.settingsPopUp-wrap').addClass('open')
+                        var allQuestionInput = $('.settingsPopUp input');
+                        allQuestionInput.last().addClass('newInput');
                     }
                 });
 
 
 
-                $('.add, .button-control').on('click', function (e) {
-                    $('.startForm input').on('focus ', function () {
-                        $('.startForm input').removeClass('focus')
-                        $(this).addClass('focus')
-                    });
 
+
+                /**************************/
+                /****** edit question *******/
+                /**************************/
+
+
+
+                $('.flowchart .edit-question').on('click', function () {
+                    var selectedNode = $('.flowchart .fc-selected textarea');
+
+                    selectedNode.removeAttr('readonly', 'readonly');
+                    selectedNode.focus();
+
+
+                });
+
+                /**************************/
+                /****** focus input *******/
+                /**************************/
+
+
+
+
+                $('.flowchart .button-control .many-questions-btn').on('click', function () {
+                    $('.flowchart .settingsPopUp input').attr("placeholder", "Example '<7' or '>7' ");
+                    $('.flowchart .settingsPopUp input').attr("maxlength", "3");
+
+                });
+
+                $('.flowchart .button-control .star-question-btn').on('click', function () {
+                    $('.flowchart .settingsPopUp input').attr("placeholder", "Enter from 1 to 5");
+                    $('.flowchart .settingsPopUp input').attr("maxlength", "1");
 
 
                 });
 
 
-                $('.delete').on("click", function (e) {
+                $('.flowchart .add,.flowchart .button-control').on('click', function (e) {
 
-                    var minInpunLeng = $('.startForm input').length;
-                    var firstPoint = $('.fc-selected .fc-bottomConnectors  .fc-magnet:eq(0)');
+                    $('.flowchart .startForm input').on('focus ', function () {
+                        var minInpunLeng = $('.flowchart .startForm input').length;
+
+                        $('.flowchart .startForm input').removeClass('focus');
+                        $(this).addClass('focus');
+                        if (minInpunLeng > 1) {
+                            $('.flowchart .delete').removeClass('disabled');
+
+                        } else {
+                            $('.flowchart .delete').addClass('disabled');
+                        }
+
+                        if ($('.flowchart .answer.focus').hasClass('newInput')) {
+                            $('.flowchart .delete').addClass('disabled');
+                        }
+                    });
+                });
 
 
-                    if (minInpunLeng > 1){
-                        $('.delete').removeClass('disabled');
-                        $('.focus').prev('label').detach();
-                        $('.focus').detach();
-                        console.log(firstPoint)
-                        firstPoint.detach();
+
+                /**************************/
+                /*******delete *********/
+                /**************************/
+
+
+
+                $('.flowchart .delete').on("click", function (e) {
+                    $(this).addClass('disabled');
+
+                    var minInpunLeng = $('.flowchart  .startForm input').length;
+
+                    if (minInpunLeng > 1) {
+                        $('.flowchart .focus').prev('label').detach();
+                        $('.flowchart .focus').detach();
+
+                        $('.startForm label').each(function (index) {
+                            $(this).text(index + 1 + ' Answer')
+                        });
+
                         return
                     }
-
                 });
 
-                $('.edit-question').on("click", function () {
-                    if (!$(this).attr('disabled')) {
-                        $('.settingsPopUp-wrap').addClass('disabled')
-                    }
-                });
+
+
                 })
         })(jQuery);
-
 
     });
 
