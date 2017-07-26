@@ -634,24 +634,24 @@
 
 
 
-        function windowSize(){
-            var maxWith  = 1920;
+        // function windowSize(){
+        //     var maxWith  = 1920;
+        //
+        //
+        //     if (windowsWidth >= maxWith){
+        //
+        //         var  necWidth  = $(window).width() - maxWith;
+        //
+        //         $('.pop-up').css({right : necWidth + 'px'});
+        //     }
+        //     else{
+        //         $('.pop-up').css({right :   '0'});
+        //
+        //     }
+        // }
 
-
-            if (windowsWidth >= maxWith){
-
-                var  necWidth  = $(window).width() - maxWith;
-
-                $('.pop-up').css({right : necWidth + 'px'});
-            }
-            else{
-                $('.pop-up').css({right :   '0'});
-
-            }
-        }
-
-        $(window).ready(windowSize);
-        $(window).resize(windowSize);
+        // $(window).ready(windowSize);
+        // $(window).resize(windowSize);
 
 
 
