@@ -1,0 +1,278 @@
+/* Table of Contents
+
+	Use (CMD/CRL + F $[SECTION] to quickly find what you are looking for [SECTION] )
+
+1.  About-company
+2.  About-team
+3.  About-partner
+4.  About-clients
+4.  $Partner & Clients-slider
+5.  $Cooperation-scheme
+6.  $First-step
+
+*/
+
+
+
+
+/* $About-company
+********************************/
+.about-company{
+  margin-bottom: 70px;
+  .title-list{
+    margin: 30px 0 10px 0;
+  }
+  .develop-supply-list{
+    margin-bottom: 48px;
+    li{
+      margin-bottom: 12px;
+    }
+  }
+  .def-marker{
+    margin-right: 25px;
+  }
+}
+
+
+
+/* $About-team
+********************************/
+.about-team{
+  .title{
+    margin-bottom: 55px;
+    padding: 0 40px;
+    .text{
+      padding-right: 3%;
+    }
+  }
+  .content-header{
+    margin-bottom: 26px;
+    font-size: 3rem;
+  }
+
+  // Slider
+  .team-slider{
+    position: relative;
+    margin-left: 40px;
+    margin-bottom: 75px;
+    .next-arrow,
+    .prev-arrow{
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9;
+    }
+    .prev-arrow{
+      left: 30px;
+    }
+    .next-arrow{
+      right: 77px;
+    }
+  }
+  .img-link {
+    position: relative;
+    display: table;
+    overflow: hidden;
+    height: 500px;
+    margin-right: 40px;
+    padding: 35px 45px 35px 40px;
+    background-color: $accent-col;
+    &:hover {
+      .link-bg {
+        opacity: .15;
+      }
+      .hidden-text {
+        bottom: 0;
+        margin: 7px 30px 5px 0;
+        .content-header{
+          display: block;
+          padding-right: 25%;
+          margin-bottom: 15px;
+        }
+        .position{
+          display: block;
+          margin: 0px 0 30px 0;
+        }
+      }
+    }
+
+    .link-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: opacity $trans-ease;
+    }
+    .img-link-content {
+      position: relative;
+      display: table-cell;
+      vertical-align: bottom;
+    }
+    .hidden-text {
+      position: relative;
+      bottom: -400px;
+      margin: 0 30px 0 0;
+      overflow: hidden;
+      line-height: 1.8;
+      font-family: $open-sans;
+      transition: all $trans-ease;
+      color: $accent-text;
+    }
+  }
+}
+
+
+
+
+
+/* Partner & Clients-slider
+*****************************/
+.about-partner,
+.about-clients{
+  .content-header{
+    margin-bottom: 26px;
+    font-size: 3rem;
+  }
+  .title{
+    margin-bottom: 20px;
+  }
+  .next-arrow,
+  .prev-arrow {
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 9;
+  }
+  .prev-arrow {
+    left: 0;
+  }
+  .next-arrow {
+    right: 7px;
+  }
+}
+  .brand-list{
+    li{
+      height: 125px;
+      margin-right: 10px;
+      outline: none;
+      &:hover{
+        .name,
+        .specialization{
+          opacity: 1;
+        }
+      }
+    }
+    .name{
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity $trans-ease;
+      font-weight: 700;
+    }
+    .specialization{
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity $trans-ease;
+      text-align: center;
+      .link{
+        color: $accent-col;
+      }
+    }
+  }
+
+
+
+/* $About-partner
+********************************/
+.about-partner{
+  .partner-slider {
+    position: relative;
+    margin-bottom: 35px;
+  }
+  .bottom-text{
+    margin-bottom: 70px;
+    p:first-of-type{
+      padding-right: 2%;
+    }
+    p + p{
+      padding-left: 1.5%;
+    }
+  }
+}
+
+
+
+
+
+
+
+/* $About-clients
+********************************/
+.about-clients {
+  .clients-slider {
+    position: relative;
+    margin-bottom: 31px;
+
+  }
+}
+
+
+
+
+
+
+
+/* $Cooperation-scheme
+********************************/
+.cooperation-scheme{
+  .title{
+    margin-bottom: 30px;
+  }
+  .content-header{
+    margin-bottom: 26px;
+    font-size: 3rem;
+  }
+  .scheme-item{
+    margin-bottom: 27px;
+  }
+  .scheme-item{
+    padding-right: 3%;
+    + .scheme-item{
+      padding-left: 1%;
+    }
+    &:last-of-type{
+      padding-right: 0;
+    }
+  }
+  .number-xl{
+    display: block;
+    margin-bottom: 8px;
+    font-family: $Avenir-heavy;
+    font-size: 7rem;
+  }
+  .line{
+    display: inline-block;
+    height: 3px;
+    width: 30%;
+    margin-top: 35px;
+    background-color: $accent-col;
+  }
+}
+
+
+
+
+/* $First-step
+********************************/
+.first-step{
+  margin-bottom: 118px;
+  .text{
+    padding-left: 60px;
+  }
+}
