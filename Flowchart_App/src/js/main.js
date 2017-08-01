@@ -575,10 +575,12 @@
 
         $('.flowchart form').keydown(function(event){
             if(event.keyCode == 13) {
+                console.log('enter')
                 event.preventDefault();
                 return false;
             }
         });
+
 
 
         window.scrollTo(0, 0);

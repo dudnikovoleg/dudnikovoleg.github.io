@@ -468,6 +468,7 @@ angular.module('bzrdashApp', ['flowchart'])
 
                 function settingsPopUp () {
 
+
                     $('.flowchart .add').on("click", function () {
 
 
@@ -506,9 +507,19 @@ angular.module('bzrdashApp', ['flowchart'])
 
 
 
-                    $( ".flowchart .settingsPopUp, .flowchart .settingsPopUp input" ).on('change keyup', function () {
+                    $( ".flowchart .settingsPopUp, .flowchart .settingsPopUp input" ).on('change keydown', function (event) {
 
-                         lastInputField = $(this).siblings("input").length + 1;
+                        if (event.keyCode == 13) {
+                            event.preventDefault();
+                            return false;
+                        }
+                    });
+
+                    $( ".flowchart .settingsPopUp, .flowchart .settingsPopUp input" ).on('change keyup', function (event) {
+
+
+
+                        lastInputField = $(this).siblings("input").length + 1;
 
                         allQuestionInput = $('.flowchart .settingsPopUp input');
 
@@ -535,7 +546,7 @@ angular.module('bzrdashApp', ['flowchart'])
 
                 $('.flowchart .done').on("click", function () {
 
-
+                    $('.add').addClass('disabled')
                     var settingsInputVal = [];
 
                     $('.flowchart .settingsPopUp input').each(function (index) {

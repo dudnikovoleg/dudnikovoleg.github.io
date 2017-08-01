@@ -1,0 +1,39 @@
+// Price
+.price-page{
+  padding: 65px 8% 35px 8%;
+  .content-header{
+    margin-bottom: 35px;
+  }
+  .price-list{
+    padding:0;
+    background-color: #FFF;
+    > ul{
+      margin-bottom: 35px;
+    }
+    li{
+      .bg-text,
+      .price{
+        background-color: #fff;
+      }
+    }
+  }
+  .directions-title{
+    display: block;
+    margin-bottom: 10px;
+    font-family: $kievit;
+    font-size: 2em;
+    line-height: 1.2;
+    transition: color .3s ease;
+    &:hover{
+      color: $accent-col;
+    }
+  }
+  .sub-directions-title{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: .892em;
+    color: $accent-col;
+  }
+
+}

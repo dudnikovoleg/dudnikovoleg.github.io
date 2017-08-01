@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
 
     <!-- Custom stile -->
     <link rel="stylesheet" href="css/main.css">
@@ -67,10 +68,10 @@
 
                         <ul class="sub-menu" >
                             <li>
-                                <a href="#">Оборудование</a>
+                                <a class="link" href="#">Оборудование</a>
                             </li>
                             <li>
-                                <a href="#">Лицензия</a>
+                                <a class="link" href="#">Лицензия</a>
                             </li>
                         </ul>
 
@@ -129,8 +130,8 @@
 
                     </li>
                     <li><a class="link" href="doctors-vse.html">Наши врачи</a></li>
-                    <li><a class="link" href="price.html">Стоимость</a></li>
-                    <li class="active"><span class="link">Новости и акции</span></li>
+                    <li class="active"><span class="link">Стоимость</span></li>
+                    <li><a class="link" href="news-shares.html">Новости и акции</a></li>
                     <li><a class="link" href="statyi.html">Статьи</a></li>
                     <li><a class="link" href="otveti_na_voprosi.html">Ответы на вопросы</a></li>
                     <li><a class="link" href="contacts.html">Контакты</a></li>
@@ -245,7 +246,6 @@
 
 
 
-
         <!-------------------------------->
         <!------ Main content start ------>
         <!-------------------------------->
@@ -254,112 +254,331 @@
 
 
 
-        <!----- News and shares start ----->
+
+        <!-- Answers on questions start -->
+
+        <section class="answers-questions">
 
 
-        <section class="news-shares">
+            <!-- price start -->
 
-            <h2 class="title">Новости и акции</h2>
+            <div class="price-page board-boot">
+
+                <div class="content-header">
+                    <h3 class="title">
+                        Стоимость услуг
+                    </h3>
 
 
-            <ul class="news-shares-list">
-
-                <li>
-                    <a href="news-item.html" class="link">
-
-                        <div class="news-shares-img">
-                            <img src="img/news_photo-1.jpg" alt="Visiting professor program Kiev III">
+                    <div class="directions-select">
+                        <span class="selected">Все направления</span>
+                        <div class="select-list-wrapp">
+                            <ul class="directions-select-list">
+                                <li><a class="link" href="#">Гинекология</a></li>
+                                <li><a class="link" href="#">Маммология</a></li>
+                                <li><a class="link" href="#">Урология</a></li>
+                                <li><a class="link" href="#">Проктология</a></li>
+                                <li><a class="link" href="#">Диагностика</a></li>
+                                <li><a class="link" href="#">Сосудистая хирургия</a></li>
+                                <li><a class="link" href="#">Пластическая хирургия</a></li>
+                                <li><a class="link" href="#">Общая хирургия</a></li>
+                                <li><a class="link" href="#">Лаборатория</a></li>
+                                <li><a class="link" href="#">Эндокринология</a></li>
+                                <li><a class="link" href="#">Терапия</a></li>
+                                <li><a class="link" href="#">Косметология</a></li>
+                                <li><a class="link" href="#">Сексология</a></li>
+                                <li><a class="link" href="#">Психотерапия</a></li>
+                                <li><a class="link" href="#">Вакцинация</a></li>
+                                <li class="active"><a class="link" href="#">Все направления</a></li>
+                            </ul>
                         </div>
-
-                        <div class="news-shares-descr">
-
-                            <h3 class="content-header">
-                                Заведующий отделом маммологии выступил на
-                                конференции «Visiting professor program Kiev III»
-                            </h3>
-
-                            <time class="date" datetime="2017-04-19">19 апреля 2017</time>
-
-                            <p class="text-short">
-                                Конференция «Visiting professor program Kiev III» организована уже в третий раз.
-                                Как правило, это событие проходит с участием ведущих пластических хирургов со всего мира.
-                            </p>
-
-                            <span class="read-more" >Подробнее</span>
-
-                        </div>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="news-item.html" class="link">
-                        <div class="news-shares-img ">
-                            <img src="img/news_photo-2.jpg" alt="Клиника др. Медведева">
-                        </div>
-
-                        <div class="news-shares-descr">
-                            <h3 class="content-header">
-                                Клиника др. Медведева — воплощает масштабный проект модернизации медицинского оборудования
-                            </h3>
-                            <time class="date" datetime="2017-04-19">19 апреля 2017</time>
-
-                            <p class="text-short">
-                                Основным приоритетом работы клиники др. Медведева,
-                                является предоставление пациентам высококачественных медицинских услуг наряду с высококлассным сервисом.
-                            </p>
-
-                            <span class="read-more" >Подробнее</span>
-
-                        </div>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="news-item.html" class="link">
-                        <div class="news-shares-img">
-                        <img src="img/news_photo-3.jpg" alt="Открытие операционного блока" >
                     </div>
-                        <div class="news-shares-descr">
-                            <h3 class="content-header">
-                                Открытие операционного блока
-                            </h3>
-                            <time class="date" datetime="2017-04-19">19 апреля 2017</time>
 
-                            <p class="text-short">
-                                Операционный блок, оснащенный современным технологичным оборудованием и
-                                организованный по принципу модульной системы чистых помещений, можно смело назвать гордостью клиники.
-                            </p>
-
-                            <span class="read-more" >Подробнее</span>
-
-                        </div>
-                    </a>
-                </li>
+                </div>
 
 
-            </ul>
+                <a href="napravlenie.html" class="directions-title">Гинекология</a>
+                <section class="price-list">
+                    <a href="pod-napravlenie.html" class="sub-directions-title">Малая операционная</a>
+                    <ul class="container-fluid">
+                        <li  class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Радиоволновое удаления остроконечной кондиломы
+                                (папилломы) стенок вульвы (две зоны), без стоимости анестезии
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">700 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="pod-napravlenie.html" class="sub-directions-title">Малая операционная</a>
+                    <ul class="container-fluid">
+                        <li  class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Радиоволновое удаления остроконечной кондиломы
+                                (папилломы) стенок вульвы (две зоны), без стоимости анестезии
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">700 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="pod-napravlenie.html" class="sub-directions-title">Малая операционная</a>
+                    <ul class="container-fluid">
+                        <li  class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Радиоволновое удаления остроконечной кондиломы
+                                (папилломы) стенок вульвы (две зоны), без стоимости анестезии
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">700 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </section>
 
 
-            <div class="pagin">
 
-                <ul>
-                    <li><span class="prev disabled" href="#">Назад</span></li>
-                    <li><a class="count-pag" href="#">1</a></li>
-                    <li><span class="count-pag active" href="#">2</span></li>
-                    <li><a class="count-pag" href="#">3</a></li>
-                    <!--<li><a class="count-pag" href="#">17</a></li>-->
-                    <li><a class="next" href="">Вперед</a></li>
-                </ul>
+
+                <a href="napravlenie.html" class="directions-title">Маммология</a>
+                <section class="price-list">
+                    <ul class="container-fluid">
+                        <li  class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Радиоволновое удаления остроконечной кондиломы
+                                (папилломы) стенок вульвы (две зоны), без стоимости анестезии
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">700 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+
+                        <li  class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Радиоволновое удаления остроконечной кондиломы
+                                (папилломы) стенок вульвы (две зоны), без стоимости анестезии
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">700 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+                        <li  class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Радиоволновое удаления остроконечной кондиломы
+                                (папилломы) стенок вульвы (две зоны), без стоимости анестезии
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">700 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </section>
+
+
+                <a href="napravlenie.html" class="directions-title">Урология</a>
+                <section class="price-list">
+                    <ul class="container-fluid">
+
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Биопсия шейки матки и цервикального канала (без стоимости ПГД)
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 450 грн.</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <a href="#" class="name-services">
+                            <span class="bg-text">
+                                Восстановление проходимости церкивального канала
+                            </span>
+                            </a>
+
+                            <div class="price">
+                                <span class="bg-text">от 560 грн.</span>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+
 
             </div>
 
+
+
         </section>
 
-
-        <!----- News and sharesend ----->
+        <!-- Price end -->
 
 
 
@@ -604,7 +823,6 @@
             </div>
         </div>
 
-
         <button id="sendBotton" type="submit" class="btn ">Записаться</button>
 
     </form>
@@ -623,6 +841,7 @@
         </div>
     </div>
 
+
 </div>
 
 <!-- Pop-up end-->
@@ -635,11 +854,10 @@
 <script src="libs/bootstrap-datepicker.js"></script>
 <script src="libs/bootstrap-datepicker.ru.js" charset="UTF-8"></script>
 
-
 <!-- Custom scripts -->
 <script src="js/main.js"></script>
 <script src="js/hover-effect.js"></script>
-
+<script src="libs/perfect-scrollbar.jquery.js"></script>
 
 
 

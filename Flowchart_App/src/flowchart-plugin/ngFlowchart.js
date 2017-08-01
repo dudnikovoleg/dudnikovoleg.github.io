@@ -838,12 +838,11 @@ if (!Function.prototype.bind) {
                 angular.forEach(pointToDelete, function(node) {
                     // console.log(node.connectors)
                     // console.log(node)
-                    console.log(model.nodes)
-                    console.log(model.edges)
+
 
                         // console.log($('.answer ').length);
                         // console.log(model.edges.length);
-                        model.edges = [];
+                        model.edges.splice(-1,1);
 
                     // console.log(node.connectors)
 
