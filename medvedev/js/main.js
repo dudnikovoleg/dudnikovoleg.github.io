@@ -313,7 +313,7 @@
 
             /**** Button ****/
 
-            $('.btn-feedback .btn').on('click', function () {
+            $('.btn-feedback:not(.scroll) .btn').on('click', function () {
                 $('.pop-up').addClass('open');
 
                 $('body').addClass('height-popup');
