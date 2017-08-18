@@ -6,9 +6,9 @@
 2.  About-team
 3.  About-partner
 4.  About-clients
-4.  $Partner & Clients-slider
-5.  $Cooperation-scheme
-6.  $First-step
+5.  Partner & Clients-slider
+6.  Cooperation-scheme
+7.  First-step
 
 */
 
@@ -19,17 +19,66 @@
 ********************************/
 .about-company{
   margin-bottom: 70px;
-  .title-list{
-    margin: 30px 0 10px 0;
+  .about-company-header{
+    margin-left: 8.33333%;
+    margin-bottom: 42px;
   }
-  .develop-supply-list{
-    margin-bottom: 48px;
+  aside{
+    padding-left: 2%;
+    float: right;
+    font-size: 1.4rem;
     li{
-      margin-bottom: 12px;
+      margin-bottom: 7px;
+    }
+    .link{
+      font-family: $Avenir-demi;
     }
   }
-  .def-marker{
-    margin-right: 25px;
+  .title-list{
+    font-size: 3rem;
+  }
+  .develop-list{
+    margin-bottom: 45px;
+    li{
+      position: relative;
+      margin-bottom: 22px;
+      padding-left: 100px;
+      font-size: 1.65rem;
+      .bold{
+        font-size: 1.78rem;
+      }
+    }
+    .min-rotate{
+      position: absolute;
+      left: 7px;
+      top: 14px;
+      width: 50px;
+      height: 50px;
+
+      transform: rotate(45deg);
+      border-radius: 12px;
+      &.yellow{
+        background-color: #fdbb00;
+      }
+      &.red{
+        background-color: #ef4139;
+      }
+      &.blue{
+        background-color: #24add9;
+      }
+      &.green{
+        background-color: #bccf16;
+      }
+      &.grey{
+        background-color: #5b5b5b;
+      }
+    }
+    ~ .text{
+      margin-bottom: 48px;
+    }
+  }
+  .logo-parse{
+    max-width: 100%;
   }
 }
 
@@ -38,6 +87,10 @@
 /* $About-team
 ********************************/
 .about-team{
+  margin-bottom: 75px;
+  .img-link{
+    width: 371px;
+  }
   .title{
     margin-bottom: 55px;
     padding: 0 40px;
@@ -53,78 +106,125 @@
   // Slider
   .team-slider{
     position: relative;
-    margin-left: 40px;
-    margin-bottom: 75px;
     .next-arrow,
     .prev-arrow{
       top: 50%;
       transform: translateY(-50%);
       z-index: 9;
+      opacity: .3;
+      &:hover{
+        opacity: 1;
+      }
     }
     .prev-arrow{
-      left: 30px;
+      left: 77px;
     }
     .next-arrow{
       right: 77px;
     }
+    .link-bg{
+      background-size: cover;
+    }
   }
-  .img-link {
-    position: relative;
-    display: table;
-    overflow: hidden;
-    height: 500px;
-    margin-right: 40px;
-    padding: 35px 45px 35px 40px;
-    background-color: $accent-col;
-    &:hover {
-      .link-bg {
-        opacity: .15;
-      }
-      .hidden-text {
-        bottom: 0;
-        margin: 7px 30px 5px 0;
-        .content-header{
-          display: block;
-          padding-right: 25%;
-          margin-bottom: 15px;
-        }
-        .position{
-          display: block;
-          margin: 0px 0 30px 0;
-        }
+  .img-link-header{
+    span{
+      display: block;
+    }
+    .surname{
+      margin-bottom: 7px;
+    }
+    .text{
+      color: #fff;
+      transition: color $trans-ease;
+    }
+  }
+  .img-link-content{
+    z-index: 3;
+  }
+  .img-link:hover{
+    .hidden-text{
+      height: 300px;
+    }
+    .img-link-header{
+      margin-bottom: 27px;
+      .text{
+        transition: color $trans-ease;
+        color: $accent-text;
       }
     }
+  }
 
-    .link-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: opacity $trans-ease;
+  .join{
+    position: relative;
+    .img-link{
+      padding: 0;
     }
-    .img-link-content {
-      position: relative;
-      display: table-cell;
-      vertical-align: bottom;
-    }
-    .hidden-text {
-      position: relative;
-      bottom: -400px;
-      margin: 0 30px 0 0;
-      overflow: hidden;
-      line-height: 1.8;
-      font-family: $open-sans;
-      transition: all $trans-ease;
+    .img-link-header{
+      padding: 35px 40px;
+      background-color: $accent-col;
       color: $accent-text;
+      .equal{
+        font-size: 1.6rem;
+      }
+    }
+    .hidden-text{
+      position: absolute;
+      top: 500px;
+      width: 100%;
+      height: 500px;
+      padding: 40px;
+      transition: all $trans-ease;
+      background-color: $accent-col;
+      z-index: 9999;
+      .content-header{
+        margin-bottom: 30px;
+      }
+      ul{
+        margin-bottom: 38px;
+      }
+      li{
+        margin-bottom: 10px;
+      }
+      .def-dots{
+        margin-left: -10px;
+
+      }
+      .btn{
+        display: block;
+        margin: 0 auto;
+        border-color: #fff;
+        text-align: center;
+        color: #fff;
+        &:before{
+          content: 'Присоеденится';
+        }
+        &:after{
+          content: 'Присоеденится';
+        }
+        &:hover:after{
+          color: #fff;
+        }
+      }
+    }
+    .img-link:hover{
+      .hidden-text{
+        height: 500px;
+        top: 0;
+      }
     }
   }
 }
-
-
-
+.blackout{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom,
+          transparent 0%,
+          rgba(0, 0, 0, 0.2) 60%,
+          rgba(0, 0, 0, 0.95) 110%, #000 100%)
+}
 
 
 /* Partner & Clients-slider
@@ -151,12 +251,27 @@
     right: 7px;
   }
 }
-  .brand-list{
+.about-clients{
+  .slick-list.interval-right {
+    padding-right: 40px;
+    margin-right: -40px;
+  }
+}
+.about-clients{
+  .slick-list.interval-left {
+    padding-left: 40px;
+    margin-left: -40px;
+  }
+}
+
+.about-partner .brand-list,
+.about-clients .brand-list{
     li{
       height: 125px;
-      margin-right: 10px;
+      margin-right: 11px;
+      width: 101px;
       outline: none;
-      &:hover{
+      &.hover:hover{
         .name,
         .specialization{
           opacity: 1;
@@ -169,7 +284,9 @@
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
-      transition: opacity $trans-ease;
+
+      font-size: 1.4rem;
+      font-family: $Avenir-demi;
       font-weight: 700;
     }
     .specialization{
@@ -178,8 +295,10 @@
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
-      transition: opacity $trans-ease;
+      font-size: 1.4rem;
+      font-family: $Avenir-demi;
       text-align: center;
+      color: #787878;
       .link{
         color: $accent-col;
       }
@@ -188,9 +307,17 @@
 
 
 
+
 /* $About-partner
 ********************************/
 .about-partner{
+
+  li:hover{
+    > .name,
+    > .specialization{
+      opacity: 1;
+    }
+  }
   .partner-slider {
     position: relative;
     margin-bottom: 35px;
@@ -250,12 +377,6 @@
       padding-right: 0;
     }
   }
-  .number-xl{
-    display: block;
-    margin-bottom: 8px;
-    font-family: $Avenir-heavy;
-    font-size: 7rem;
-  }
   .line{
     display: inline-block;
     height: 3px;
@@ -271,8 +392,12 @@
 /* $First-step
 ********************************/
 .first-step{
-  margin-bottom: 118px;
+  margin-bottom: 145px;
+  margin-top: 25px;
   .text{
-    padding-left: 60px;
+    padding-left: 32px;
+    a{
+      color: $accent-col;
+    }
   }
 }

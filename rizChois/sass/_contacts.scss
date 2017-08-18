@@ -29,7 +29,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-
   }
 }
 
@@ -40,18 +39,20 @@
 .breadcrumb{
   margin-top: 75px;
   padding-top: 35px;
-  padding-bottom: 22px;
+  padding-bottom: 25px;
   li{
     display: inline-block;
     font-size: 1.4rem;
+    font-weight: 700;
+    &:hover a{
+      color: $accent-col;
+    }
+    &:last-of-type{
+      font-weight: normal;
+      pointer-events: none;
+    }
     .link{
       color: #c6c7c7;
-      &:hover:not(.last-crumb) span{
-        color: $accent-col;
-      }
-    }
-    .last-crumb{
-      font-weight: 700;
     }
     .double-right{
       padding: 0 5px;
@@ -62,9 +63,6 @@
   }
 }
 
-
-
-
 /* $Contacts
 ***********************************/
 .contacts{
@@ -74,7 +72,7 @@
     vertical-align: bottom;
     float: none;
     .content-header{
-      margin-bottom: 70px;
+      margin-bottom: 50px;
     }
   }
 
@@ -117,6 +115,23 @@
     }
   }
 
+
+  .icon{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-top: 6px;
+    margin-left: -5px;
+    background-repeat: no-repeat;
+    &.viber{
+      display: inline-block;
+      float: none;
+      margin-left: 5px;
+      vertical-align: initial;
+    }
+  }
+
+
   //contact-info-data
   .contact-info-data{
    font-size: 3rem;
@@ -124,9 +139,20 @@
    li{
      margin-bottom: 60px;
    }
+    .mail{
+      .icon{
+        background-position: -175px 5px;
+      }
+      .data-text{
+        color: $accent-col;
+      }
+    }
     .phone{
       .icon{
-        background-position: 3px 0  ;
+        background-position: -5px 3px;
+      }
+      .viber{
+        background-position: 2px 2px;
       }
       .data-text{
         pointer-events: none;
@@ -134,7 +160,7 @@
     }
     .skype{
       .icon{
-        background-position: -38px 0;
+        background-position: -45px -1px;
       }
       .data-text{
         color: $accent-col;
@@ -142,7 +168,7 @@
     }
     .address{
       .icon{
-        background-position: -80px 3px;
+        background-position: -87px 0;
       }
       &:hover .data-text{
         color: $accent-col;
@@ -151,18 +177,11 @@
     }
     .requisites{
       .icon{
-        background-position: -123px 1px;
+        background-position: -130px 1px;
       }
     }
 
 
-    .icon{
-      width: 30px;
-      height: 30px;
-      float: left;
-      margin-top: 6px;
-      background-repeat: no-repeat;
-    }
     .data-text{
       display: inline-block;
       padding-left: 3px;
@@ -177,6 +196,7 @@
     .link{
       width: 50px;
       height: 50px;
+      margin: 0 30px 0 0;
       border: solid 2px #d9d9d9;
       font-size: 2.5rem;
       color: #d9d9d9;

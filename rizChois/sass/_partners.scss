@@ -1,0 +1,25 @@
+/* Table of Contents
+
+	Use (CMD/CRL + F $[SECTION] to quickly find what you are looking for [SECTION] )
+
+1.  Partners
+
+*/
+
+/* $Partners
+********************************/
+
+.partner-list{
+  li{
+    margin-bottom: 65px;
+  }
+  .write-message-box{
+    .btn{
+      &:before,
+      &:after{
+        content: 'Предложить партнерство';
+      }
+    }
+  }
+}
+

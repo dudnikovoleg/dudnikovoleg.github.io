@@ -1,0 +1,95 @@
+/* Table of Contents
+
+	Use (CMD/CRL + F $[SECTION] to quickly find what you are looking for [SECTION] )
+
+1.  Search
+2.  Search-result
+
+
+*/
+
+/* $Search
+*******************************/
+.search{
+  margin: 155px auto 93px auto;
+  .content-header{
+    margin-bottom: 50px;
+  }
+
+
+
+
+  .search-form {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+    .search-icon {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      padding-top: 16px;
+      width: 42px;
+      height: 100%;
+      padding-left: 10px;
+      -webkit-transition: 0.35s ease;
+      transition: 0.35s ease;
+      &:after {
+        display: inline-block;
+        vertical-align: middle;
+        font: normal normal normal 15px/1 FontAwesome;
+        content: "\f002";
+        color: #000;
+      }
+      &:hover {
+        cursor: pointer;
+        &:after {
+          color: $accent-col;
+        }
+      }
+    }
+    .form-control {
+      padding: 13px 40px 13px 15px;
+      width: 100%;
+      font-size: 1.6rem;
+      border: solid 1px #000;
+      border-radius: 100px;
+      background-color: transparent;
+      transition: all .35s;
+      outline: none;
+      color: #000;
+    }
+  }
+}
+
+
+
+/* $Search-result
+*******************************/
+.search-result{
+  .results-sum{
+    margin-bottom: 52px;
+  }
+  .keyword{
+    color: $accent-col;
+  }
+  .results-item{
+    margin-bottom: 52px;
+  }
+  time{
+    margin-bottom: 12px;
+    display: inline-block;
+    font-family:$Avenir-demi;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #fdbb00;
+  }
+  .content-header{
+    margin-bottom: 5px;
+    font-size: 3rem;
+  }
+  .breadcrumb{
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 17px;
+  }
+}

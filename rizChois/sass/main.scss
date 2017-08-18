@@ -12,7 +12,7 @@
 7.	Advantage
 8.	Blog
 9.	Benefit
-10. Clients
+10. Clients-short
 11. Footer
 12.	Imports
 
@@ -56,13 +56,55 @@ body {
   line-height: 1.5;
   font-family: 'AvenirNextW1G-Regular', 'Open Sans', sans-serif;
   color: $accent-text;
+    &.open {
+      overflow-y: hidden;
+    }
 }
 
 
-//bold text
+// Bold text
 .bold {
   font-weight: 700;
 }
+
+
+// Number-xl
+.number-xl{
+  display: block;
+  margin-bottom: 8px;
+  font-family: $Avenir-heavy;
+  font-size: 7rem;
+}
+
+
+
+// Title list
+.title-list{
+  margin: 30px 0 10px 0;
+}
+
+.def-marker{
+  margin-right: 27px;
+  margin-left: -38px;
+}
+
+// Attention
+.attention{
+  position: relative;
+  padding-left: 35px;
+  font-weight: 700;
+  &:before{
+    content:'';
+    position: absolute;
+    width: 5px;
+    top: 5px;
+    bottom: 5px;
+    left: 3px;
+    background-color: $accent-col;
+
+  }
+}
+
 
 
 //Dots
@@ -129,18 +171,62 @@ body {
 
 //Button
 .btn {
+  position: relative;
+  min-width: 215px;
+  height: 50px;
+  font-size: 1.65rem;
   display: inline-block;
-  padding: 10px 68px;
+  overflow: hidden;
   border-radius: 100px;
   background-color: transparent;
   border: solid 2px $accent-col;
-  font-size: 1.65rem;
   font-family: $Avenir-reg;
   transition: color $trans-ease;
-  &:hover {
+}
+
+
+ a.btn,
+form .btn{
+  width: 220px;
+  height: 50px;
+  font-size: 0;
+  overflow: hidden;
+  &:before{
+    content: 'Отправить';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 1.65rem;
+    top: 10px;
+
+    transform: translate3d(0, 0, 0);
+    transition: all 0.15s ease-in-out;
+  }
+  &:hover:before{
+    opacity: 0;
+    transform: translate3d(0, -200%, 0);
+  }
+  &:after{
+    content: 'Отправить';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 1.65rem;
+    top: 10px;
+
+    opacity: 0;
+    transform: translate3d(0, 200%, 0);
+    transition: all 0.15s ease-in-out;
+  }
+  &:hover:after{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
     color: $accent-col;
   }
 }
+
+
+
 
 ::-webkit-input-placeholder {
   transition: all $trans-ease;
@@ -169,7 +255,6 @@ header{
   top: 0;
   width: 100%;
   background-color: rgba(255,255,255, 0);
-  //background-color: rgba(255,0,0, 1);
   z-index: 9999;
   transition: all $trans-ease;
   &.scroll-start{
@@ -180,9 +265,44 @@ header{
     }
     .header-nav .logo img {
       max-width: 50%;
-      padding-top: 10px;
+      padding-top: 7px;
     }
   }
+  // Cookie message
+  .cookie-msg{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding-top: 15px;
+    background-color: $accent-col;
+    text-align: center;
+    z-index:9999;
+    transition: all $trans-ease;
+    letter-spacing: 0.25px;
+    &.open{
+      top:0;
+    }
+    .text{
+      display: inline;
+      font-family: $Avenir-reg;
+      font-size: 1.55rem;
+      a{
+        color: #fff;
+      }
+    }
+    .cookie-btn{
+      display: inline-block;
+      margin-left: 155px;
+      padding: 10px 35px;
+      border: solid 2px #fff;
+      border-radius: 100px;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+
 }
 //Header nav
 .header-nav {
@@ -202,7 +322,7 @@ header{
 
   //Nav
   .nav {
-    margin-top: 11px;
+    margin-top: 8px;
     ul {
       text-align: center;
     }
@@ -214,8 +334,8 @@ header{
     }
     a {
       display: inline-block;
-      padding: 5px 20px;
-      border: solid 1px transparent;
+      padding: 7px 22px;
+      border: solid 2px transparent;
       border-radius: 100px;
 
       font-family: $Avenir-reg;
@@ -272,7 +392,7 @@ header{
       outline: none;
     }
 
-    .form-control:hover,
+    .open.form-control,
     .form-control:focus {
       width: 150px;
       padding: 3px 30px 3px 15px;
@@ -296,15 +416,15 @@ header{
     font-size: 1.3rem;
     font-family: $Avenir-demi;
     text-transform: uppercase;
-    &:before {
-      content: '';
-      display: inline-block;
-      width: 30px;
-      height: 1px;
-      margin-right: 18px;
-      background-color: #000000;
-      vertical-align: super;
-    }
+    //&:before {
+    //  content: '';
+    //  display: inline-block;
+    //  width: 30px;
+    //  height: 1px;
+    //  margin-right: 18px;
+    //  background-color: #000000;
+    //  vertical-align: super;
+    //}
 
     .lang-ru,
     .lang-en {
@@ -340,7 +460,7 @@ header{
   transform: rotate(45deg);
   transform-origin: 0 100%;
   border-radius: 250px;
-  background-color: $accent-col;
+  //background-color: $accent-col;
 
   .slider-img {
     transform: rotate(-45deg);
@@ -375,6 +495,29 @@ header{
       width: 100%;
       height: 100%;
       background-color: rgba(253, 187, 0, .6);
+    }
+
+
+    &.blue-bg:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(45, 170, 194, 0.62);
+    }
+    &.red-bg:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(235, 32, 29, 0.67);
+    }
+    &.white-bg:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, .2);
     }
   }
 }
@@ -432,6 +575,7 @@ header{
   .slider-top {
 
     .slider-top_item {
+      min-height: 415px;
       min-height: 415px;
       display: table;
 
@@ -537,7 +681,6 @@ header{
         }
 
         &.scale-item {
-
           .hover-img {
             transform: scale(1.067, 1.067);
             opacity: 1;
@@ -613,14 +756,13 @@ header{
 -----------------------------------*/
 
 .advantage {
-  margin-bottom: 50px;
+  margin-bottom: 65px;
   .advantage-header {
 
     .text {
       margin-left: 31px;
       margin-bottom: 75px;
       padding-right: 3%;
-      font-size: 1.6rem;
       font-family: $open-sans;
       line-height: 25px;
       color: $accent-text;
@@ -628,47 +770,93 @@ header{
   }
 
   .advantage-list {
-    padding: 0 20px 0 40px;
-
     .advantage-item {
       display: inline-block;
       width: 33%;
-      margin-bottom: 67px;
+      margin-bottom: 60px;
       vertical-align: top;
       color: $accent-text;
-      padding-left: 120px;
+      &:not(:nth-child(3n+1)){
+        padding-left: 20px;
+      }
+
+      a:hover{
+        .advantage-title{
+          color: $accent-col;
+        }
+      }
 
       .advantage-title {
         margin-bottom: 15px;
         font-size: 3rem;
         line-height: 1.2;
         font-family: $Avenir-light;
+        transition: color .15s ease;
         color: $accent-text;
       }
       .advantage-icon {
         display: block;
-        width: 46px;
+        width: 50px;
         height: 50px;
-        margin-bottom: 25px;
-
+        margin-bottom: 18px;
         background-repeat: no-repeat;
-        background-position: center bottom;
+        transition: all .15s ease;
       }
-      .link {
-        font-family: $Avenir-light;
-        font-size: 1.4rem;
-        border-bottom: solid 1px $accent-text;
-        &:hover {
-          border-bottom: solid 1px $accent-col;
+      .quality{
+        .advantage-icon{
+          background-position: -18px -10px;
+        }
+        &:hover .advantage-icon {
+          background-position: -17px -60px;
         }
       }
+      .cost-price{
+        .advantage-icon{
+          background-position: -81px -16px;
+        }
+        &:hover .advantage-icon {
+          background-position: -81px -66px;
+        }
+      }
+      .automation{
+        .advantage-icon{
+          background-position: -137px -13px;
+        }
+        &:hover .advantage-icon {
+          background-position: -137px -63px;
+        }
+      }
+      .reliability{
+        .advantage-icon{
+          background-position: -196px -15px;
+        }
+        &:hover .advantage-icon {
+          background-position: -196px -65px;
+        }
+      }
+      .modularity{
+        .advantage-icon{
+          background-position: -263px -11px;
+        }
+        &:hover .advantage-icon {
+          background-position: -263px -61px;
+        }
+      }
+      .ecological{
+        .advantage-icon{
+          background-position: -318px -11px;
+        }
+        &:hover .advantage-icon {
+          background-position: -318px -61px;
+        }
+      }
+
       .text {
         margin-bottom: 10px;
       }
     }
-    .advantage-item:nth-child(3n+1) {
-      padding-left: 8.33333333%;
-
+    .advantage-item:not(:nth-child(3n)) {
+      padding-right: 4%;
     }
   }
 }
@@ -676,6 +864,8 @@ header{
 /* $Blog
 -----------------------------------*/
 
+.article-slider,
+.about-team,
 .blog-short {
   position: relative;
   margin-bottom: 140px;
@@ -694,7 +884,7 @@ header{
       color: $accent-text;
     }
   }
-
+  .article-slider-link,
   .blog-short-link {
     margin-left: 40px;
   }
@@ -707,6 +897,9 @@ header{
     padding: 35px 45px 35px 40px;
     background-color: $accent-col;
     &:hover {
+      .blackout{
+        display: none;
+      }
       .link-bg {
         opacity: .15;
       }
@@ -724,14 +917,20 @@ header{
         transition: background $trans-ease;
 
       }
-      .img-link-header,
-      .read-more {
+      .img-link-header{
         color: #272725;
       }
       .hidden-text {
-        height: 170px;
+        height: 265px;
         margin: 7px 30px 5px 0;
       }
+
+      .read-more {
+        margin-top: 23px;
+        opacity: 1;
+        height: auto;
+      }
+
     }
 
     .link-bg {
@@ -771,13 +970,18 @@ header{
     }
     .read-more {
       position: relative;
-      display: inline-block;
-      margin-top: 23px;
-      font-size: 1.4rem;
+      display: block;
+      font-size: 1.65rem;
       font-family: $Avenir-demi;
-      color: #ffffff;
-      transition: color $trans-ease;
       z-index: 3;
+
+      opacity: 0;
+      margin: 0;
+      height: 0;
+      &:after {
+        padding-left: 10px;
+        font: bold 15px/1 FontAwesome;
+      }
     }
   }
 }
@@ -880,9 +1084,9 @@ header{
   }
 }
 
-/* $Clients
+/* $Clients-short
 ------------------------------------*/
-.clients {
+.clients-short{
   position: relative;
   margin-bottom: 140px;
   .content-header{
@@ -1066,6 +1270,28 @@ footer {
         color: $accent-col;
       }
     }
+
+    .footer-logo{
+      position: relative;
+      display: block;
+      &:hover{
+        img:not(.hover){
+          opacity: 0;
+        }
+        .hover{
+          opacity: 1;
+        }
+      }
+      img{
+        transition: opacity $trans-ease;
+      }
+      .hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+    }
     .siteMap{
       display: block;
       margin-top: 35px;
@@ -1140,7 +1366,17 @@ footer{
 
 @import "contacts";
 @import "about_company";
+@import "work";
 @import "blog";
+@import "article";
+@import "equipment_all";
+@import "equipment";
+@import "clients";
+@import "partners";
+@import "site_map";
+@import "sorry_page";
+@import "search";
+@import "404";
 
 
 // Media queri

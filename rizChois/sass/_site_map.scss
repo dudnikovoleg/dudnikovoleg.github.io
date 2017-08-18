@@ -1,0 +1,45 @@
+/*  Table of Contents
+
+    Use (CMD/CRL + F $[SECTION] to quickly find what you are looking for [SECTION] )
+
+1.  Site-map
+
+*/
+
+
+/* $Site-map
+*********************/
+.site-map{
+  margin: 155px auto 130px auto;
+}
+.map-list{
+  margin-top: 67px;
+  font-size: 1.4rem;
+  .title{
+    margin: 35px 0 15px 0;
+    font-family: $Avenir-demi;
+    a{
+      transition: color $trans-ease;
+      &:hover{
+        color: $accent-col;
+      }
+    }
+  }
+}
+.map-sub-list{
+  li{
+    padding-left: 13px;
+    margin-left: 17px;
+    margin-top: 15px;
+    position: relative;
+    &.dots:before {
+      top: 6px;
+    }
+    a{
+      transition: color $trans-ease;
+      &:hover{
+        color: $accent-col;
+      }
+    }
+  }
+}

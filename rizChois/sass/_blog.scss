@@ -14,17 +14,13 @@
 /* $Blog
 ***************************/
 .blog{
-  margin-bottom: 150px;
-  a.btn{
-    margin-top: 24px;
-    padding: 10px 50px;
-    border-color: #f5f5f5;
-    color: #a5a5a5;
-  }
+  margin-bottom: 90px;
 }
-.blog-header {
+.blog-header,
+.article-header{
   margin-left: 8.33333333%;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  width: 58.33333333%;
 }
 
 
@@ -56,7 +52,7 @@
 }
 // Blog content
 .blog-content {
-  padding-left: 163px;
+  padding-left: 165px;
   time{
     margin-bottom: 12px;
     display: inline-block;
@@ -85,12 +81,14 @@
     margin-bottom: 7px;
     font-family: $Avenir-demi;
     font-size: 1.4rem;
+    line-height: 1.45;
   }
 }
 
 
 
 // Subscribe
+.article .subscribe,
 .blog .subscribe{
   padding-left: 25px;
   .content-header{
@@ -106,9 +104,17 @@
       font-size: 3rem;
     }
     input,
-    button {
+    .btn {
       display: block;
       margin-bottom: 34px;
+    }
+    .btn{
+      &:before{
+        content: 'Подписаться';
+      }
+      &:after{
+        content: 'Подписаться';
+      }
     }
     input {
       width: 100%;
@@ -122,7 +128,7 @@
       &:focus,
       &:hover {
         border-bottom: solid 2px $accent-col;
-        margin-bottom: 37px;
+        margin-bottom: 33px;
         //Placeholder color
         &::-webkit-input-placeholder {
           color: $accent-col;
@@ -146,7 +152,7 @@
     }
     input:focus + button,
     input:hover + button{
-      margin-top: 49px;
+      margin-top: 39px;
     }
   }
 }

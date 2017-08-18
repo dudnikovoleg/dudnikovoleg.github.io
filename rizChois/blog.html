@@ -159,8 +159,8 @@
                     <span class="  double-right" >  >  </span>
                 </li>
                 <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                    <span class="link last-crumb" title="Блог" itemprop="item">
-                        <span class="bold" itemprop="name">Блог</span>
+                    <span class="link" title="Блог" itemprop="item">
+                        <span itemprop="name">Блог</span>
                     </span>
                     <meta itemprop="position" content="1">
                 </li>
@@ -188,8 +188,7 @@
 
             <div class="col-lg-7 col-md-10 col-md-offset-1 ">
 
-                <!-- for tablet 768px start -->
-                <ul class="tag-cloud tag-cloud-mob">
+                <ul class="tag-cloud tag-cloud-mob ">
                     <li><a href="#" class="link">Новости</a></li>
                     <li><a href="#" class="link">Покрасочное оборудование</a></li>
                     <li><a href="#" class="link">Технология порошковой покраски</a></li>
@@ -203,7 +202,7 @@
                     <li><a href="#" class="link">Себестоимость окраски</a></li>
                     <li><a href="#" class="link">Разумный выбор</a></li>
                 </ul>
-                <!-- for tablet 768px end -->
+
 
                 <ul>
                     <li class="blog-item">
@@ -285,8 +284,6 @@
                     </li>
                 </ul>
 
-                <a class="btn" href="#">Загрузить еще</a>
-
             </div>
 
             <!-- Blog list end -->
@@ -294,7 +291,7 @@
 
             <!-- Tag cloud subscribe form start -->
 
-            <div class="col-lg-3 col-md-11 ">
+            <div class="col-lg-3 col-md-10 col-md-offset-1 col-lg-offset-0">
 
                 <ul class="tag-cloud">
                     <li><a href="#" class="link">Новости</a></li>
@@ -314,9 +311,14 @@
                 <div class="subscribe">
                     <h3 class="content-header">Подпишитесь на новые статьи</h3>
                     <form>
-                        <input class="subscribe-name" placeholder="Ваше имя">
-                        <input class="subscribe-mail" type="email" placeholder="Ваш email">
-                        <button class="btn">Отправить</button>
+                        <div class="left">
+                            <input class="subscribe-name" placeholder="Ваше имя">
+                        </div>
+                        <div class="right">
+                            <input class="subscribe-mail" type="email" placeholder="Ваш email">
+                            <button class="btn">Отправить</button>
+                        </div>
+
                     </form>
 
                 </div>

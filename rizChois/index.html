@@ -29,6 +29,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -38,6 +39,16 @@
 <!-- Header start -->
 
     <header>
+
+        <!--&lt;!&ndash; Cookie message start &ndash;&gt;-->
+
+        <!--<div class="cookie-msg">-->
+            <!--<p class="text">Посещая этот сайт, вы принимаете программу использования cookie. Подробнее о нашей-->
+                <!--<a href="#">политике использования cookie.</a></p>-->
+            <!--<span class="cookie-btn text">Ок</span>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Cookie message end &ndash;&gt;-->
 
         <!-- Mobile menu start -->
 
@@ -77,7 +88,7 @@
                     <ul>
                         <li class="mobile-item"><a href="#">Главная</a></li>
                         <li><a href="about_company.html">О Компании</a></li>
-                        <li><a href="#">Оборудование</a></li>
+                        <li><a href="equipment_all.html">Оборудование</a></li>
                         <li><a href="blog.html">Блог</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
@@ -153,10 +164,11 @@
 
 
         <div class="rotate ">
-            <div class="slider-img green-bg animated" style="background-image: url('img/slider_img-1.jpg')"></div>
-            <div class="slider-img yellow-bg " style="background-image: url('img/slider_img-2.jpg')"></div>
-            <div class="slider-img green-bg animated" style="background-image: url('img/slider_img-1.jpg')"></div>
-            <div class="slider-img yellow-bg " style="background-image: url('img/slider_img-2.jpg')"></div>
+            <div class="slider-img green-bg animated" style="background-image: url('img/rotate-slider_img-1.jpg')"></div>
+            <div class="slider-img yellow-bg " style="background-image: url('img/rotate-slider_img-2.jpg')"></div>
+            <div class="slider-img blue-bg " style="background-image: url('img/rotate-slider_img-3.jpg')"></div>
+            <div class="slider-img red-bg " style="background-image: url('img/rotate-slider_img-4.jpg')"></div>
+            <div class="slider-img white-bg " style="background-image: url('img/rotate-slider_img-5.jpg')"></div>
         </div>
 
 
@@ -382,74 +394,83 @@
             </div>
 
 
-            <div class="container">
+            <div class="container-fluid">
+                <div class="row">
+                    <ul class="advantage-list col-md-offset-1 col-md-10">
 
-                <ul class="advantage-list row">
+                        <li class="advantage-item">
+                            <a class="quality" href="#">
+                                <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-sprite.png')"></span>
+                                <h3 class="advantage-title">Высокое качество полимерного покрытия</h3>
+                                <p class="advantage-text text">
+                                    Эстетичность, долговечность и высокая коррозионная стойкость благодаря соблюдению
+                                    оптимальной технологии на всех стадиях получения финишных покрытий.
+                                </p>
+                            </a>
+                        </li>
 
-                    <li class="advantage-item ">
-                        <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-1.png')"></span>
-                        <h3 class="advantage-title">Высокое качество полимерного покрытия</h3>
-                        <p class="advantage-text text">
-                            Эстетичность, долговечность и высокая коррозионная стойкость благодаря соблюдению
-                            оптимальной технологии на всех стадиях получения финишных покрытий.
-                        </p>
-                        <a class="link" href="#">Подробнее</a>
-                    </li>
+                        <li class="advantage-item">
+                            <a class="cost-price" href="#">
+                                <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-sprite.png')"></span>
+                                <h3 class="advantage-title">Минимальная себестоимость окраски</h3>
+                                <p class="advantage-text text">
+                                    Рациональное потребление энергии и ресурсов в совокупности с минимальными
+                                    эксплуатацион- ными расходами оборудования — это наш главный приоритет.
+                                </p>
+                            </a>
+                        </li>
 
-                    <li class="advantage-item">
-                        <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-2.png')"></span>
-                        <h3 class="advantage-title">Минимальная себестоимость окраски</h3>
-                        <p class="advantage-text text">
-                            Рациональное потребление энергии и ресурсов в совокупности с минимальными
-                            эксплуатацион- ными расходами оборудования — это наш главный приоритет.
-                        </p>
-                        <a class="link" href="#">Подробнее</a>
-                    </li>
+                        <li class="advantage-item">
+                            <a class="automation" href="#">
+                                <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-sprite.png')"></span>
+                                <h3 class="advantage-title">
+                                    Автоматизация технологического процесса</h3>
+                                <p class="advantage-text text">
+                                    Интеллектуальные системы управления сводят к минимуму "человеческий фактор",
+                                    обеспечивают стабильное высокое качество покрытия и низкую себестоимость.
+                                </p>
+                            </a>
+                        </li>
 
-                    <li class="advantage-item">
-                        <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-3.png')"></span>
-                        <h3 class="advantage-title">
-                            Автоматизация технологического процесса</h3>
-                        <p class="advantage-text text">
-                            Интеллектуальные системы управления сводят к минимуму "человеческий фактор",
-                            обеспечивают стабильное высокое качество покрытия и низкую себестоимость.
-                        </p>
-                        <a class="link" href="#">Подробнее</a>
-                    </li>
+                        <li class="advantage-item">
+                            <a class="reliability" href="#">
+                                <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-sprite.png')"></span>
+                                <h3 class="advantage-title">Надёжность оборудования</h3>
+                                <p class="advantage-text text">
+                                    Высокий рабочий ресурс позволяет эксплуатировать оборудование круглосуточно из года в год,
+                                    на протяжении десятилетий бесперебойной работы.
+                                </p>
+                            </a>
+                        </li>
 
-                    <li class="advantage-item">
-                        <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-4.png')"></span>
-                        <h3 class="advantage-title">Надёжность оборудования</h3>
-                        <p class="advantage-text text">
-                            Высокий рабочий ресурс позволяет эксплуатировать оборудование круглосуточно из года в год,
-                            на протяжении десятилетий бесперебойной работы.
-                        </p>
-                        <a class="link" href="#">Подробнее</a>
-                    </li>
+                        <li class="advantage-item">
+                            <a class="modularity" href="#">
+                                <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-sprite.png')"></span>
+                                <h3 class="advantage-title">
+                                    Модульность и низкая стоимость</h3>
+                                <p class="advantage-text text">
+                                    Оборудование производится серийно из стандартных модулей, что существенно снижает их
+                                    стоимость и обеспечивает высокую взаимозаменяемость всехузлов и агрегатов.
+                                </p>
+                            </a>
+                        </li>
 
-                    <li class="advantage-item ">
-                        <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-5.png')"></span>
-                        <h3 class="advantage-title">
-                            Модульность и низкая стоимость</h3>
-                        <p class="advantage-text text">
-                            Оборудование производится серийно из стандартных модулей, что существенно снижает их
-                            стоимость и обеспечивает высокую взаимозаменяемость всехузлов и агрегатов.
-                        </p>
-                        <a class="link" href="#">Подробнее</a>
-                    </li>
-
-                    <li class="advantage-item ">
-                        <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-6.png')"></span>
-                        <h3 class="advantage-title">Экологическая чистота</h3>
-                        <p class="advantage-text text">
-                            Наиболее полное использование энергии и ресурсов делает наше оборудование практически
-                            безотходным, что благоприятно сказывается на экологической чистоте.
-                        </p>
-                        <a class="link" href="#">Подробнее</a>
-                    </li>
+                        <li class="advantage-item">
+                            <a class="ecological" href="#">
+                                <span class="advantage-icon" style="background-image: url('img/icons/advantage_icon-sprite.png')"></span>
+                                <h3 class="advantage-title">Экологическая чистота</h3>
+                                <p class="advantage-text text">
+                                    Наиболее полное использование энергии и ресурсов делает наше оборудование практически
+                                    безотходным, что благоприятно сказывается на экологической чистоте.
+                                </p>
+                            </a>
+                        </li>
 
 
-                </ul>
+                    </ul>
+
+                </div>
+
             </div>
 
 
@@ -479,12 +500,12 @@
             <div class="row blog-short-link " id="mob-slider">
 
 
-                <div class="col-md-4 ">
+                <div class="col-md-4">
                     <a href="#" class="img-link">
 
                         <div class="link-bg" style="background-image: url('img/blog_img_bg-1.jpg')"></div>
                         <div class="gradient"></div>
-
+                        <div class="blackout"></div>
                         <div class="img-link-content">
                             <h3 class="img-link-header">Области применения порошковых красок</h3>
                             <p class="hidden-text text">
@@ -505,7 +526,7 @@
 
                         <div class="link-bg" style="background-image: url('img/blog_img_bg-2.jpg')"></div>
                         <div class="gradient"></div>
-
+                        <div class="blackout"></div>
                         <div class="img-link-content">
                             <h3 class="img-link-header">
                                 Устройство для подачи порошка</h3>
@@ -527,7 +548,7 @@
 
                         <div class="link-bg" style="background-image: url('img/blog_img_bg-3.jpg')"></div>
                         <div class="gradient"></div>
-
+                        <div class="blackout"></div>
                         <div class="img-link-content">
                             <h3 class="img-link-header">Требования к оборудованию</h3>
                             <p class="hidden-text text">
@@ -602,12 +623,12 @@
 
 
                 <div class="callback-form col-lg-4 col-md-7 col-md-offset-1" >
-                    <h3 class="content-header">Оставьте заявку и мы свяжемся с Вами</h3>
+                    <h3 class="content-header">Оставьте заявку и мы свяжемся с вами</h3>
                     <form>
                         <input name="name" placeholder="Ваше имя">
                         <input type="email" name="email" placeholder="Ваш email">
                         <input type="tel" name="tel" placeholder="Ваш телефон">
-                        <input name="comments" placeholder="Комментарий">
+                        <input name="comments" placeholder="Предварительный запрос">
                         <button class="btn">Отправить</button>
                     </form>
                 </div>
@@ -621,9 +642,9 @@
         <!--  short-info end  -->
 
 
-        <!-- our clients start -->
+        <!-- our clients-short start -->
 
-        <section class="container-fluid clients">
+        <section class="container-fluid clients-short">
 
             <div class="row">
                 <h2 class="content-header col-md-offset-1">Наши клиенты</h2>
@@ -693,7 +714,7 @@
         </section>
 
 
-        <!-- our clients end -->
+        <!-- our clients-short end -->
 
 
     </div>
@@ -726,7 +747,7 @@
                             <ul>
                                 <li><a class="link" href="#">Главная</a></li>
                                 <li><a class="link" href="#">О компании</a></li>
-                                <li><a class="link" href="#">Оборудование</a></li>
+                                <li><a class="link" href="equipment_all.html">Оборудование</a></li>
                                 <li><a class="link" href="#">Блог</a></li>
                                 <li><a class="link" href="contacts.html">Контакты</a></li>
                             </ul>
@@ -742,25 +763,29 @@
                         <nav class=" services-nav">
                             <h3 class="title">Производство и поставка</h3>
                             <ul>
-                                <li><a class="link" href="#">Оборудование для порошковой покраски</a></li>
-                                <li><a class="link" href="#">Рекуператоры тепла выхлопных газов</a></li>
-                                <li><a class="link" href="#">Регенераторы химических реагентов</a></li>
-                                <li><a class="link" href="#">Блоки абсолютной фильтрации</a></li>
-                                <li><a class="link" href="#">Замещение природного газа на газ генераторный из твёрдого топлива</a></li>
-                                <li><a class="link" href="#">Восстановление и модернизация старого покрасочного оборудования</a></li>
+                                <li><a class="link" href="equipment.html">Оборудование для порошковой покраски</a></li>
+                                <li><a class="link" href="equipment.html">Рекуператоры тепла выхлопных газов</a></li>
+                                <li><a class="link" href="equipment.html">Регенераторы химических реагентов</a></li>
+                                <li><a class="link" href="equipment.html">Блоки абсолютной фильтрации</a></li>
+                                <li><a class="link" href="equipment.html">Замещение природного газа на газ генераторный из твёрдого топлива</a></li>
+                                <li><a class="link" href="equipment.html">Восстановление и модернизация старого покрасочного оборудования</a></li>
                             </ul>
 
                         </nav>
                     </div>
 
                     <div class="col-lg-3 col-md-5 subscribe">
-                        <h3 class="title">Оставьте свой е-mail и оставайтесь всегда в курсе всех событий</h3>
+                        <h3 class="title">Оставьте свой email и будьте в курсе всех новостей</h3>
                         <form>
                             <input class="subscribe-name" placeholder="Ваше имя">
                             <input class="subscribe-mail" type="email" placeholder="Ваш email">
                             <button class="subscribe-btn">OK</button>
                         </form>
-                        <img src="img/logo_b&w.png" alt="Разумный выбор" title="Разумный выбор">
+                        <a href="index.html" class="footer-logo">
+                            <img src="img/logo_b&w.png" alt="Разумный выбор" title="Разумный выбор">
+                            <img class="hover" src="img/logo-hover.png" alt="Разумный выбор" title="Разумный выбор">
+                        </a>
+
                         <a class="link siteMap" href="#">Карта сайта</a>
                     </div>
                 </div>
