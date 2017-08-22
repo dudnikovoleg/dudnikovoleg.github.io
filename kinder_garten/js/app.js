@@ -19,15 +19,15 @@ kindergartenApp.config(['$stateProvider','$urlRouterProvider',function ($statePr
     $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: '../views/main.html'
+            templateUrl: 'views/main.html'
         })
         .state('set_data_child', {
             url: '/set_data_child',
-            templateUrl: '../views/set_data_child.html'
+            templateUrl: 'views/set_data_child.html'
         })
         .state('child_table', {
             url: '/child_table',
-            templateUrl: '../views/child_table.html'
+            templateUrl: 'views/child_table.html'
         })
 
 
