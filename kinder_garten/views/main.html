@@ -1,0 +1,18 @@
+<div ng-controller="AddChildCtrl">
+
+
+    <form>
+
+        <span class="capacity">(Dynamic) Kindergarten Capacity</span>
+
+        <input class="" name="kindGarCode"          ng-model="kindGarCode"          placeholder="Kindergarten Code (UID)" required>
+        <input class="" name="kindGarURL"           ng-model="kindGarURL"           placeholder="Kindergarten URL (UID)" required>
+        <input class="" name="kindGarName"          ng-model="kindGarName"          placeholder="Kindergarten Name" required>
+        <input class="" name="kindGarAddress"       ng-model="kindGarAddress"       placeholder="Kindergarten Address" required>
+        <input class="" name="kindGarTeacherName"   ng-model="kindGarTeacherName"   placeholder="Kindergarten Teacher  Name" required>
+        <input class="" name="kindGarTeacherPhone"  ng-model="kindGarTeacherPhone"  placeholder="Kindergarten Teacher  Phone" required>
+        <input class="" name="alertsInterval"       ng-model="alertsInterval"       placeholder="Define Alerts Interval in Min" required>
+
+        <button ui-sref="set_data_child" ng-click="addChild()">Button  - Add Child</button>
+    </form>
+</div>

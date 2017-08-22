@@ -1,0 +1,159 @@
+
+/* Table of Contents
+
+	Use (CMD/CRL + F $[SECTION] to quickly find what you are looking for [SECTION] )
+
+1.  Main
+*/
+
+/* Main
+----------------------------------*/
+body{
+  color: #000;
+}
+
+
+input,
+button,
+.capacity{
+  padding: 20px;
+  width: 28%;
+  display: inline-block;
+  background-color: #33488b;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  color: #fff;
+  margin: 30px 10px;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: #fff;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: #fff;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+  }
+}
+
+button{
+  margin: 0 auto;
+  display: block;
+  padding: 40px;
+}
+
+.capacity{
+  background-color: #0b0e8b;
+}
+.upload-photo{
+  width: 300px;
+  height: 300px;
+  background-color: #33488b;
+  float: right;
+  margin: 40px;
+}
+
+
+/* Children table
+---------------------------------*/
+
+.child-table{
+  .child-list{
+    opacity: 0;
+    transition: all 1s;
+    .child-item{
+      position: relative;
+      float: left;
+      width: 25%;
+      list-style: none;
+      margin: 20px 0;
+      cursor: pointer;
+      &:hover .parent-btn{
+        opacity: 1;
+      }
+
+      .child-item-content{
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 30px;
+        overflow: hidden;
+        text-align: center;
+        background-color: rgba(255, 58, 55, 0.56);
+
+      }
+      .picture{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .name{
+        position: relative;
+        top: 50%;
+        margin: 0;
+        transition: translateY(-50%);
+        z-index: 2;
+        color: white;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .parent-btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 250px;
+
+    text-align: center;
+    padding-top: 100px;
+    background-color: rgba(51, 72, 140, .5);
+    box-sizing: border-box;
+    border-radius: 30px;
+    opacity: 0;
+    transition: all .3s;
+    .btn{
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #1f8b10;
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+#ww{
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+
+<div class="child-table" ng-controller="ChildrenTableCtrl">
+    <p>32 img</p>
+<h2>Hove many in {{children.length}}</h2>
+
+    <ul class="child-list" id="ss" style="{{setStile()}}">
+        <li class="child-item" ng-repeat="children in children" on-finish-render="ngRepeatFinished">
+
+            <div class="child-item-content">
+                <!--<img data-lazy="{{children.picture}}" alt="">-->
+                <span class="picture" style="background-image: url('{{children.picture}}') "></span>
+                <h3 class="name">{{children.name}}</h3>
+            </div>
+
+            <div class="parent-btn">
+                <span class="btn">Mather</span>
+                <span class="btn">Father</span>
+            </div>
+        </li>
+    </ul>
+
+
+</div>

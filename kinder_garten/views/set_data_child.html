@@ -1,0 +1,59 @@
+
+
+<div>
+
+
+
+    <form id="form1" runat="server">
+        <input type='file' id="imgInp" />
+        <img class="upload-photo" id="blah" src="#" alt="your image" />
+    </form>
+
+
+
+    <form class="clearfix">
+        <!--<label class="upload-photo" for="ww"></label>-->
+        <!--<input id="ww"  type="file"  name="photo" multiple accept="image/*,image/jpeg">-->
+
+        <input class="" name="kindGarName"          ng-model="kindGarName"      placeholder="Kindergarten Name" required>
+        <input class="" name="childName"            ng-model="childName"        placeholder="Child Name" required>
+        <input class="" name="childId"              ng-model="childId"          placeholder="Child ID (National ID)" required>
+        <input class="" name="motherName"           ng-model="motherName"       placeholder="Mother Name" required>
+        <input class="" name="motherID"             ng-model="motherID"         placeholder="Mother ID (National ID)" required>
+        <input class="" name="motherPhone"          ng-model="motherPhone"      placeholder="Mother Phone" required>
+        <input class="" name="fatherName"           ng-model="fatherName"       placeholder="Father Name" required>
+        <input class="" name="fatherId"             ng-model="fatherId"         placeholder="Father ID (National ID)" required>
+        <input class="" name="fatherPhone"          ng-model="fatherPhone"      placeholder="Father Phone" required>
+        <input class="" name="familyName"           ng-model="familyName"       placeholder="Family Name" required>
+        <input class="" name="relativeContact1"     ng-model="relativeContact1" placeholder="Relative Contact 1" required>
+        <input class="" name="relativeContact2"     ng-model="relativeContact2" placeholder="Relative Contact 2" required>
+
+        <button ui-sref="child_table" ng-click="addChild()">Button  - Add Child</button>
+
+    </form>
+
+
+
+    <script>
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                console.log(reader)
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp").change(function(){
+            readURL(this);
+        });
+    </script>
+
+
+</div>
