@@ -549,6 +549,15 @@
   }
 
 
+  /* Thank-popup
+  ----------------------------------*/
+  .thank-popup{
+    .thank-popup-content{
+      width: 65%;
+      padding: 7% 3%;
+    }
+  }
+
   /* $About-company
   **************************/
   .about-company{
@@ -2135,6 +2144,15 @@
     }
     .fresh {
       margin: 10px 0;
+    }
+  }
+
+  /* Thank-popup
+----------------------------------*/
+  .thank-popup{
+    .thank-popup-content{
+      width: 100%;
+      padding: 20% 7%;
     }
   }
 

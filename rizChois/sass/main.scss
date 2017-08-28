@@ -15,6 +15,7 @@
 10. Clients-short
 11. Footer
 12.	Imports
+13. Thank-popup
 
 */
 
@@ -994,7 +995,8 @@ header{
   margin-bottom: 115px;
   .rotate {
     left: -50.5%;
-    top: -565px
+    top: -565px;
+    background-color: $accent-col;
   }
 
   //benefit list
@@ -1354,6 +1356,42 @@ footer{
       .link{
         display: block;
       }
+    }
+  }
+}
+
+/* $Thank-popup
+***************************/
+.thank-popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .2);
+  z-index: 99999;
+  .thank-popup-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 5% 8%;
+    transform: translate(-50%,-50%);
+
+    border:solid 5px $accent-col;
+    background-color: #fff;
+    text-align: center;
+    .close {
+      position: absolute;
+      top: -5px;
+      right: 13px;
+      font-size: 43px;
+    }
+    .close:hover,
+    .close:focus {
+      color: $accent-col;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 }
