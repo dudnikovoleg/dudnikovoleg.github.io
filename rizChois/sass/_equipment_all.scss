@@ -54,7 +54,7 @@
   .icon{
     position: absolute;
     width: 50px;
-    height: 55px;
+    height: 60px;
     left: 0;
     top: 5px;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@
   // Icons
   .poros_pocr{
     &:hover .icon{
-      background-position: 0 -90px;
+      background-position: 0 -88px;
     }
   }
   .recuper{
@@ -86,10 +86,10 @@
   }
   .filter{
     .icon{
-      background-position: -187px 0;
+      background-position: -180px 0;
     }
     &:hover .icon{
-      background-position: -187px -90px;
+      background-position: -178px -88px;
     }
   }
   .zamesh{
@@ -113,7 +113,7 @@
       background-position: -408px 0;
     }
     &:hover .icon {
-      background-position: -408px -90px;
+      background-position: -408px -91px;
     }
   }
   .alternativ {
@@ -121,7 +121,7 @@
       background-position: -475px 0;
     }
     &:hover .icon {
-      background-position: -475px -92px;
+      background-position: -475px -90px;
     }
   }
 }
