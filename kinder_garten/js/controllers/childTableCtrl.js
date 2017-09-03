@@ -10,8 +10,8 @@ ChildrenTableCtrl.$inject = ['$scope', 'httpRequest'];
 function ChildrenTableCtrl ($scope, httpRequest) {
     httpRequest.getChildData().then(function (response) {
         $scope.children = response.data.children
-    });
 
+    });
 
 
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
@@ -20,7 +20,6 @@ function ChildrenTableCtrl ($scope, httpRequest) {
             slidesToScroll: 4,
             rows: 2,
             infinite: false
-            // lazyLoad: 'ondemand'
 
         });
         $scope.setStile = function (setStile) {
