@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jack",
-      "picture": "img/children_1.jpg"
+      "picture": "../img/children_1.jpg"
     },
     {
       "id": 2,
