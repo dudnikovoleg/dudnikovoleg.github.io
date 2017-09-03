@@ -6,7 +6,7 @@ httpRequest.$inject = ['$http'];
 function httpRequest ($http) {
 
     this.getChildData = function () {
-        return $http.get('../child.json ');
+        return $http.get('child.json ');
     };
 
 }
