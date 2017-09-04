@@ -13,6 +13,8 @@
 
 
     <form class="clearfix">
+        <!--<label class="upload-photo" for="ww"></label>-->
+        <!--<input id="ww"  type="file"  name="photo" multiple accept="image/*,image/jpeg">-->
 
         <input class="" name="kindGarName"          ng-model="kindGarName"      placeholder="Kindergarten Name" required>
         <input class="" name="childName"            ng-model="childName"        placeholder="Child Name" required>
@@ -27,13 +29,28 @@
         <input class="" name="relativeContact1"     ng-model="relativeContact1" placeholder="Relative Contact 1" required>
         <input class="" name="relativeContact2"     ng-model="relativeContact2" placeholder="Relative Contact 2" required>
 
-        <button>Button  - Add Child</button>
-
-        <span ui-sref="child_table" class="next">Next</span>
+        <button ui-sref="child_table">Button  - Add Child</button>
 
     </form>
 
 
+
+    <script>
+//        function readURL(input) {
+//
+//            if (input.files && input.files[0]) {
+//                var reader = new FileReader();
+//                reader.onload = function (e) {
+//                    $('#blah').attr('src', e.target.result);
+//                };
+//                reader.readAsDataURL(input.files[0]);
+//            }
+//        }
+//
+//        $("#imgInp").change(function(){
+//            readURL(this);
+//        });
+    </script>
 
 
 </div>
