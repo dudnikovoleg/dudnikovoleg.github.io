@@ -12,10 +12,8 @@
         <input class="" name="kindGarTeacherName"   ng-model="kindGarTeacherName"   placeholder="Kindergarten Teacher  Name" required>
         <input class="" name="kindGarTeacherPhone"  ng-model="kindGarTeacherPhone"  placeholder="Kindergarten Teacher  Phone" required>
         <input class="" name="alertsInterval"       ng-model="alertsInterval"       placeholder="Define Alerts Interval in Min" required>
-        <button
+        <button ng-disabled="addChild.$invalid">Button  - Add Child</button>
 
-                ng-disabled="addChild.$invalid">
-            Button  - Add Child</button>
-        <span ui-sref="set_data_child" class="next">Next</span>
+        <!--<span ui-sref="set_data_child" class="next">Next</span>-->
     </form>
 </div>
