@@ -29,8 +29,5 @@ kindergartenApp.config(['$stateProvider','$urlRouterProvider',function ($statePr
             url: '/child_table',
             templateUrl: 'views/child_table.html'
         })
-
-
-
 }]);
 

@@ -9,7 +9,6 @@ AddChildCtrl.$inject = ['$scope'];
 
 function AddChildCtrl($scope) {
 
-
 }
 
 
