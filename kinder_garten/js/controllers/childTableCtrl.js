@@ -8,13 +8,7 @@ ChildrenTableCtrl.$inject = ['$scope', 'httpRequest'];
 
 
 function ChildrenTableCtrl ($scope, httpRequest) {
-<<<<<<< HEAD
-=======
-    httpRequest.getChildData().then(function (response) {
-        $scope.children = response.data.children
->>>>>>> 339ba61fe3b4c30d402f44ce692be80994a5a066
 
-    });
 
     httpRequest.getChildData().then(
         function (response) {
@@ -32,13 +26,9 @@ function ChildrenTableCtrl ($scope, httpRequest) {
             slidesToShow: 4,
             slidesToScroll: 4,
             rows: 2,
-<<<<<<< HEAD
             infinite: false,
             nextArrow: angular.element($(".nextArrow")),
             prevArrow: angular.element($(".prevArrow"))
-=======
-            infinite: false
->>>>>>> 339ba61fe3b4c30d402f44ce692be80994a5a066
 
             // lazyLoad: 'ondemand'
         });

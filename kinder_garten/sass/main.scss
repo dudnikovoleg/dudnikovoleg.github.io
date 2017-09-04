@@ -43,13 +43,17 @@ button{
   margin: 0 auto;
   display: block;
   padding: 40px;
-  &[disabled]{
-    background-color: gray;
-  }
 }
 
 .capacity{
   background-color: #0b0e8b;
+}
+.upload-photo{
+  width: 300px;
+  height: 300px;
+  background-color: #33488b;
+  float: right;
+  margin: 40px;
 }
 
 
@@ -69,17 +73,11 @@ button{
     padding:0 5px;
     opacity: 0;
     transition: all 1s;
-    .slick-slide{
-      &:focus{
-        outline: none;
-      }
-    }
     .child-item{
       float: left;
       list-style: none;
       margin: 20px 0;
       cursor: pointer;
-
       &:hover .parent-btn{
         opacity: 1;
       }
@@ -140,51 +138,17 @@ button{
   }
 }
 
-<<<<<<< HEAD
 button[disabled]{
   background-color: #939393;
   color: #b0b0b0;
-=======
-
-
-.next{
-  width: 100px;
-  height: 30px;
-  float: right;
-  text-align: center;
-  background: #1f8b10 ;
-  cursor: pointer;
-
-  padding: 20px;
-  border: none;
-  border-radius: 15px;
-  font-size: 25px;
-  color: #fff;
-  margin: 30px 10px;
->>>>>>> 339ba61fe3b4c30d402f44ce692be80994a5a066
 }
 
 #imgInp{
   display: none;
 }
 
-.upload-photo{
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-label{
-  width: 250px;
-  height: 250px;
-  background-color: #33488b;
-  float: right;
-  margin: 40px;
-  position: relative;
-  cursor: pointer;
 
-}
 
-<<<<<<< HEAD
 .prevArrow,
 .nextArrow{
   font-size: 120px;
@@ -203,21 +167,6 @@ label{
 }
 .nextArrow{
   right: 20px;
-=======
-.imgInp{
-  opacity: 0;
-  display: none;
-}
-.imgForm{
-  .text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    color: #fff;
-  }
->>>>>>> 339ba61fe3b4c30d402f44ce692be80994a5a066
 }
 
 .next{

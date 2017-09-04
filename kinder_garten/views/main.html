@@ -1,13 +1,9 @@
 <div ng-controller="AddChildCtrl">
 
 
-<<<<<<< HEAD
     <form name="addChild">
-=======
-    <form name="addChil">
->>>>>>> 339ba61fe3b4c30d402f44ce692be80994a5a066
 
-        <span class="capacity">(10) Kindergarten Capacity</span>
+        <span class="capacity">(Dynamic) Kindergarten Capacity</span>
 
         <input class="" name="kindGarCode"          ng-model="kindGarCode"          placeholder="Kindergarten Code (UID)" required>
         <input class="" name="kindGarURL"           ng-model="kindGarURL"           placeholder="Kindergarten URL (UID)" required>
@@ -18,14 +14,8 @@
         <input class="" name="alertsInterval"       ng-model="alertsInterval"       placeholder="Define Alerts Interval in Min" required>
         <button
 
-<<<<<<< HEAD
                 ng-disabled="addChild.$invalid">
             Button  - Add Child</button>
         <span ui-sref="set_data_child" class="next">Next</span>
-=======
-        <button ng-click="addChild()" ng-disabled="addChil.$invalid">Button  - Add Child</button>
-        <span class="next" ui-sref="set_data_child">Next</span>
-
->>>>>>> 339ba61fe3b4c30d402f44ce692be80994a5a066
     </form>
 </div>
