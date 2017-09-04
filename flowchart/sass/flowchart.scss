@@ -276,10 +276,20 @@
 		.fc-connector.fc-hover {
 			cursor: url(../img/lnr-arrow-down.svg), auto;
 		}
-		.conditionItem {
-			padding-top: 0;
-		}
 
+	}
+	.conditionItem{
+		background-color: #f0f0f0;
+		opacity: 0;
+		width: 100%;
+		text-align: center;
+		left: 0;
+		top: -45px;
+		padding: 7px 0;
+		transition: opacity .35s;
+	}
+	.fc-bottomConnectors .fc-magnet:hover > .conditionItem{
+		opacity: 1;
 	}
 
 	.fc-connector.fc-hover {
@@ -349,9 +359,6 @@
 	.star-question {
 		.fc-bottomConnectors {
 			bottom: -50px;
-			.conditionItem {
-				padding-top: 0;
-			}
 		}
 	}
 
