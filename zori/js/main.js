@@ -5,6 +5,49 @@
 
 
 
+
+        /* Scroll off top
+        --------------------------------------*/
+
+
+        (function () {
+            // var chechScroll = true;
+            
+            $(".trigger-down").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#elementtoScrollToID").offset().top - $('.top-menu').height() - 45
+                }, 1500);
+            });
+
+
+            // $(window).on('scroll ', function (e) {
+            //
+            //     var scrollTopVal = $(window).scrollTop();
+            //
+            //     if ( scrollTopVal > 1 && chechScroll ) {
+            //         e.stopPropagation();
+            //
+            //         $('html, body').animate({
+            //             scrollTop: $("#elementtoScrollToID").offset().top - $('.top-menu').height() - 45
+            //         }, 1500);
+            //         chechScroll = false;
+            //     }
+            //
+            //     if( scrollTopVal === 0 &&   scrollTopVal < 100){
+            //         chechScroll = true;
+            //     }
+            //     e.preventDefault();
+            //
+            //     return chechScroll;
+            //
+            //
+            // })
+
+        })();
+
+
+
+
         /* Init AOS.js plugin
         ---------------------------------*/
 
@@ -89,6 +132,18 @@
         })();
 
 
+
+
+        /* Trigger click to slider dods
+        -------------------------------------*/
+
+
+        (function () {
+           $('.main-slider .static-content .progress-bar_list li').on('click',function () {
+               var curentPointId = $('.main-slider .static-content .progress-bar_list li').index($(this))
+               $('#slick-slide0' + curentPointId).click()
+           }) 
+        })();
 
 
 
