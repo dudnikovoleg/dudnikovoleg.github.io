@@ -118,7 +118,7 @@
         (function () {
             $('#mainSlider').slick({
                 infinite: true,
-                // autoplay: true,
+                autoplay: true,
                 dots: true,
                 arrows: false,
                 autoplaySpeed: 5000,
