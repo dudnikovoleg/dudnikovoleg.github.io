@@ -232,6 +232,7 @@ main{
     background-color: #282828;
     display: inline-block;
     font-size: 22px;
+    color: #fff;
 }
 .bottom_btns a:hover{
     background-color: #00a1e1;
