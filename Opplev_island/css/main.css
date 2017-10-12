@@ -1,0 +1,266 @@
+/*
+    Table of content
+
+    Use (CMD/CRL + F $[SECTION] to quickly find what you are looking for [SECTION])
+    
+1.  Top
+2.  Middle
+3.  Bottom
+*/
+
+.top-left_line,
+.top-right_line,
+.bottom-left_line,
+.bottom-right_line{
+    width: 88px;
+    height: 88px;
+    position: absolute;
+}
+.top-left_line:before,
+.top-right_line:before,
+.bottom-left_line:before,
+.bottom-right_line:before{
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 1px;
+    background-color: #000;
+}
+.top-left_line:after,
+.top-right_line:after,
+.bottom-left_line:after,
+.bottom-right_line:after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 65px;
+    background-color: #000;
+}
+.top-left_line{
+    top: 0;
+    left: 0;
+}
+.bottom-left_line{
+    bottom: 0;
+    left: 0;
+}
+.bottom-right_line{
+    bottom: 0;
+    right: 0;
+}
+
+.top-right_line{
+    top: 0;
+    right: 0;
+}
+
+.top-left_line:before{
+    bottom: 0;
+    left: 0;
+}
+.top-left_line:after{
+    top: 0;
+    right: 0;
+}
+.top-right_line:before{
+    bottom: 0;
+    right: 0;
+}
+.top-right_line:after{
+    top: 0;
+    left: 0;
+}
+.bottom-left_line:before{
+     top: 0;
+     left: 0;
+ }
+.bottom-left_line:after{
+    bottom: 0;
+    right: 0;
+}
+.bottom-right_line:before{
+    top: 0;
+    right: 0;
+}
+.bottom-right_line:after{
+    bottom: 0;
+    left: 0;
+}
+
+
+
+body{
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+main{
+    padding: 90px;
+    overflow: hidden;
+}
+
+.content{
+    border: solid 1px #000;
+}
+.header{
+    background-color: #6ba3b1 ;
+    color: #fff;
+    padding: 30px 70px;
+
+    -webkit-box-shadow: 10px 10px 14px 5px rgba(0,0,0,0.07);
+    -moz-box-shadow: 10px 10px 14px 5px rgba(0,0,0,0.07);
+    box-shadow: 10px 10px 14px 5px rgba(0,0,0,0.07);
+}
+
+.header .top-list{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+}
+.header .h1{
+    display: inline-block;
+    vertical-align: top;
+}
+.header .top-list li{
+    font-size: 25px;
+}
+
+.header .top-list li:before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    vertical-align: middle;
+}
+
+.dashboard_img{
+    display: flex;
+    width: 100%;
+}
+.dashboard_img .right{
+    height: 100%;
+    width: 66.66%;
+    flex-wrap: wrap;
+    display: flex;
+}
+.dashboard_img .left{
+    height: 100%;
+    width: 33.33%;
+}
+.dashboard_img .left .img{
+    height: 100%;
+    padding-top: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.dashboard_img .right .img{
+    width: 50%;
+    padding-top: 37.5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bottom-text{
+    text-align: center;
+}
+
+
+.bottom{
+    display: flex;
+}
+.logo{
+    width: 50%;
+}
+.bottom .right{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.contact{
+    align-self: center;
+}
+.contact a{
+    display: block;
+}
+.partners{
+    display: flex;
+    flex-direction: column;
+}
+
+.partners img:first-of-type{
+    width: 60px;
+    align-self: flex-end;
+
+}
+.partners img:last-of-type{
+    width: 150px;
+}
+
+@media all and (max-width: 767px) {
+    .dashboard_img {
+        flex-wrap: wrap;
+    }
+    .dashboard_img .left{
+        width: 100%;
+    }
+    .dashboard_img .left .img {
+        padding-top: 37.5%;
+    }
+    .dashboard_img .right {
+        width: 100%;
+    }
+    .bottom{
+        flex-wrap: wrap;
+    }
+    .logo{
+        width: 100%;
+    }
+    .bottom .right{
+        width: 100%;
+        flex-direction: column;
+    }
+    .header {
+        padding: 30px 20px;
+    }
+    main {
+        padding: 35px;
+    }
+    .top-left_line,
+    .top-right_line,
+    .bottom-left_line,
+    .bottom-right_line {
+        width: 35px;
+        height: 35px;
+    }
+    .top-left_line:before,
+    .top-right_line:before,
+    .bottom-left_line:before,
+    .bottom-right_line:before {
+        width: 25px;
+    }
+    .top-left_line:after,
+    .top-right_line:after,
+    .bottom-left_line:after,
+    .bottom-right_line:after {
+        height: 25px;
+    }
+    .partners {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .header .h1 {
+        display: block;
+        text-align: center;
+    }
+    .header .top-list{
+        float: none;
+        display: block;
+    }
+    .header .top-list li {
+        display: inline-block;
+    }
+}
