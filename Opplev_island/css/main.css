@@ -8,6 +8,38 @@
 3.  Bottom
 */
 
+
+
+@font-face {
+    font-family: "Chalkduster";
+    src: url('../fonts/Chalkduster.woff2') format('woff2'),
+    url("../fonts/Chalkduster.woff") format("woff"),
+    url("../fonts/Chalkduster.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "FranklinGothic";
+    src: url('../fonts/FranklinGothic.woff2') format('woff2'),
+    url("../fonts/FranklinGothic.woff") format("woff"),
+    url("../fonts/FranklinGothic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "FranklinGothic-demi";
+    src: url('../fonts/FranklinGothic-DemiCond.woff2') format('woff2'),
+    url("../fonts/FranklinGothic-DemiCond.woff") format("woff"),
+    url("../fonts/FranklinGothic-DemiCond.ttf") format("truetype");
+
+}@font-face {
+    font-family: "ExPontoPro-Regular";
+    src: url('../fonts/ExPontoPro-Regular.woff2') format('woff2'),
+    url("../fonts/ExPontoPro-Regular.woff") format("woff"),
+    url("../fonts/ExPontoPro-Regular.ttf") format("truetype");
+
+}
+
 .top-left_line,
 .top-right_line,
 .bottom-left_line,
@@ -93,6 +125,7 @@ body{
     position: relative;
     max-width: 1280px;
     margin: 0 auto;
+    min-width: 1200px;
 }
 main{
     padding: 90px;
@@ -103,9 +136,9 @@ main{
     border: solid 1px #000;
 }
 .header{
-    background-color: #6ba3b1 ;
+    background-color: #29a2b3 ;
     color: #fff;
-    padding: 30px 70px;
+    padding: 30px 50px 8px 50px;
 
     -webkit-box-shadow: 10px 10px 14px 5px rgba(0,0,0,0.07);
     -moz-box-shadow: 10px 10px 14px 5px rgba(0,0,0,0.07);
@@ -121,16 +154,30 @@ main{
 .header .h1{
     display: inline-block;
     vertical-align: top;
+    font-family: 'Chalkduster' , "Open Sans", sans-serif;
+    font-size: 70px;
+    font-weight: 100;
+    position: relative;
+    bottom: -72px;
 }
 .header .top-list li{
-    font-size: 25px;
-}
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'FranklinGothic-demi' , "Open Sans", sans-serif;
 
+}
+.header .top-list{
+    padding-bottom: 12px;
+
+}
 .header .top-list li:before{
     content: '';
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
+    margin-right: 8px;
     background-color: #fff;
     vertical-align: middle;
 }
@@ -168,12 +215,44 @@ main{
     text-align: center;
 }
 
+.bottom-text h2{
+    text-align: center;
+    font-family: 'FranklinGothic' , "Open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 8px 0;
 
+}
+.bottom-text p{
+    font-family: 'FranklinGothic' , "Open Sans", sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 8px 0;
+
+}
 .bottom{
     display: flex;
+    padding: 15px 35px;
+
 }
 .logo{
     width: 50%;
+
+
+}
+.logo img{
+    width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo span {
+    color: #d76644;
+    font-family: 'ExPontoPro-Regular' , "Open Sans", sans-serif;
+    font-size: 35px;
+    vertical-align: -webkit-baseline-middle;
+
 }
 .bottom .right{
     display: flex;
@@ -183,8 +262,15 @@ main{
 .contact{
     align-self: center;
 }
+
+.contact .site{
+    font-family: 'FranklinGothic-demi' , "Open Sans", sans-serif;
+}
 .contact a{
     display: block;
+    font-family: 'FranklinGothic' , "Open Sans", sans-serif;
+    font-size: 20px;
+
 }
 .partners{
     display: flex;
@@ -201,6 +287,10 @@ main{
 }
 
 @media all and (max-width: 767px) {
+    body{
+        min-width: 100%;
+
+    }
     .dashboard_img {
         flex-wrap: wrap;
     }
@@ -218,7 +308,19 @@ main{
     }
     .logo{
         width: 100%;
+        margin-bottom: 10px;
     }
+
+    .bottom {
+        padding: 15px 10px;
+    }
+    .logo img{
+        width: 75px;
+    }
+    .logo span {
+        font-size: 20px;
+    }
+
     .bottom .right{
         width: 100%;
         flex-direction: column;
@@ -255,6 +357,10 @@ main{
     .header .h1 {
         display: block;
         text-align: center;
+        bottom: 25px;
+        font-size: 50px;
+
+
     }
     .header .top-list{
         float: none;
@@ -262,5 +368,22 @@ main{
     }
     .header .top-list li {
         display: inline-block;
+        font-size: 20px;
+
+    }
+
+    .contact a {
+        padding-bottom: 6px;
+    }
+    .contact{
+        margin-bottom: 10px;
+    }
+
+    .bottom-text h2 {
+        font-size: 18px;
+
+    }
+    .bottom-text p {
+        font-size: 15px;
     }
 }
