@@ -368,6 +368,8 @@ main{
     .header .top-list{
         float: none;
         display: block;
+                margin-left: -10px;
+
     }
     .header .top-list li {
         display: inline-block;
