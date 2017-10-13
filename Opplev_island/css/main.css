@@ -158,7 +158,9 @@ main{
     font-size: 70px;
     font-weight: 100;
     position: relative;
-    bottom: -72px;
+    transform: scaleY(1.5);
+    bottom: -37px;
+
 }
 .header .top-list li{
     font-size: 32px;
