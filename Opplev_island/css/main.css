@@ -158,7 +158,9 @@ main{
     font-size: 70px;
     font-weight: 100;
     position: relative;
-    bottom: -72px;
+    transform: scaleY(1.5);
+    bottom: -37px;
+
 }
 .header .top-list li{
     font-size: 32px;
@@ -187,7 +189,7 @@ main{
     width: 100%;
 }
 .dashboard_img .right{
-    height: 100%;
+    min-height: 100%;
     width: 66.66%;
     flex-wrap: wrap;
     display: flex;
@@ -288,7 +290,7 @@ main{
 
 @media all and (max-width: 767px) {
     body{
-        min-width: 100%;
+        min-width: 320px;
 
     }
     .dashboard_img {
@@ -309,6 +311,7 @@ main{
     .logo{
         width: 100%;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .bottom {
@@ -359,16 +362,19 @@ main{
         text-align: center;
         bottom: 25px;
         font-size: 50px;
-
+        transform: scaleY(1);
 
     }
     .header .top-list{
         float: none;
         display: block;
+                margin-left: -10px;
+
     }
     .header .top-list li {
         display: inline-block;
         font-size: 20px;
+        margin-left: 10px;
 
     }
 
