@@ -372,6 +372,7 @@ main{
     .header .top-list li {
         display: inline-block;
         font-size: 20px;
+        margin-left: 10px;
 
     }
 
