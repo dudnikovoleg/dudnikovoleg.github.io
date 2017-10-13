@@ -290,7 +290,7 @@ main{
 
 @media all and (max-width: 767px) {
     body{
-        min-width: 100%;
+        min-width: 320px;
 
     }
     .dashboard_img {
