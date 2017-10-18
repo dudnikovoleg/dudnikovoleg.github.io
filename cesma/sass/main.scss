@@ -491,6 +491,7 @@ header {
       transform: translate(-50%,-50%);
       font-size: 70px;
       color: #fff;
+      line-height: 0;
 
     }
     img{
@@ -738,7 +739,9 @@ footer{
 --------------------------------------*/
 
 @media all and (max-width: 1279px) {
-
+  .list-sector .list{
+    margin-top: 140px;
+  }
   header{
     min-height: 300px;
     .menu{
@@ -851,6 +854,7 @@ footer{
 
 
 @media all and (max-width: 767px) {
+
   header{
     padding: 20px;
     .language-social{
@@ -867,7 +871,7 @@ footer{
       }
       .social {
         display: flex;
-        flex-direction: column;
+        //flex-direction: column;
         align-items: flex-end;
         a{
           margin-bottom: 10px;
