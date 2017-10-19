@@ -57,7 +57,11 @@ figure,
 main { /* 1 */
     display: block;
 }
-
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+ }
 /**
  * Add the correct margin in IE 8.
  */

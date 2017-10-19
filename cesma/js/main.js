@@ -14,19 +14,58 @@
             controls: false,
             verticalHeight:550,
             vThumbWidth: 180,
-            thumbItem:3,
+            thumbItem:4,
+            auto: true,
+            pauseOnHover: true,
+            enableTouch: true,
 
+            pause: 5000,
 
             responsive : [
+
+                {
+                    breakpoint:1280,
+                    settings: {
+                        thumbItem:3
+                    }
+                }  ,              {
+                    breakpoint:980,
+                    settings: {
+                        thumbItem:2.2
+                    }
+                },
                 {
                     breakpoint:768,
                     settings: {
-                        verticalHeight:280,
-                        vThumbWidth: 85,
+                        thumbItem:3,
+                        vThumbWidth: 85
+
+                    }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        thumbItem:2.2,
+                        vThumbWidth: 85
 
                     }
                 }
-                ]
+
+            ]
+        });
+
+
+
+
+        $("#headerImgBg").lightSlider({
+            item:1,
+            pause: 5000,
+            auto: true,
+            controls: false,
+            pager: false,
+            enableTouch: true,
+            slideMargin: 0,
+            loop: true,
         });
 
 
