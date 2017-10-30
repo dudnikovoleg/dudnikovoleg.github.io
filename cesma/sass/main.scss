@@ -987,6 +987,30 @@ footer{
   display: none;
 }
 
+
+/*  Info
+------------------------------------*/
+.info{
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 10px solid #272322;
+
+  h3{
+    font-size: 25px;
+  }
+  .right,
+  .left{
+    width: 50%;
+  }
+  .center{
+    width: 100%;
+    text-align: center;
+  }
+  border-bottom: 10px solid #272322;
+
+}
+
 /*    $Mediaqueri
 --------------------------------------*/
 
