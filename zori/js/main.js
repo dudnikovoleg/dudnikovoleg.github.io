@@ -11,38 +11,11 @@
 
 
         (function () {
-            // var chechScroll = true;
-            
             $(".trigger-down").click(function () {
                 $('html, body').animate({
                     scrollTop: $("#elementtoScrollToID").offset().top - 133
                 }, 1500);
             });
-
-
-            // $(window).on('scroll ', function (e) {
-            //
-            //     var scrollTopVal = $(window).scrollTop();
-            //
-            //     if ( scrollTopVal > 1 && chechScroll ) {
-            //         e.stopPropagation();
-            //
-            //         $('html, body').animate({
-            //             scrollTop: $("#elementtoScrollToID").offset().top - $('.top-menu').height() - 45
-            //         }, 1500);
-            //         chechScroll = false;
-            //     }
-            //
-            //     if( scrollTopVal === 0 &&   scrollTopVal < 100){
-            //         chechScroll = true;
-            //     }
-            //     e.preventDefault();
-            //
-            //     return chechScroll;
-            //
-            //
-            // })
-
         })();
 
 
@@ -176,6 +149,32 @@
                 }
             })
         })();
+
+
+
+
+        (function () {
+            var faqList = $('.faq-list li');
+
+            faqList.each(function(i, item, arr) {
+                i++;
+                $(item).find('input').attr('id', 'answer'+i)
+                $(item).find('label').attr('for', 'answer'+i)
+            });
+
+
+            // $('.faq-list li').on('click', function (e) {
+            //     e.preventDefault();
+            //
+            //     $('.faq-list li .text').slideUp();
+            //     $(this).find('.text').slideDown( "slow");
+            // })
+
+
+        })()
+
+
+
 
     })
 })(jQuery);
