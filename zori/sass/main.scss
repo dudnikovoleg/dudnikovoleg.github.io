@@ -181,7 +181,7 @@ header{
     left: 0;
     background-color: #fff;
     animation: down-move  .6s alternate ease-in-out;
-    z-index: 99;
+    z-index: 99999;
     .logo{
       width: 8%;
       img{
@@ -318,12 +318,13 @@ header{
   .header-content{
     display: block;
     position: absolute;
-    top: 48%;
+    top: 44%;
     padding-left: 8.5%;
     .h2{
       margin-bottom: 50px;
       font-size: 5.9rem;
       color: #fff;
+      text-align: left;
     }
 
     .link{
@@ -598,7 +599,8 @@ header{
       overflow: hidden;
       &:hover{
         border-color: $accentCol;
-        z-index: 9;
+        z-index: 999;
+        position: relative;
         .content-header{
           color: $accentCol;
         }
