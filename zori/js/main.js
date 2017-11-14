@@ -27,7 +27,7 @@
 
         (function () {
             AOS.init({
-                offset: 250,
+                offset: 150,
                 duration: 500,
                 easing: 'ease-in-sine',
                 disable: function () {
@@ -171,9 +171,18 @@
             // })
 
 
-        })()
+        })();
 
 
+
+
+        (function () {
+            $('input').on("click", function () {
+                var labelText = $('label[for=' + this.id + ']');
+                $('.tab label').removeClass('active');
+                $(labelText).addClass('active');
+            });
+        })();
 
 
     })

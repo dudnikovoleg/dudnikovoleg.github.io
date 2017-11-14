@@ -30,7 +30,8 @@
 3.  News item page
 4.  Contact page
 5.  Faq page
-6.  404 page
+6.  Secret-list
+7.  404 page
 
 
 
@@ -324,8 +325,11 @@
 
   /*  $News item Page
   -------------------------------------*/
+  .marker-list{
+    padding: 45px 0 0 0;
+  }
   .news-item{
-    padding: 0;
+    padding: 0 24px;
     .content-header{
       padding: 0;
     }
@@ -548,6 +552,7 @@
   .tom-main{
     min-height: 200px;
     .header-content{
+      padding: 0 24px;
       .h2 {
         margin-top: 10px;
         font-size: 2rem;
@@ -652,6 +657,29 @@
     }
   }
 
+  /* $Secret-list
+  ----------------------------------*/
+  .secret-list .tab {
+    padding: 0 24px;
+    white-space: nowrap;
+    overflow-y: auto;
+  }
+
+  .marker-list {
+    padding: 45px 24px 0 24px;
+    ul {
+      padding-left: 0;
+    }
+     li::before {
+      content: "\25cf";
+      padding-right: 14px;
+      margin-left: -24px;
+    }
+     li {
+      margin-bottom: 7px;
+      padding-left: 24px;
+    }
+  }
 
   /* $404 page
   -----------------------------*/

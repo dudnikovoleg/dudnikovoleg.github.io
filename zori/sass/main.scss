@@ -51,6 +51,9 @@ body{
   }
 }
 
+.bold{
+  font-weight: 600;
+}
 .content-wrap{
   width: 1218px;
   margin: 0 auto;
@@ -720,7 +723,9 @@ footer{
 -------------------------------------*/
 
 @import "news";
+@import "secret-list";
 @import "news-item";
+@import "secret-item";
 @import "contact";
 @import "faq";
 @import "404";
