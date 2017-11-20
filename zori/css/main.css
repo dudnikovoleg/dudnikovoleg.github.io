@@ -993,6 +993,9 @@ header {
         margin-left: 10px; }
       .insta-photo ul li:hover .insta-icon {
         opacity: 1; }
+        .insta-photo img{
+        	width: 100%;
+        }
     .insta-photo ul .insta-icon {
       position: absolute;
       top: 50%;

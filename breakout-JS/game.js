@@ -53,7 +53,7 @@ var arrtext = {
 
 var setting = {
 	ballColor : "#eee",
-	ballRadius : 15,
+	ballRadius : 10,
 
 	paddleHeight: 10,
 	paddleWidth: 120,
@@ -99,12 +99,6 @@ var img = new Image();
 function drawBall() {
 
 
-    // if ($('.heart-o').length === 2) {
-    //     img.src = src = "img/P2.png";
-    // }
-    // else {
-    //     img.src = src = "img/P12.png";
-    // }
 
 var heartLangth = $('.heart-o').length;
 
@@ -130,7 +124,7 @@ var heartLangth = $('.heart-o').length;
 
     context.fill();
 
-    context.drawImage(img, x - 15.5, y - 15.5, 30, 30);
+    context.drawImage(img, x - 10, y - 10, 20, 20);
 
     x += dx;
 	y += dy;
@@ -301,7 +295,7 @@ function brickCollision() {
 
 			var currentBrick = brick[n][k];
             if(currentBrick.state) {
-				if( x > currentBrick.x && x < currentBrick.x + bricks.width + 13 && y > currentBrick.y && y < currentBrick.y + bricks.height + 13 ) {
+				if( x > currentBrick.x && x < currentBrick.x + bricks.width && y > currentBrick.y && y < currentBrick.y + bricks.height ) {
 					dy = -dy;
                     currentBrick.state = false;
 					setting.currentScore += setting.brickScore;
