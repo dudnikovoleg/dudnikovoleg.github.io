@@ -69,7 +69,7 @@ var setting = {
 
 	gameState: true,
 	deathNumber: 0,
-	deathTotal: 2,
+	deathTotal: 3,
 
 	lostMessage: "You've lost the game. Would you like to play again?",
 	wonMessage: "You've beaten the game. Would you like to improve on your credits?",

@@ -107,14 +107,17 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.heart:nth-child(1) {
-	background-image: url('img/P2.png');
 
+.heart:nth-child(1) {
+	background-image: url('img/P1.png');
 }
 .heart:nth-child(2) {
-	background-image: url('img/P3.png');
+	background-image: url('img/P2.png');
 }
 .heart:nth-child(3) {
+	background-image: url('img/P3.png');
+}
+.heart:nth-child(4) {
 	background-image: url('img/P4.png');
 }
 
