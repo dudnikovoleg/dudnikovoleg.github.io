@@ -401,9 +401,11 @@ function modalPopup(message, header) {
 	$('.modal-box h3').text(header);
 
 	setTimeout(function(){
-		$('.modal-overlay').show();
+        $('.life .heart').eq(setting.deathNumber).addClass('heart-o');
+
+        $('.modal-overlay').show();
 		$('body').addClass('game-over');
-	}, 100);
+	}, 00);
 
 	$('.btn-play-again').on('click', function(e){
 		e.preventDefault();
