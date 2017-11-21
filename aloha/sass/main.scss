@@ -1,0 +1,218 @@
+@import "_page_style";
+
+body {
+  opacity: 1;
+  margin: 0;
+}
+
+html {
+  overflow-y: auto;
+  height: auto;
+}
+
+
+#test_page {
+  overflow-y: auto;
+  height: auto;
+  nav {
+    background-color: transparent;
+
+    a.logo {
+      float: none;
+      margin: 0 auto;
+      background: url('../img/aloha_logo.png') center  no-repeat;
+      background-size: contain;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+     a.logo:hover {
+      -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      transform: scale(0.98);
+    }
+  }
+  .main{
+    background: #fff  url(http://aloha.ua/img/1/pattern.png.pagespeed.ce.46So6tnfZU.png) 1rem center ;
+    background-size: 91% auto;
+    min-height: 100vh;
+    padding-top:  1.55rem;
+    padding-bottom:  1rem;
+
+  }
+
+}
+
+
+
+
+
+/* Form page
+------------------------------*/
+
+.test_content {
+
+  .content {
+    width: 18rem;
+    text-align: center;
+  }
+
+  .content-header {
+    margin-bottom: .8rem;
+    color: #874916;
+
+    font-size: .72rem;
+    line-height: .84rem;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  input {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+
+    border:solid 1px #ccc;
+    border-radius: 2px;
+    margin-bottom: .5rem;
+    padding: 13px;
+
+  }
+  a.button {
+    margin-top: .3rem;
+    background-color: #12a527;
+    &:hover {
+      background-color: #109322;
+    }
+  }
+}
+
+
+/* Test page
+------------------------------*/
+
+
+#test_list {
+  .content-header {
+    padding-top:  2rem;
+    text-transform: uppercase;
+  }
+
+  .stages_list {
+    width: 24rem;
+    margin: 0 auto .9rem auto;
+    color: #7f7f7f;
+    .stages_item {
+      position: relative;
+      float: left;
+      width: 25%;
+      list-style: none;
+      font-size: .3rem;
+      line-height: .46rem;
+      text-align: center;
+      border-top: solid 4px #dfe3e4;
+      padding: .25rem;
+
+      .checkpoint {
+        position: absolute;
+        top: calc( -.32rem - 2px);
+        right:  calc( -.32rem - 2px);
+        border-radius: 100%;
+        width: .64rem;
+        height: .64rem;
+        background-color: #dfe3e4;
+        z-index: 9;
+      }
+
+      &.active {
+        border-top-color:  #3ac547;
+        .checkpoint {
+          background-color: #3ac547;
+          background-image: url("../img/check-mark.svg");
+          background-position: center;
+          background-size: 65%;
+          background-repeat: no-repeat;
+
+        }
+      }
+    }
+  }
+
+  iframe {
+    width: 18rem;
+    height:10rem;
+  }
+
+  .question {
+    text-align: start;
+    color: #636363;
+    margin-bottom: 1.3rem;
+    .question-text {
+      font-weight: 600;
+      margin-bottom: .7rem;
+      font-size: .78rem;
+
+    }
+    .answer_list {
+      .answer_item {
+        position: relative;
+        list-style: none;
+        font-size: .4rem;
+        padding-left: 1rem;
+        margin-bottom: .3rem;
+        .point {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: .5rem;
+          height: .5rem;
+          border-radius: 50px;
+          border: solid 1px #dfe3e4;
+        }
+        input:checked  + .point:before{
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: .25rem;
+          height: .25rem;
+          border-radius: 100%;
+          background-color: #874916;
+        }
+        input {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+}
+#test_form .content-header,
+#test_thanks .content-header{
+  font-size: .6rem;
+}
+
+#test_thanks{
+  img {
+    max-width: 100%;
+    padding-bottom: .5rem;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  #test_page {
+    #test_list .stages_list,
+    .content {
+      width: 90%;
+    }
+    iframe {
+      width: 100%;
+      height:12rem;
+    }
+
+  }
+}
