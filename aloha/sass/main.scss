@@ -14,23 +14,36 @@ html {
 #test_page {
   overflow-y: auto;
   height: auto;
-  nav {
-    background-color: transparent;
 
-    a.logo {
-      float: none;
-      margin: 0 auto;
-      background: url('../img/aloha_logo.png') center  no-repeat;
-      background-size: contain;
-      width: 1.8rem;
-      height: 1.8rem;
+  img {
+    max-width: 100%;
+  }
+  nav {
+    .text {
+      text-align: center;
     }
-     a.logo:hover {
-      -webkit-transform: scale(0.98);
-      -ms-transform: scale(0.98);
-      transform: scale(0.98);
+    a.logo {
+      width: 4.5rem;
     }
   }
+  //nav {
+  //  background-color: transparent;
+  //
+  //  a.logo {
+  //    float: none;
+  //    margin: 0 auto;
+  //    background: url('../img/aloha_logo.png') center  no-repeat;
+  //    background-size: contain;
+  //    width: 1.8rem;
+  //    height: 1.8rem;
+  //  }
+  //   a.logo:hover {
+  //    -webkit-transform: scale(0.98);
+  //    -ms-transform: scale(0.98);
+  //    transform: scale(0.98);
+  //  }
+  //}
+
   .main{
     background: #fff  url(http://aloha.ua/img/1/pattern.png.pagespeed.ce.46So6tnfZU.png) 1rem center ;
     background-size: 91% auto;
@@ -38,8 +51,12 @@ html {
     padding-top:  1.55rem;
     padding-bottom:  1rem;
 
+    .error-block {
+      font-size: .25rem;
+      color: #ff0000;
+      text-align: center;
+    }
   }
-
 }
 
 
@@ -82,13 +99,34 @@ html {
       box-shadow: 0px 0px 8px 1px rgba(255,0,0,.4);
     }
   }
-  a.button {
-    margin-top: .3rem;
-    background-color: #12a527;
-    &:hover {
-      background-color: #109322;
-    }
-  }
+
+  button.button {
+    border: none;
+    padding: 0 .48rem;
+    color: #fff;
+    line-height: 1.14rem;
+    background-color: #f48d1f;
+    font-weight: 900;
+    font-size: .48rem;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    text-decoration: none; }
+
+  button.button.green {
+    background-color: #12a527; }
+
+  button.button.green:hover {
+    background-color: #109322; }
+
+
+
+
+
 }
 
 
@@ -142,35 +180,60 @@ html {
     }
   }
 
+
   iframe {
-    width: 18rem;
-    height:10rem;
+    width: 6rem;
+    height:4rem;
   }
 
+  .media-test {
+    .question-text {
+      padding-left: 1rem;
+    }
+    .answer_item {
+      margin-left: 1rem;
+
+    }
+
+  }
+  .question-text-title,
+  .question-text {
+    font-weight: 600;
+    margin-bottom: .3rem;
+    font-size: .35rem;
+    color: #636363;
+  }
+  .question-text-title{
+    color: #874916;
+    font-size: .5rem;
+    margin-bottom: .345rem;
+
+  }
   .question {
     text-align: start;
     color: #636363;
     margin-bottom: 1.3rem;
-    .question-text {
-      font-weight: 600;
-      margin-bottom: .7rem;
-      font-size: .78rem;
-
+    &.media-test .question-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
+
     .answer_list {
       .answer_item {
         position: relative;
         list-style: none;
-        font-size: .4rem;
-        padding-left: 1rem;
+        font-size: .3rem;
+        padding-left: .6rem;
+
         margin-bottom: .3rem;
         .point {
           position: absolute;
           top: 50%;
           left: 0;
           transform: translateY(-50%);
-          width: .5rem;
-          height: .5rem;
+          width: .4rem;
+          height: .4rem;
           border-radius: 50px;
           border: solid 1px #dfe3e4;
         }
@@ -180,8 +243,8 @@ html {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: .25rem;
-          height: .25rem;
+          width: .2rem;
+          height: .2rem;
           border-radius: 100%;
           background-color: #874916;
         }
@@ -189,10 +252,8 @@ html {
           display: none;
         }
       }
-
     }
   }
-
 }
 #test_thanks,
 #test_form{
@@ -218,8 +279,8 @@ html {
       width: 90%;
     }
     iframe {
-      width: 100%;
-      height:12rem;
+      width: 13rem;
+      height:6rem;
     }
 
   }
@@ -227,9 +288,26 @@ html {
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   #test_list .question .question-text {
-    font-size: .55rem;
+    font-size: .45rem;
   }
   #test_list .question .answer_list .answer_item {
-    font-size: .5rem;
+    font-size: .35rem;
+  }
+  #test_list .question.media-test .question-wrap {
+    flex-direction: column;
+  }
+  #test_page iframe {
+    width: 100%;
+    height: 8rem;
+    margin-bottom: .5rem;
+  }
+  #test_list .media-test .question-text {
+    padding-left: 0;
+  }
+  #test_list .media-test .answer_item {
+    margin-left: 0;
+  }
+  #test_list .question-text-title {
+    font-size: .6rem;
   }
 }

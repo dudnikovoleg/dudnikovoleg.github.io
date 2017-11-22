@@ -20,8 +20,16 @@
 
 
 <nav>
-    <section class='content clearfix'>
-        <a class='logo' onclick="$.fn.fullpage.moveTo(1);"></a>
+    <section class="content clearfix">
+        <a href="http://aloha.ua/" class="logo" onclick="$.fn.fullpage.moveTo(1);"></a>
+        <aside>
+            <p>
+                <a href="tel:+380672170333">+38 067 <span>217</span> 03 33</a>
+                <a href="tel:+380503640333">+38 050 364 03 33</a>
+            </p>
+        </aside>
+
+        <p class="text clearfix">Развязываем Языки</p>
     </section>
 </nav>
 
@@ -32,16 +40,22 @@
             <h1 class="content-header">Пожалуйста, заполните форму для получения результатов теста</h1>
 
             <form action="">
+
+                <div class="error-block"></div>
                 <input type="text" placeholder="Как Вас зовут? *">
                 <input type="text" placeholder="Контактный телефон *">
                 <input class="error" type="text" placeholder="E-mail *">
                 <input type="text" placeholder="Город">
-                <a href="test.html" class="button">узнать свой уровень</a>
+                <button class="button green">узнать свой уровень</button>
             </form>
         </section>
     </div>
 </section>
-
-
+<!--<script>-->
+    <!--window.onbeforeunload = function(evt) {-->
+        <!--evt = evt || window.event;-->
+        <!--evt.returnValue = "Вы же ничего не сохранили!";-->
+    <!--}-->
+<!--</script>-->
 </body>
 </html>
