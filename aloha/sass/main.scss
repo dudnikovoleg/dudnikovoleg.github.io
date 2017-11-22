@@ -192,6 +192,9 @@ html {
   }
 
 }
+#test_form{
+  height: 100vh;
+}
 #test_form .content-header,
 #test_thanks .content-header{
   font-size: .6rem;
@@ -216,5 +219,14 @@ html {
       height:12rem;
     }
 
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  #test_list .question .question-text {
+    font-size: .55rem;
+  }
+  #test_list .question .answer_list .answer_item {
+    font-size: .5rem;
   }
 }
