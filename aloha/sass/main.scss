@@ -86,7 +86,7 @@ html {
   }
 
   input {
-    width: 70%;
+    width: 100%;
     display: block;
     margin: 0 auto;
 
@@ -187,6 +187,7 @@ html {
     margin-top: .6rem;
   }
 
+  img,
   iframe {
     width: 6rem;
     height:4rem;
@@ -261,6 +262,33 @@ html {
     }
   }
 }
+
+#test_form {
+  .form-group {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  input:valid + label,
+  input:focus + label{
+    display: none;
+  }
+  label {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    font-family: 'GP',sans-serif;
+    color: #636363;
+    font-size: 13px;
+    span {
+      color: red;
+      font-size: 15px;
+    }
+  }
+}
+
+
 #test_thanks,
 #test_form{
   height: 100vh;
@@ -284,6 +312,7 @@ html {
     .content {
       width: 90%;
     }
+    img,
     iframe {
       width: 13rem;
       height:6rem;
@@ -302,6 +331,7 @@ html {
   #test_list .question.media-test .question-wrap {
     flex-direction: column;
   }
+  #test_page img,
   #test_page iframe {
     width: 100%;
     height: 8rem;
@@ -331,3 +361,13 @@ html {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
