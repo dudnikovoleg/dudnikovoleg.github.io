@@ -187,7 +187,10 @@ html {
     margin-top: .6rem;
   }
 
-  img,
+  img{
+    width: auto;
+    height:4rem;
+  }
   iframe {
     width: 6rem;
     height:4rem;
@@ -312,7 +315,10 @@ html {
     .content {
       width: 90%;
     }
-    img,
+    img{
+      width: auto;
+      height:6rem;
+    }
     iframe {
       width: 13rem;
       height:6rem;
