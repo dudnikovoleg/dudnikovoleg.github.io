@@ -26,23 +26,24 @@ html {
       width: 4.5rem;
     }
   }
-  //nav {
-  //  background-color: transparent;
-  //
-  //  a.logo {
-  //    float: none;
-  //    margin: 0 auto;
-  //    background: url('../img/aloha_logo.png') center  no-repeat;
-  //    background-size: contain;
-  //    width: 1.8rem;
-  //    height: 1.8rem;
-  //  }
-  //   a.logo:hover {
-  //    -webkit-transform: scale(0.98);
-  //    -ms-transform: scale(0.98);
-  //    transform: scale(0.98);
-  //  }
-  //}
+  nav {
+    //background-color: transparent;
+
+    a.logo {
+      //float: none;
+      //margin: 0 auto;
+      background: url('../img/aloha_logo.svg') center  no-repeat;
+      background-size: 55%;
+      //width: 1.8rem;
+      //height: 1.8rem;
+
+    }
+     a.logo:hover {
+      -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      transform: scale(0.98);
+    }
+  }
 
   .main{
     background: #fff  url(http://aloha.ua/img/1/pattern.png.pagespeed.ce.46So6tnfZU.png) 1rem center ;
@@ -179,7 +180,12 @@ html {
       }
     }
   }
-
+  .test__progress {
+    color: #7f7f7f;
+    font-size: .3rem;
+    text-align: right;
+    margin-top: .6rem;
+  }
 
   iframe {
     width: 6rem;
@@ -309,5 +315,19 @@ html {
   }
   #test_list .question-text-title {
     font-size: .6rem;
+  }
+
+  #test_page nav a.logo {
+    background-size: 100%;
+  }
+#test_page nav a.logo {
+  width: 2.5rem;
+  margin-left: 0;
+}
+  #test_page nav .text {
+    display: none;
+  }
+  #test_list .stages_list .stages_item {
+    width: 100%;
   }
 }
