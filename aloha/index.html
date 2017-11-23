@@ -90,8 +90,8 @@
 
                 case 'name':
 
-                    var mailRegExp = /^[a-z ,.'-]+$/i;
-                    if ( !mailRegExp.test(fieldValue) ) {
+                    var nameRegExp = /^[a-zA-Zа-яА-Я']/u;
+                    if ( !nameRegExp.test(fieldValue) ) {
                         $(this).addClass("error");
 
                     } else {

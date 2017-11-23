@@ -46,8 +46,8 @@ html {
   }
 
   .main{
-    background: #fff  url(http://aloha.ua/img/1/pattern.png.pagespeed.ce.46So6tnfZU.png) 1rem center ;
-    background-size: 91% auto;
+    background: #fff  url('../img/main_bg.png')center repeat-y;
+    background-size: 100% auto;
     min-height: 100vh;
     padding-top:  1.55rem;
     padding-bottom:  1rem;
