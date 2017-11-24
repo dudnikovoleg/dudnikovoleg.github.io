@@ -184,11 +184,15 @@ html {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     align-items: center;
-    .button.link {
+    .link {
       background: none;
-      color: #874916;
+      padding-left: 0;
+
+      color: #7f7f7f;
+      font-size: .4rem;
+      text-decoration: none;
     }
     .button:not(.green):hover {
       background: none;
@@ -196,7 +200,7 @@ html {
   }
   .test__progress {
     color: #7f7f7f;
-    font-size: .45rem;
+    font-size: .4rem;
     text-align: right;
   }
 
@@ -452,6 +456,10 @@ html {
     button {
       margin-bottom: 1rem;
     }
+  }
+  #test_list .get-result .link {
+    padding: 0;
+    margin-bottom: .4rem;
   }
 }
 
