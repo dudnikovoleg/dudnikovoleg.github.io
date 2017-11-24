@@ -70,7 +70,7 @@ html {
 .test_content {
 
   .content {
-    width: 18rem;
+    width: 20rem;
     text-align: center;
   }
 
@@ -180,20 +180,27 @@ html {
       }
     }
   }
+  .get-result {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    align-items: center;
+  }
   .test__progress {
     color: #7f7f7f;
-    font-size: .3rem;
+    font-size: .45rem;
     text-align: right;
-    margin-top: .6rem;
   }
-
+  .button:not(.green):hover {
+    background-color: #e6861f;
+  }
   img{
-    width: auto;
-    height:4rem;
+    height: 6rem;
   }
   iframe {
-    width: 6rem;
-    height:4rem;
+    width: 9rem;
+    height: 5rem;
   }
 
   .media-test {
@@ -210,12 +217,12 @@ html {
   .question-text {
     font-weight: 600;
     margin-bottom: .3rem;
-    font-size: .35rem;
+    font-size: .45rem;
     color: #636363;
   }
   .question-text-title{
     color: #874916;
-    font-size: .5rem;
+    font-size: .55rem;
     margin-bottom: .345rem;
 
   }
@@ -233,19 +240,25 @@ html {
       .answer_item {
         position: relative;
         list-style: none;
-        font-size: .3rem;
+        font-size: .45rem;
         padding-left: .6rem;
-
         margin-bottom: .3rem;
+
+        label {
+          cursor: pointer;
+
+        }
         .point {
-          position: absolute;
           top: 50%;
-          left: 0;
           transform: translateY(-50%);
-          width: .4rem;
-          height: .4rem;
-          border-radius: 50px;
-          border: solid 1px #dfe3e4;
+          position: absolute;
+          left: 0;
+          width: .47rem;
+          height: .47rem;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          border: solid 2px;
+          border-color: rgba(0,0,0,0.54);
         }
         input:checked  + .point:before{
           content: '';
@@ -253,10 +266,15 @@ html {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: .2rem;
-          height: .2rem;
+          width: 8px;
+          height: 8px;
           border-radius: 100%;
+
           background-color: #874916;
+        }
+
+        input:checked + .point {
+          border-color: #874916 ;
         }
         input {
           display: none;
@@ -302,10 +320,14 @@ html {
 }
 
 #test_thanks{
-  img {
-    max-width: 100%;
-    padding-bottom: .5rem;
+  .test_content {
+    img {
+      max-width: 100%;
+      padding-bottom: .5rem;
+      width: 50px;
+    }
   }
+
 }
 
 
@@ -321,28 +343,59 @@ html {
     }
     iframe {
       width: 13rem;
-      height:6rem;
+      height:7rem;
     }
 
   }
 }
 
-@media only screen and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) {
   #test_list .question .question-text {
-    font-size: .45rem;
+    font-size: .5rem;
   }
   #test_list .question .answer_list .answer_item {
-    font-size: .35rem;
+    font-size: .5rem;
   }
   #test_list .question.media-test .question-wrap {
     flex-direction: column;
   }
-  #test_page img,
-  #test_page iframe {
-    width: 100%;
-    height: 8rem;
+  #test_page img{
+    max-width: 100%;
+    height: auto;
     margin-bottom: .5rem;
   }
+  #test_page iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+  .video-container {
+    position:relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+    width: 100%;
+    margin-bottom: .5rem;
+
+  }
+
+  .video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+
+
+
+
+
+
+
   #test_list .media-test .question-text {
     padding-left: 0;
   }
@@ -364,7 +417,36 @@ html {
     display: none;
   }
   #test_list .stages_list .stages_item {
-    width: 100%;
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+    border-top:none;
+    border-bottom: solid 4px #dfe3e4;
+    font-size: .45rem;
+  }
+  #test_list .stages_list .stages_item.active {
+    border-bottom-color: #3ac547;
+  }
+  #test_list .stages_list .stages_item .checkpoint {
+    top: auto;
+    bottom: calc(-.32rem - 2px);
+  }
+
+    #test_list .content-header {
+    padding-top: .8rem;
+  }
+  .question-wrap .text {
+    align-self: flex-start;
+
+  }
+
+  .get-result {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-bottom: 1rem;
+    }
   }
 }
 
