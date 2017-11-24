@@ -186,15 +186,20 @@ html {
     flex-wrap: wrap;
     margin-top: 2rem;
     align-items: center;
+    .button.link {
+      background: none;
+      color: #874916;
+    }
+    .button:not(.green):hover {
+      background: none;
+    }
   }
   .test__progress {
     color: #7f7f7f;
     font-size: .45rem;
     text-align: right;
   }
-  .button:not(.green):hover {
-    background-color: #e6861f;
-  }
+
   img{
     height: 6rem;
   }
