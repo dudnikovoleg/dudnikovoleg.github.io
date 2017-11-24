@@ -187,12 +187,11 @@ html {
     margin-top: 1.5rem;
     align-items: center;
     .link {
+      text-decoration: none;
       background: none;
       padding-left: 0;
-
       color: #7f7f7f;
       font-size: .4rem;
-      text-decoration: none;
     }
     .button:not(.green):hover {
       background: none;
