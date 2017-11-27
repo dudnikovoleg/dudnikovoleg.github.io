@@ -77,6 +77,7 @@ html {
   .content-header {
     margin-bottom: .8rem;
     color: #874916;
+    margin-top: .4rem;
 
     font-size: .72rem;
     line-height: .84rem;
@@ -293,6 +294,14 @@ html {
 }
 
 #test_form {
+
+  .text {
+    font-size: .35rem;
+    line-height: .62rem;
+    margin-top: 2em;
+    font-weight: 300;
+    color: #636363;
+  }
   .form-group {
     position: relative;
     width: 70%;
@@ -328,7 +337,11 @@ html {
 }
 
 #test_thanks{
+  .content {
+    width: 16rem;
+  }
   .test_content {
+
     img {
       max-width: 100%;
       padding-bottom: .5rem;
@@ -340,6 +353,51 @@ html {
 
 
 @media only screen and (max-width: 1200px) {
+ /* Fonts
+ --------------*/
+  #test_list .content-header {
+    font-size: 26px;
+  }
+  #test_list .test__progress,
+  #test_list .get-result .link,
+  #test_list .stages_list .stages_item {
+    font-size: 14px;
+  }
+
+  #test_list .question .answer_list .answer_item .point {
+    width: 16px;
+    height: 16px;
+  }
+  #test_list .question .answer_list .answer_item {
+    padding-left: 24px;
+  }
+  #test_form label,
+  .test_content input {
+    font-size: 15px;
+  }
+  #test_form .content-header, #test_thanks .content-header {
+     font-size: 23px;
+    line-height: 1;
+  }
+
+  #test_form .form-group {
+    width: 90%;
+  }
+
+  #test_list .question .answer_list .answer_item,
+  #test_list .question .question-text ,
+  #test_form .text {
+    font-size: 16px;
+  }
+  .test_content button.button.green {
+    font-size: 12px;
+  }
+
+  #test_list .question-text-title {
+    font-size: 19px;
+  }
+
+
   #test_page {
     #test_list .stages_list,
     .content {
@@ -358,12 +416,8 @@ html {
 }
 
 @media only screen and (max-width: 768px) {
-  #test_list .question .question-text {
-    font-size: .5rem;
-  }
-  #test_list .question .answer_list .answer_item {
-    font-size: .5rem;
-  }
+
+
   #test_list .question.media-test .question-wrap {
     flex-direction: column;
   }
@@ -410,9 +464,7 @@ html {
   #test_list .media-test .answer_item {
     margin-left: 0;
   }
-  #test_list .question-text-title {
-    font-size: .6rem;
-  }
+
 
   #test_page nav a.logo {
     background-size: 100%;
@@ -430,7 +482,6 @@ html {
     margin: 0 auto;
     border-top:none;
     border-bottom: solid 4px #dfe3e4;
-    font-size: .45rem;
   }
   #test_list .stages_list .stages_item.active {
     border-bottom-color: #3ac547;
