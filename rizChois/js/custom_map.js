@@ -3,6 +3,7 @@
 
 (function ($) {
     $(document).ready(function () {
+        if(!$("#map").length)return;
 
         var coordinateX = $("#map").attr("data-coordinateX");
         var coordinateY = $("#map").attr("data-coordinateY");
@@ -168,7 +169,7 @@
 
             var marker = new google.maps.Marker({
                 position: rozVybor ,
-                icon: '/img/icons/map_marker.png',
+                icon: '/assets/templates/site/img/icons/map_marker.png',
 
                 map: map
 
