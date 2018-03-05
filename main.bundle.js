@@ -62,20 +62,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: '', redirectTo: 'service', pathMatch: 'full' },
-    { path: 'sign-up', component: __WEBPACK_IMPORTED_MODULE_2__sign_up_sign_up_component__["a" /* SignUpComponent */] },
-    { path: 'sign-up/thank-you', component: __WEBPACK_IMPORTED_MODULE_15__sign_up_thank_sign_up_thank_sign_up_component__["a" /* ThankSignUpComponent */] },
-    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_3__sign_in_sign_in_component__["a" /* SignInComponent */] },
-    { path: 'calendar', component: __WEBPACK_IMPORTED_MODULE_4__calendar_calendar_component__["a" /* CalendarComponent */] },
-    { path: 'calendar/appointment', component: __WEBPACK_IMPORTED_MODULE_12__calendar_appointment_appointment_component__["a" /* AppointmentComponent */] },
-    { path: 'clients', component: __WEBPACK_IMPORTED_MODULE_5__clients_clients_component__["a" /* ClientsComponent */] },
-    { path: 'clients/add', component: __WEBPACK_IMPORTED_MODULE_10__clients_clients_add_clients_add_component__["a" /* ClientsAddComponent */] },
-    { path: 'service', component: __WEBPACK_IMPORTED_MODULE_6__services_services_component__["a" /* ServicesComponent */] },
-    { path: 'service/add', component: __WEBPACK_IMPORTED_MODULE_13__services_add_service_add_service_component__["a" /* AddServiceComponent */] },
-    { path: 'service/edit', component: __WEBPACK_IMPORTED_MODULE_14__services_edit_service_edit_service_component__["a" /* EditServiceComponent */] },
-    { path: 'availability', component: __WEBPACK_IMPORTED_MODULE_7__availability_availability_component__["a" /* AvailabilityComponent */] },
-    { path: 'black-out-times', component: __WEBPACK_IMPORTED_MODULE_8__black_out_times_black_out_times_component__["a" /* BlackOutTimesComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__["a" /* ProfileComponent */] },
-    { path: 'profile/edit', component: __WEBPACK_IMPORTED_MODULE_11__profile_profile_edit_profile_edit_component__["a" /* ProfileEditComponent */] }
+    { path: 'https://dudnikovoleg.github.io/sign-up', component: __WEBPACK_IMPORTED_MODULE_2__sign_up_sign_up_component__["a" /* SignUpComponent */] },
+    { path: 'https://dudnikovoleg.github.io/sign-up/thank-you', component: __WEBPACK_IMPORTED_MODULE_15__sign_up_thank_sign_up_thank_sign_up_component__["a" /* ThankSignUpComponent */] },
+    { path: 'https://dudnikovoleg.github.io/sign-in', component: __WEBPACK_IMPORTED_MODULE_3__sign_in_sign_in_component__["a" /* SignInComponent */] },
+    { path: 'https://dudnikovoleg.github.io/calendar', component: __WEBPACK_IMPORTED_MODULE_4__calendar_calendar_component__["a" /* CalendarComponent */] },
+    { path: 'https://dudnikovoleg.github.io/calendar/appointment', component: __WEBPACK_IMPORTED_MODULE_12__calendar_appointment_appointment_component__["a" /* AppointmentComponent */] },
+    { path: 'https://dudnikovoleg.github.io/clients', component: __WEBPACK_IMPORTED_MODULE_5__clients_clients_component__["a" /* ClientsComponent */] },
+    { path: 'https://dudnikovoleg.github.io/clients/add', component: __WEBPACK_IMPORTED_MODULE_10__clients_clients_add_clients_add_component__["a" /* ClientsAddComponent */] },
+    { path: 'https://dudnikovoleg.github.io/service', component: __WEBPACK_IMPORTED_MODULE_6__services_services_component__["a" /* ServicesComponent */] },
+    { path: 'https://dudnikovoleg.github.io/service/add', component: __WEBPACK_IMPORTED_MODULE_13__services_add_service_add_service_component__["a" /* AddServiceComponent */] },
+    { path: 'https://dudnikovoleg.github.io/service/edit', component: __WEBPACK_IMPORTED_MODULE_14__services_edit_service_edit_service_component__["a" /* EditServiceComponent */] },
+    { path: 'https://dudnikovoleg.github.io/availability', component: __WEBPACK_IMPORTED_MODULE_7__availability_availability_component__["a" /* AvailabilityComponent */] },
+    { path: 'https://dudnikovoleg.github.io/black-out-times', component: __WEBPACK_IMPORTED_MODULE_8__black_out_times_black_out_times_component__["a" /* BlackOutTimesComponent */] },
+    { path: 'https://dudnikovoleg.github.io/profile', component: __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__["a" /* ProfileComponent */] },
+    { path: 'https://dudnikovoleg.github.io/profile/edit', component: __WEBPACK_IMPORTED_MODULE_11__profile_profile_edit_profile_edit_component__["a" /* ProfileEditComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
