@@ -1,0 +1,14 @@
+.table_list thead th{
+  border: none;
+}
+.table_list td{
+  border: none;
+}
+.labels {
+  left: 3px;
+  display: inline-block;
+}
+.delete {
+  cursor: pointer;
+  text-decoration: underline !important;
+}

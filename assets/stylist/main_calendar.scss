@@ -1,0 +1,205 @@
+div{font-size:13px}
+//.bodyofdiv{
+//   background-image: url(../../blocks/images/test/Wolf.jpg);
+//   background-color: #c7b39b;
+// }
+.calendar_modern {
+  padding: 0;
+}
+.calendar_modern .calendar {
+  margin: auto;
+  width: 100%;
+  height: 290px;
+}
+.calendar_modern .calendar .nav {
+  height: 0;
+  position: relative;
+}
+.calendar_modern .calendar .nav i, .calendar_modern .calendar .nav b {
+  display: block;
+  font-style: normal;
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+  top: 0;
+}
+
+/*левый переключатель месяца*/
+.calendar_modern .calendar .nav i {
+  left: 0;
+  /*border-right: 1px solid #423a37;*/
+  /*background: url(http://cs4399.userapi.com/u49225742/docs/58f03726ea27/lft.png) no-repeat center center transparent;*/
+}
+
+/*правый переключатель месяца*/
+.calendar_modern .calendar .nav b {
+  right: 0;
+  /*border-left: 1px solid #423a37;*/
+  /*background: url(http://cs4399.userapi.com/u49225742/docs/5fd2e9dd3a9f/rgt.png) no-repeat center center transparent;*/
+}
+.calendar_modern .calendar .month .header {
+  height: 30px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 1.4em;
+  text-align: center;
+  background: white;
+}
+.calendar_modern .calendar .month .body {
+  background: white;
+}
+.calendar_modern .calendar .month .body .day_names {
+  height: 25px;
+}
+.calendar_modern .calendar .month .body .day_names i {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-style: normal;
+  float: left;
+  width: 14%;
+}
+.calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s, .calendar_modern .calendar .month .body .days a {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  float: left;
+  width: 14%;
+  height: 33px;
+  color: #8d8d8d;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  font-style: normal;
+  background: #e4e4e4;
+  text-decoration: none;
+  /* table like borders */
+  /*border-right: 1px solid #aaaaaa;*/
+  /*border-bottom: 1px solid #aaaaaa;*/
+  /* table like borders */
+}
+.calendar_modern .calendar .month .body .days i.weekend, .calendar_modern .calendar .month .body .days b.weekend, .calendar_modern .calendar .month .body .days s.weekend, .calendar_modern .calendar .month .body .days a.weekend {
+  color: #444;
+  background: InactiveCaption;
+}
+.calendar_modern .calendar .month .body .days i:nth-child(7n + 1), .calendar_modern .calendar .month .body .days b:nth-child(7n + 1), .calendar_modern .calendar .month .body .days s:nth-child(7n + 1), .calendar_modern .calendar .month .body .days a:nth-child(7n + 1) {
+  /*border-left: 1px solid #aaaaaa;*/
+}
+.calendar_modern .calendar .month .body .days i:nth-child(n+1):nth-child(-n+7), .calendar_modern .calendar .month .body .days b:nth-child(n+1):nth-child(-n+7), .calendar_modern .calendar .month .body .days s:nth-child(n+1):nth-child(-n+7), .calendar_modern .calendar .month .body .days a:nth-child(n+1):nth-child(-n+7) {
+  /*border-top: 1px solid #aaaaaa;*/
+}
+.calendar_modern .calendar .month .body .days i:nth-child(n+1):nth-child(-n+7).empty, .calendar_modern .calendar .month .body .days b:nth-child(n+1):nth-child(-n+7).empty, .calendar_modern .calendar .month .body .days s:nth-child(n+1):nth-child(-n+7).empty, .calendar_modern .calendar .month .body .days a:nth-child(n+1):nth-child(-n+7).empty {
+  /*border-top: 1px solid #d5d5d5;*/
+  /*border-bottom: 1px solid #aaaaaa;*/
+}
+.calendar_modern .calendar .month .body .days s:nth-child(7n + 1) {
+  /*border-left: 1px solid #d5d5d5;*/
+}
+.calendar_modern .calendar .month .body .days a {
+  color: #372f2d;
+  background: white;
+  /*text-shadow: 1px 1px 0px white;*/
+  /*background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dadada), color-stop(100%, #cfcfcf));*/
+  /*background-image: -webkit-linear-gradient(bottom, #dadada, #cfcfcf);*/
+  /*background-image: -moz-linear-gradient(bottom, #dadada, #cfcfcf);*/
+  /*background-image: -o-linear-gradient(bottom, #dadada, #cfcfcf);*/
+  /*background-image: linear-gradient(bottom, #dadada, #cfcfcf);*/
+}
+.calendar_modern .calendar .month .body .days a.today {
+  color: black;
+  -webkit-box-shadow: 0 0 18px #006600 inset;
+  -moz-box-shadow: 0 0 18px #006600 inset;
+  box-shadow: 0 0 50px #007bff inset;
+  border-radius: 50%;
+  /*text-shadow: 1px 1px 2px teal;*/
+  /*-webkit-box-shadow: 0 0 18px teal inset;*/
+  /*-moz-box-shadow: 0 0 18px teal inset;*/
+  /*box-shadow: 0 0 18px teal inset;*/
+}
+
+.calendar_modern .calendar .month .body .days a.busy {
+  color:black;
+  /*-webkit-box-shadow: 0 0 18px #006600 inset;*/
+  /*-moz-box-shadow: 0 0 18px #006600 inset;*/
+  /*box-shadow: 0 0 15px #d03f3f inset;*/
+  /*border-radius: 20px;*/
+}
+.calendar_modern .calendar .month .body .days a.empty {
+  /*-webkit-box-shadow: 0 0 18px #006600 inset;*/
+  /*-moz-box-shadow: 0 0 18px #006600 inset;*/
+  box-shadow: 0 0 4px #28a745 inset;
+  /*box-shadow: 0 0 50px #25a50e inset;*/
+  /*box-shadow: 0 0 4px #008489 inset;*/
+  border-radius: 50%;
+  color: #28a745;
+  /*color: #008489;*/
+}
+
+
+.calendar_modern .calendar .month .body .days a.selected {
+  /*text-shadow: 1px 1px 2px blue;*/
+  color: white;
+  box-shadow: 0 0 100px #28a745 inset;/*box-shadow: 0 0 50px #25a50e inset;*/
+  /*box-shadow: 0 0 100px #008489 inset;!*box-shadow: 0 0 50px #25a50e inset;*!*/
+  border-radius: 50%;
+}
+/*.calendar_modern .calendar .month .body .days a:hover {*/
+/*color: black;*/
+/*-webkit-transition-property: text-shadow;*/
+/*-moz-transition-property: text-shadow;*/
+/*-o-transition-property: text-shadow;*/
+/*transition-property: text-shadow;*/
+/*-webkit-transition-property: box-shadow;*/
+/*-moz-transition-property: box-shadow;*/
+/*-o-transition-property: box-shadow;*/
+/*transition-property: box-shadow;*/
+/*-webkit-transition-duration: 0.2s;*/
+/*-moz-transition-duration: 0.2s;*/
+/*-o-transition-duration: 0.2s;*/
+/*transition-duration: 0.2s;*/
+/*!*text-shadow: 1px 1px 2px green;*!*/
+/*-webkit-box-shadow: 0 0 18px #006600 inset;*/
+/*-moz-box-shadow: 0 0 18px #006600 inset;*/
+/*box-shadow: 0 0 50px #007bff inset;*/
+/*border-radius: 20px;*/
+/*}*/
+.calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days s {
+  color: #ccc;
+}
+.calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s {
+  background: white;
+  /*border-color: #d5d5d5;*/
+}
+
+
+
+
+
+
+
+
+//table-list css
+.table_list th {
+  font-size: 1.25rem;
+  border: none;
+}
+.table_list td {
+  border: none;
+}
+.table_list tr {
+  border: none;
+}
+.table_list thead {
+  border: none;
+}
+.table_list table {
+  border: none;
+}
+

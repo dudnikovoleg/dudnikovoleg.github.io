@@ -1,0 +1,29 @@
+.select_block {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ced4da;
+  width: 100%;
+  border-radius: .25rem;
+  overflow: hidden;
+  background-color: #fff;
+  display: inline-block
+}
+
+.select_block select {
+  font: 400 120% Arial;
+  padding: .525rem .75rem;
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none
+}
+.labels {
+  left: 3px;
+  display: inline-block;
+}
+.delete {
+  cursor: pointer;
+  text-decoration: underline !important;
+}
